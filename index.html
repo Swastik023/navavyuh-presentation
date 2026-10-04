@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>From Website Audit to Digital Growth — Rishikesh Yoga Ashram</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,29 +30,40 @@
     --font-mono: 'JetBrains Mono', monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
+  html, body {
+    width: 100%;
+    height: 100%;
     background-color: var(--bg);
     color: var(--text-primary);
     font-family: var(--font-body);
     overflow: hidden;
     line-height: 1.48;
     -webkit-font-smoothing: antialiased;
+    touch-action: pan-y;
   }
   h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 800; }
   
   /* Layout */
-  #presentation { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+  #presentation { 
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+    height: 100dvh; 
+    overflow: hidden; 
+  }
   .slide {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     opacity: 0; pointer-events: none;
-    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    transform: translateY(16px);
+    transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1), transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(14px);
     display: flex; flex-direction: column;
     padding: 68px 80px 32px 80px;
     background-image: radial-gradient(circle at 50% 15%, rgba(214,168,79,0.035) 0%, transparent 65%);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .slide.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
-  .slide.prev { transform: translateY(-16px); }
+  .slide.prev { transform: translateY(-14px); }
 
   /* Top Bar */
   .top-ui {
@@ -65,10 +76,10 @@
     color: var(--gold); font-weight: 700; display: flex; align-items: center; gap: 8px;
   }
   .section-label::before {
-    content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block;
+    content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; flex-shrink: 0;
   }
   .progress-wrap {
-    display: flex; align-items: center; gap: 16px;
+    display: flex; align-items: center; gap: 14px;
   }
   .progress-text {
     font-size: 12.5px; font-weight: 600; color: var(--text-secondary); font-family: var(--font-mono);
@@ -85,17 +96,35 @@
   /* Typography */
   .eyebrow {
     font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em;
-    color: var(--gold); margin-bottom: 10px; font-weight: 800; display: flex; align-items: center; gap: 8px;
+    color: var(--gold); margin-bottom: 10px; font-weight: 800; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   }
   .big-heading { 
     font-size: clamp(1.8rem, 2.8vw, 2.9rem); 
     font-weight: 800; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.02em; 
+  }
+  .hero-title {
+    font-size: clamp(2.3rem, 4.4vw, 4.2rem); 
+    margin-bottom: 12px;
+    line-height: 1.12;
+  }
+  .closing-title {
+    font-size: clamp(2rem, 3.8vw, 3.6rem); 
+    margin-bottom: 18px;
+    line-height: 1.15;
   }
   .sub-heading {
     font-size: 1.05rem; color: var(--text-secondary); max-width: 920px; margin-bottom: 20px; line-height: 1.45;
   }
   .body-lg { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
   
+  /* Metric Displays */
+  .perf-score {
+    font-size: 7rem; font-weight: 800; font-family: var(--font-heading); color: var(--red); line-height: 0.9;
+  }
+  .popup-timer {
+    font-size: 6.5rem; font-weight: 800; font-family: var(--font-mono); color: var(--red); line-height: 0.9;
+  }
+
   /* Founder takeaway banner */
   .founder-takeaway {
     margin-top: auto; padding: 14px 20px; border-radius: 10px;
@@ -143,6 +172,7 @@
     justify-content: space-between;
     gap: 8px;
     margin-bottom: 2px;
+    flex-wrap: wrap;
   }
   .algo-badge {
     font-size: 11px;
@@ -180,11 +210,11 @@
     background: #1b1e24; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
     padding: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
-  .serp-url { font-size: 11px; color: #9aa0a6; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .serp-url { font-size: 11px; color: #9aa0a6; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; word-break: break-all; }
   .serp-title { font-size: 16px; color: #8ab4f8; font-weight: 500; line-height: 1.3; margin-bottom: 4px; cursor: pointer; }
   .serp-title:hover { text-decoration: underline; }
   .serp-snippet { font-size: 12px; color: #bdc1c6; line-height: 1.45; }
-  .serp-stars { color: #f2994a; font-size: 12px; font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .serp-stars { color: #f2994a; font-size: 12px; font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .serp-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
   .serp-badge { font-size: 10.5px; font-weight: 600; padding: 2px 6px; border-radius: 4px; }
   .serp-badge-warn { background: rgba(240,106,114,0.15); color: var(--red); border: 1px solid rgba(240,106,114,0.3); }
@@ -239,10 +269,11 @@
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
     background: rgba(0,0,0,0.92); z-index: 2000; display: none;
     align-items: center; justify-content: center; flex-direction: column;
+    padding: 20px;
   }
   #img-modal.active { display: flex; }
-  #img-modal img { max-width: 90vw; max-height: 85vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.8); }
-  #img-modal .modal-caption { margin-top: 14px; color: var(--text-secondary); font-size: 13.5px; }
+  #img-modal img { max-width: 90vw; max-height: 80vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.8); }
+  #img-modal .modal-caption { margin-top: 14px; color: var(--text-secondary); font-size: 13.5px; text-align: center; }
   
   /* Evidence Modal */
   #evidence-modal {
@@ -254,13 +285,13 @@
 
   /* Nav Controls at bottom */
   .bottom-nav {
-    position: absolute; bottom: 18px; right: 80px; display: flex; gap: 10px; z-index: 100;
+    position: absolute; bottom: 18px; right: 80px; display: flex; align-items: center; gap: 10px; z-index: 100;
   }
   .nav-btn {
-    width: 34px; height: 34px; border-radius: 50%; background: var(--surface-light);
+    width: 36px; height: 36px; border-radius: 50%; background: var(--surface-light);
     border: 1px solid var(--surface-border); color: var(--text-primary);
     display: flex; align-items: center; justify-content: center; cursor: pointer;
-    font-size: 13px; transition: all 0.2s; user-select: none;
+    font-size: 14px; transition: all 0.2s; user-select: none;
   }
   .nav-btn:hover { background: var(--gold); color: #000; border-color: var(--gold); }
   .key-hint {
@@ -268,11 +299,206 @@
     display: flex; align-items: center; gap: 14px; font-family: var(--font-mono);
   }
 
+  .mobile-nav-info {
+    display: none;
+    align-items: center;
+    gap: 12px;
+  }
+  .mobile-ev-btn {
+    background: var(--gold-dim);
+    border: 1px solid rgba(214,168,79,0.3);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
   /* Utilities */
   .text-gold { color: var(--gold); }
   .text-cyan { color: var(--cyan); }
   .text-green { color: var(--green); }
   .text-red { color: var(--red); }
+
+  /* ============================================================
+     RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS (TABLETS & PHONES)
+     ============================================================ */
+  @media (max-width: 900px) {
+    .slide {
+      padding: 56px 20px 84px 20px;
+      display: block; /* Allows natural scrolling flow */
+      height: 100%;
+    }
+    .top-ui {
+      left: 20px;
+      right: 20px;
+      top: 12px;
+    }
+    .section-label {
+      font-size: 10px;
+      max-width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .progress-bar-bg {
+      width: 70px;
+    }
+    .progress-text {
+      font-size: 11px;
+    }
+    .grid-2, .grid-3 {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+    .card {
+      padding: 14px;
+      border-radius: 10px;
+    }
+    .big-heading {
+      font-size: clamp(1.45rem, 5.5vw, 1.95rem);
+      line-height: 1.22;
+      margin-bottom: 8px;
+    }
+    .hero-title {
+      font-size: clamp(1.8rem, 6.8vw, 2.6rem);
+      margin-bottom: 10px;
+    }
+    .closing-title {
+      font-size: clamp(1.6rem, 6vw, 2.2rem);
+      margin-bottom: 14px;
+    }
+    .sub-heading {
+      font-size: 13px;
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+    .perf-score {
+      font-size: 4.8rem;
+    }
+    .popup-timer {
+      font-size: 4.5rem;
+    }
+    .phone-comparison {
+      flex-direction: column;
+      gap: 14px;
+      height: auto;
+    }
+    .phone-mockup-frame {
+      width: 100%;
+      max-width: 250px;
+      height: 350px;
+      border-width: 6px;
+    }
+    .founder-takeaway {
+      margin-top: 18px;
+      padding: 12px 14px;
+      gap: 10px;
+    }
+    .founder-takeaway p {
+      font-size: 13.5px;
+      line-height: 1.4;
+    }
+    .algo-box {
+      padding: 10px 12px;
+      gap: 4px;
+    }
+    .algo-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    .algo-system-name {
+      align-self: flex-start;
+    }
+    .algo-trigger, .algo-loss {
+      font-size: 11.8px;
+    }
+    .methodology-flow {
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
+    .methodology-arrow {
+      transform: rotate(90deg);
+      text-align: center;
+      margin: -2px auto !important;
+    }
+    #evidence-modal {
+      padding: 24px 16px 84px 16px;
+    }
+    #evidence-modal .grid-2 {
+      display: flex;
+      flex-direction: column;
+    }
+    .key-hint {
+      display: none !important;
+    }
+    .mobile-nav-info {
+      display: flex;
+    }
+    .bottom-nav {
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      right: auto;
+      width: calc(100% - 32px);
+      max-width: 380px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(14, 17, 23, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 100px;
+      padding: 5px 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+      z-index: 1000;
+    }
+    .bottom-nav .nav-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .slide {
+      padding: 50px 14px 78px 14px;
+    }
+    .big-heading {
+      font-size: clamp(1.35rem, 6.2vw, 1.7rem);
+    }
+    .hero-title {
+      font-size: clamp(1.65rem, 7.5vw, 2.2rem);
+    }
+    .top-ui {
+      left: 14px;
+      right: 14px;
+      top: 10px;
+    }
+    .section-label {
+      font-size: 9px;
+      max-width: 150px;
+    }
+    .progress-bar-bg {
+      width: 55px;
+    }
+    .progress-text {
+      font-size: 10px;
+    }
+    .bottom-nav {
+      width: calc(100% - 20px);
+      bottom: 8px;
+      padding: 4px 10px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -291,10 +517,10 @@
   <!-- SLIDE 1: Title Hook -->
   <div class="slide active" data-section="01 / INTRODUCTION">
     <div class="eyebrow">RISHIKESH YOGA ASHRAM &bull; DIGITAL GROWTH AUDIT</div>
-    <h1 class="big-heading" style="font-size:clamp(2.6rem, 4.4vw, 4.2rem); margin-bottom:12px;">
+    <h1 class="big-heading hero-title">
       FROM WEBSITE AUDIT<br>TO <span class="text-gold">DIGITAL GROWTH</span>
     </h1>
-    <p class="sub-heading" style="font-size:1.25rem; margin-bottom:28px;">
+    <p class="sub-heading">
       A high-stakes algorithmic investigation of <strong class="text-gold">rishikeshyogaashram.com</strong>: Where Google's search algorithms, student trust, and ashram revenue collide.
     </p>
 
@@ -425,31 +651,31 @@
     <h2 class="big-heading">I DIDN'T JUST RUN AN AUTOMATED TOOL.<br><span class="text-gold">I MANUALLY VERIFIED THE LIVE CODE.</span></h2>
     <p class="sub-heading">Tools spit out hundreds of false alarms. Real engineering judgment connects technical anomalies to student behavior and Google algorithms.</p>
 
-    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin:20px 0;">
+    <div class="methodology-flow" style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin:20px 0;">
       <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
         <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 1</div>
         <h4 style="font-size:15px; margin-bottom:3px;">DISCOVER</h4>
         <p style="font-size:12px; color:var(--text-secondary);">Full site crawl of all URLs, assets, headers & internal links.</p>
       </div>
-      <div style="color:var(--gold); font-size:18px;">&rarr;</div>
+      <div class="methodology-arrow" style="color:var(--gold); font-size:18px;">&rarr;</div>
       <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
         <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 2</div>
         <h4 style="font-size:15px; margin-bottom:3px;">VERIFY</h4>
         <p style="font-size:12px; color:var(--text-secondary);">Live DevTools inspection, mobile network profiling & packet audits.</p>
       </div>
-      <div style="color:var(--gold); font-size:18px;">&rarr;</div>
+      <div class="methodology-arrow" style="color:var(--gold); font-size:18px;">&rarr;</div>
       <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
         <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 3</div>
         <h4 style="font-size:15px; margin-bottom:3px;">UNDERSTAND</h4>
         <p style="font-size:12px; color:var(--text-secondary);">Map user journey from a foreign student's perspective.</p>
       </div>
-      <div style="color:var(--gold); font-size:18px;">&rarr;</div>
+      <div class="methodology-arrow" style="color:var(--gold); font-size:18px;">&rarr;</div>
       <div class="card" style="flex:1; text-align:center; padding:16px 12px; border-top:3px solid var(--gold);">
         <div style="font-size:10.5px; font-weight:800; color:var(--gold); margin-bottom:4px;">PHASE 4</div>
         <h4 style="font-size:15px; margin-bottom:3px;">PRIORITIZE</h4>
         <p style="font-size:12px; color:var(--text-secondary);">Filter for revenue impact: P0 Critical vs P2 Polish.</p>
       </div>
-      <div style="color:var(--gold); font-size:18px;">&rarr;</div>
+      <div class="methodology-arrow" style="color:var(--gold); font-size:18px;">&rarr;</div>
       <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
         <div style="font-size:10.5px; font-weight:800; color:var(--green); margin-bottom:4px;">PHASE 5</div>
         <h4 style="font-size:15px; margin-bottom:3px;">MEASURE</h4>
@@ -652,14 +878,14 @@
     <p class="sub-heading">Real test data from Google PageSpeed Insights under simulated mobile network conditions.</p>
 
     <div class="grid-2">
-      <div class="card" style="text-align:center; padding:28px; justify-content:center;">
-        <div style="font-size:7rem; font-weight:800; font-family:var(--font-heading); color:var(--red); line-height:0.9;">
-          54<span style="font-size:2.2rem; color:var(--text-muted);">/100</span>
+      <div class="card" style="text-align:center; padding:24px; justify-content:center;">
+        <div class="perf-score">
+          54<span style="font-size:2rem; color:var(--text-muted);">/100</span>
         </div>
-        <div style="font-size:13px; font-weight:800; letter-spacing:0.12em; color:var(--red); margin-top:10px; text-transform:uppercase;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:0.12em; color:var(--red); margin-top:10px; text-transform:uppercase;">
           Google Mobile Performance Score
         </div>
-        <div style="margin-top:20px; display:flex; justify-content:space-around; border-top:1px solid var(--surface-border); padding-top:16px;">
+        <div style="margin-top:18px; display:flex; justify-content:space-around; border-top:1px solid var(--surface-border); padding-top:14px;">
           <div>
             <div style="font-size:11px; color:var(--text-muted);">LCP (MAIN CONTENT)</div>
             <div style="font-size:1.8rem; font-weight:800; color:var(--red); font-family:var(--font-mono);">5.4s</div>
@@ -741,7 +967,7 @@
         </div>
       </div>
 
-      <div class="card" style="justify-content:center; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%); padding:28px;">
+      <div class="card" style="justify-content:center; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%); padding:24px;">
         <h3 style="font-size:20px; color:var(--gold); margin-bottom:12px;">The Analogy:</h3>
         <p class="body-lg" style="font-size:15px; line-height:1.6; margin-bottom:18px;">
           <em>"It's like turning on the television and air conditioning in a hotel room before the guest has even checked in at the front desk."</em>
@@ -766,14 +992,14 @@
     <p class="sub-heading">Live behavior: In a fresh incognito session, a fullscreen enquiry form covers the screen within 2 seconds of arrival.</p>
 
     <div class="grid-2">
-      <div class="card card-highlight-red" style="text-align:center; padding:28px; justify-content:center;">
-        <div style="font-size:6.5rem; font-weight:800; font-family:var(--font-mono); color:var(--red); line-height:0.9;">
+      <div class="card card-highlight-red" style="text-align:center; padding:24px; justify-content:center;">
+        <div class="popup-timer">
           00:02
         </div>
         <div style="font-size:12px; font-weight:800; letter-spacing:0.12em; color:var(--text-muted); margin-top:14px; text-transform:uppercase;">
           Seconds before fullscreen popup appears
         </div>
-        <div style="margin-top:18px; padding:14px; background:rgba(240,106,114,0.1); border-radius:8px; border:1px solid rgba(240,106,114,0.2);">
+        <div style="margin-top:16px; padding:14px; background:rgba(240,106,114,0.1); border-radius:8px; border:1px solid rgba(240,106,114,0.2);">
           <div style="font-size:12.5px; color:var(--red); font-weight:700;">Student Psychology at 2 Seconds:</div>
           <div style="font-size:12px; color:var(--text-secondary); margin-top:3px;">"I don't even know if you teach 200hr or 300hr yet. Why are you demanding my personal phone number?"</div>
         </div>
@@ -824,11 +1050,11 @@
     <p class="sub-heading">Live audit observation: Under the "Short Courses" navigation, the Aerial Yoga Teacher Training course has a structural URL typo.</p>
 
     <div class="grid-2">
-      <div class="card card-highlight-cyan" style="justify-content:center; text-align:center; padding:28px;">
+      <div class="card card-highlight-cyan" style="justify-content:center; text-align:center; padding:24px;">
         <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:10px;">COURSE TITLE ON WEBSITE</div>
         <div style="font-size:2rem; font-weight:800; color:var(--text-primary); margin-bottom:16px;">Aerial Yoga</div>
         <div style="font-size:20px; color:var(--text-muted);">&darr; LIVE LINK IN NAVIGATION &darr;</div>
-        <div style="margin-top:16px; font-family:var(--font-mono); font-size:1.5rem; color:var(--red); background:rgba(240,106,114,0.15); padding:10px 18px; border-radius:8px; border:1px solid rgba(240,106,114,0.3);">
+        <div style="margin-top:16px; font-family:var(--font-mono); font-size:1.4rem; color:var(--red); background:rgba(240,106,114,0.15); padding:10px 16px; border-radius:8px; border:1px solid rgba(240,106,114,0.3); word-break:break-all;">
           /Arial-yoga.php
         </div>
         <div style="margin-top:14px; font-size:13px; font-weight:700; color:var(--gold);">"Arial" (Computer Font) &ne; "Aerial" (Yoga Practice)</div>
@@ -875,13 +1101,13 @@
 
     <div class="grid-2" style="align-items:stretch;">
       <!-- Current State -->
-      <div class="card card-highlight-red" style="padding:18px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+      <div class="card card-highlight-red" style="padding:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:4px;">
           <span style="font-size:11px; font-weight:800; color:var(--red);">CURRENT REALITY (TESTED ON LIVE URL)</span>
           <span class="serp-badge serp-badge-warn">0 Schemas Detected</span>
         </div>
         
-        <div class="serp-card" style="margin-bottom:12px;">
+        <div class="serp-card" style="margin-bottom:10px;">
           <div class="serp-url">https://rishikeshyogaashram.com › 200-hour-yoga-teacher-training</div>
           <div class="serp-title">200 Hour Yoga Teacher Training in Rishikesh - Rishikesh Yoga Ashram</div>
           <div class="serp-snippet">Join our 200 hour yoga teacher training course in Rishikesh. Learn authentic hatha and ashtanga yoga in the foothills of Himalayas with experienced masters...</div>
@@ -893,19 +1119,19 @@
           </div>
         </div>
 
-        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.45;">
+        <div style="font-size:12px; color:var(--text-secondary); line-height:1.45;">
           <strong>Why this hurts the business:</strong> Google's crawler only reads unstructured English paragraphs. It doesn't know this is an official course product with certification, specific batch dates, and tuition.
         </div>
       </div>
 
       <!-- Optimized State -->
-      <div class="card card-highlight-green" style="padding:18px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+      <div class="card card-highlight-green" style="padding:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:4px;">
           <span style="font-size:11px; font-weight:800; color:var(--green);">THE OPPORTUNITY (STRUCTURED COURSE ENTITY)</span>
           <span class="serp-badge serp-badge-good">@type: Course JSON-LD</span>
         </div>
 
-        <div class="serp-card" style="margin-bottom:12px; border-color:rgba(88,197,138,0.4);">
+        <div class="serp-card" style="margin-bottom:10px; border-color:rgba(88,197,138,0.4);">
           <div class="serp-url">https://rishikeshyogaashram.com › courses › 200-hour-yttc</div>
           <div class="serp-title">200-Hour Yoga Teacher Training Rishikesh | Yoga Alliance RYS 200</div>
           <div class="serp-stars">⭐⭐⭐⭐⭐ 4.9 <span style="color:#bdc1c6; font-weight:normal;">(128 reviews) · Course · 28 Days · $1,200</span></div>
@@ -918,7 +1144,7 @@
           </div>
         </div>
 
-        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.45;">
+        <div style="font-size:12px; color:var(--text-secondary); line-height:1.45;">
           <strong>Why international students click this:</strong> Foreign students searching on Google from Germany or the US immediately see reviews, dates, and accreditations. <strong>Rich snippets deliver 35%+ higher click-through rates.</strong>
         </div>
       </div>
@@ -979,9 +1205,9 @@
         </div>
       </div>
 
-      <div class="card" style="justify-content:center; padding:24px; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%);">
+      <div class="card" style="justify-content:center; padding:22px; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%);">
         <h4 style="font-size:15px; color:var(--gold); margin-bottom:10px; text-transform:uppercase; letter-spacing:0.08em;">The Ashram's Primary Market</h4>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-family:var(--font-heading); font-weight:700; margin-bottom:16px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-family:var(--font-heading); font-weight:700; margin-bottom:14px;">
           <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇩🇪 GERMANY & AUSTRIA</div>
           <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇫🇷 FRANCE & BELGIUM</div>
           <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇪🇸 SPAIN & LATAM</div>
@@ -1004,9 +1230,9 @@
     <p class="sub-heading">Live finding: The floating green WhatsApp icon and red 'Enquire Now' pill collide on smartphone screens.</p>
 
     <div class="grid-2">
-      <div class="card" style="padding:22px; justify-content:center; background:#11141a; position:relative; overflow:hidden;">
+      <div class="card" style="padding:20px; justify-content:center; background:#11141a; position:relative; overflow:hidden;">
         <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:12px;">PHYSICAL PHONE SCREEN VIEWPORT</div>
-        <div style="padding:16px; background:#1a1e27; border-radius:10px; border:1px solid rgba(255,255,255,0.08); position:relative; min-height:180px;">
+        <div style="padding:16px; background:#1a1e27; border-radius:10px; border:1px solid rgba(255,255,255,0.08); position:relative; min-height:170px;">
           <p style="font-size:13px; color:var(--text-secondary); line-height:1.55;">
             "...authentic spiritual discipline taught by masters in Rishikesh. Prospective teachers should come to the town to undergo full immersion in Hatha and Ashtanga..."
           </p>
@@ -1065,10 +1291,10 @@
     <p class="sub-heading">Going deeper than surface keywords: Protecting the ashram's institutional reputation and email security.</p>
 
     <div class="grid-2">
-      <div class="card card-highlight-gold" style="padding:18px;">
+      <div class="card card-highlight-gold" style="padding:16px;">
         <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:4px;">FINDING A &bull; EMAIL AUTHENTICATION (DMARC)</div>
         <h4 style="font-size:15px; margin-bottom:6px;">Domain email policy has no spoofing enforcement (`p=none`)</h4>
-        <p class="body-lg" style="font-size:12.5px; margin-bottom:10px;">When a student wires course fees, email imposters can forge emails pretending to be <code>admissions@rishikeshyogaashram.com</code>. Closing this gap protects your students from payment fraud.</p>
+        <p class="body-lg" style="font-size:12.5px; margin-bottom:8px;">When a student wires course fees, email imposters can forge emails pretending to be <code>admissions@rishikeshyogaashram.com</code>. Closing this gap protects your students from payment fraud.</p>
         <div style="font-family:var(--font-mono); font-size:10.5px; background:var(--surface-light); padding:7px; border-radius:6px; color:var(--text-secondary);">
           DNS Status: DMARC record exists but lacks strict quarantine/reject flags.
         </div>
@@ -1088,11 +1314,11 @@
         </div>
       </div>
 
-      <div class="card card-highlight-cyan" style="padding:18px;">
+      <div class="card card-highlight-cyan" style="padding:16px;">
         <div style="font-size:11px; font-weight:800; color:var(--cyan); margin-bottom:4px;">FINDING B &bull; SERVER HEADER EXPOSURE</div>
         <h4 style="font-size:15px; margin-bottom:6px;">Server response headers advertise exact backend software versions</h4>
-        <p class="body-lg" style="font-size:12.5px; margin-bottom:10px;">Public HTTP response headers broadcast the exact server software and PHP versions to automated network scanners. Suppressing these headers is a standard DevSecOps hygiene practice.</p>
-        <div style="font-family:var(--font-mono); font-size:10.5px; background:var(--surface-light); padding:7px; border-radius:6px; color:var(--text-secondary); margin-bottom:14px;">
+        <p class="body-lg" style="font-size:12.5px; margin-bottom:8px;">Public HTTP response headers broadcast the exact server software and PHP versions to automated network scanners. Suppressing these headers is a standard DevSecOps hygiene practice.</p>
+        <div style="font-family:var(--font-mono); font-size:10.5px; background:var(--surface-light); padding:7px; border-radius:6px; color:var(--text-secondary); margin-bottom:12px;">
           Response Header: X-Powered-By & Server banner publicly visible in curl audits.
         </div>
         <div class="card" style="background:var(--surface-light); padding:12px;">
@@ -1301,12 +1527,12 @@
   <!-- SLIDE 21: Closing Vision -->
   <div class="slide" data-section="06 / CLOSING" style="justify-content:center; text-align:center;">
     <div class="eyebrow" style="justify-content:center;">THE CLOSING VISION</div>
-    <h2 class="big-heading" style="font-size:clamp(2.4rem, 3.8vw, 3.6rem); margin-bottom:18px;">
+    <h2 class="big-heading closing-title">
       "I DON'T JUST WANT TO REPORT WHAT HAPPENED.<br>
       <span class="text-gold">I WANT TO HELP BUILD THE SYSTEM<br>THAT CONTINUOUSLY IMPROVES IT."</span>
     </h2>
 
-    <div style="display:flex; justify-content:center; gap:16px; margin:28px 0; font-family:var(--font-heading); font-size:1.2rem; font-weight:800;">
+    <div style="display:flex; justify-content:center; gap:16px; margin:24px 0; font-family:var(--font-heading); font-size:1.2rem; font-weight:800; flex-wrap:wrap;">
       <span style="color:var(--text-muted);">DISCOVER</span> <span style="color:var(--gold);">&rarr;</span>
       <span style="color:var(--text-muted);">OPTIMIZE</span> <span style="color:var(--gold);">&rarr;</span>
       <span style="color:var(--text-muted);">MEASURE</span> <span style="color:var(--gold);">&rarr;</span>
@@ -1331,8 +1557,12 @@
   </div>
 
   <div class="bottom-nav">
-    <div class="nav-btn" onclick="previousSlide()" title="Previous slide">&larr;</div>
-    <div class="nav-btn" onclick="nextSlide()" title="Next slide">&rarr;</div>
+    <button class="nav-btn" onclick="previousSlide()" aria-label="Previous slide">&larr;</button>
+    <div class="mobile-nav-info">
+      <span id="mobile-slide-num">01 / 21</span>
+      <button class="mobile-ev-btn" onclick="toggleEvidence()" aria-label="Toggle Appendix">Appendix</button>
+    </div>
+    <button class="nav-btn" onclick="nextSlide()" aria-label="Next slide">&rarr;</button>
   </div>
 </div>
 
@@ -1340,47 +1570,47 @@
 <div id="img-modal" onclick="closeZoomModal()">
   <img id="modal-img" src="" alt="Zoomed Screenshot">
   <div class="modal-caption" id="modal-caption"></div>
-  <div style="margin-top:10px; font-size:11px; color:rgba(255,255,255,0.4); font-family:var(--font-mono);">CLICK ANYWHERE TO CLOSE [ESC]</div>
+  <div style="margin-top:10px; font-size:11px; color:rgba(255,255,255,0.4); font-family:var(--font-mono);">TAP ANYWHERE TO CLOSE [ESC]</div>
 </div>
 
 <!-- Evidence Modal -->
 <div id="evidence-modal">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
-    <h2 class="big-heading" style="color:var(--gold); margin:0; font-size:2rem;">EVIDENCE & TECHNICAL APPENDIX</h2>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+    <h2 class="big-heading" style="color:var(--gold); margin:0; font-size:1.8rem;">EVIDENCE & TECHNICAL APPENDIX</h2>
     <div style="cursor:pointer; font-size:12px; font-weight:bold; color:var(--text-secondary); padding:6px 14px; background:var(--surface-light); border-radius:8px;" onclick="toggleEvidence()">
       CLOSE [ESC]
     </div>
   </div>
-  <p class="body-lg" style="margin-bottom:20px; font-size:14px;">
+  <p class="body-lg" style="margin-bottom:18px; font-size:13.5px;">
     Official Google algorithm documentation, live test parameters, and diagnostic references recorded during the audit of <code>https://rishikeshyogaashram.com/</code>:
   </p>
-  <div class="grid-2" style="gap:16px;">
-    <div class="card" style="padding:16px;">
-      <h4 style="color:var(--red); font-size:14px; margin-bottom:6px;">Google Intrusive Interstitials Penalty</h4>
-      <p style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+  <div class="grid-2" style="gap:14px;">
+    <div class="card" style="padding:14px;">
+      <h4 style="color:var(--red); font-size:14px; margin-bottom:4px;">Google Intrusive Interstitials Penalty</h4>
+      <p style="font-size:11.5px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
         Official Policy: Google Search Central (Jan 10, 2017)<br>
         Standard: "Showing a popup that covers the main content immediately after the user navigates to a page from the search results makes content less accessible, leading to search demotions."
       </p>
     </div>
-    <div class="card" style="padding:16px;">
-      <h4 style="color:var(--red); font-size:14px; margin-bottom:6px;">Google Core Web Vitals (CWV) Penalty</h4>
-      <p style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+    <div class="card" style="padding:14px;">
+      <h4 style="color:var(--red); font-size:14px; margin-bottom:4px;">Google Core Web Vitals (CWV) Penalty</h4>
+      <p style="font-size:11.5px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
         Thresholds: LCP &lt; 2.5s (Good), 2.5s–4.0s (Needs Work), &gt; 4.0s (POOR)<br>
         Audit Metric: 5.4s LCP (Ranked POOR / Red Zone).<br>
         Algorithmic Effect: Official ranking demotion under Page Experience Core Ranking System.
       </p>
     </div>
-    <div class="card" style="padding:16px;">
-      <h4 style="color:var(--cyan); font-size:14px; margin-bottom:6px;">Google Course Schema Guidelines</h4>
-      <p style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+    <div class="card" style="padding:14px;">
+      <h4 style="color:var(--cyan); font-size:14px; margin-bottom:4px;">Google Course Schema Guidelines</h4>
+      <p style="font-size:11.5px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
         Specification: schema.org/Course JSON-LD format.<br>
         Live Audit: https://search.google.com/test/rich-results<br>
         Status: 0 Course entities detected. Disqualified from Google Course Carousels.
       </p>
     </div>
-    <div class="card" style="padding:16px;">
-      <h4 style="color:var(--green); font-size:14px; margin-bottom:6px;">DNS & Email Spoofing Defense (DMARC)</h4>
-      <p style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+    <div class="card" style="padding:14px;">
+      <h4 style="color:var(--green); font-size:14px; margin-bottom:4px;">DNS & Email Spoofing Defense (DMARC)</h4>
+      <p style="font-size:11.5px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
         RFC 7489 / Google Workspace Sender Requirements (Feb 2024)<br>
         Current: "v=DMARC1; p=none;" (Vulnerable to spoofed wire transfer invoices)<br>
         Required: "v=DMARC1; p=reject;" to prevent Gmail/Yahoo phishing blacklisting.
@@ -1397,13 +1627,16 @@
   const progressText = document.getElementById('progress-text');
   const progressFill = document.getElementById('progress-fill');
   const sectionLabel = document.getElementById('section-label');
+  const mobileSlideNum = document.getElementById('mobile-slide-num');
   const imgModal = document.getElementById('img-modal');
   const modalImg = document.getElementById('modal-img');
   const modalCaption = document.getElementById('modal-caption');
   const evModal = document.getElementById('evidence-modal');
 
   function updateUI() {
-    progressText.textContent = `${String(currentSlide + 1).padStart(2, '0')} / ${totalSlides}`;
+    const formatted = `${String(currentSlide + 1).padStart(2, '0')} / ${totalSlides}`;
+    progressText.textContent = formatted;
+    if (mobileSlideNum) mobileSlideNum.textContent = formatted;
     progressFill.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
     const activeSection = slides[currentSlide].getAttribute('data-section') || '';
     sectionLabel.textContent = activeSection;
@@ -1414,6 +1647,7 @@
       slide.classList.remove('active', 'prev');
       if (index === currentSlide) {
         slide.classList.add('active');
+        slide.scrollTop = 0; // Reset scroll to top on mobile
       } else if (index < currentSlide) {
         slide.classList.add('prev');
       }
@@ -1457,6 +1691,7 @@
     evModal.classList.toggle('active');
   }
 
+  // Keyboard navigation
   function handleKeyboard(e) {
     if (evModal.classList.contains('active')) {
       if (e.key === 'Escape') toggleEvidence();
@@ -1483,6 +1718,43 @@
   }
 
   document.addEventListener('keydown', handleKeyboard);
+
+  // Mobile Touch Swipe Gesture Support
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  document.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  document.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    // If modal is active, do not swipe slides
+    if (imgModal.classList.contains('active') || evModal.classList.contains('active')) return;
+
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    // Trigger only if horizontal swipe is decisive and significantly exceeds vertical scroll
+    if (Math.abs(diffX) > 48 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+      if (diffX < 0) {
+        // Swiped Left -> Advance to next slide
+        nextSlide();
+      } else {
+        // Swiped Right -> Back to previous slide
+        previousSlide();
+      }
+    }
+  }
+
   renderSlide();
 </script>
 </body>
