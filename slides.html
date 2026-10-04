@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Website Audit to Digital Growth — Rishikesh Yoga Ashram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #08090b;
+    --bg-secondary: #0e1117;
+    --surface: #14171f;
+    --surface-light: #1c212b;
+    --surface-border: rgba(255, 255, 255, 0.08);
+    --gold: #D6A84F;
+    --gold-dim: rgba(214, 168, 79, 0.15);
+    --cyan: #55C7E8;
+    --cyan-dim: rgba(85, 199, 232, 0.15);
+    --green: #58C58A;
+    --green-dim: rgba(88, 197, 138, 0.15);
+    --red: #F06A72;
+    --red-dim: rgba(240, 106, 114, 0.15);
+    --text-primary: #F5F5F2;
+    --text-secondary: #A7ADB7;
+    --text-muted: #686F7A;
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow: hidden;
+    line-height: 1.48;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 800; }
+  
+  /* Layout */
+  #presentation { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
+  .slide {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(16px);
+    display: flex; flex-direction: column;
+    padding: 68px 80px 32px 80px;
+    background-image: radial-gradient(circle at 50% 15%, rgba(214,168,79,0.035) 0%, transparent 65%);
+  }
+  .slide.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .slide.prev { transform: translateY(-16px); }
+
+  /* Top Bar */
+  .top-ui {
+    position: absolute; top: 22px; left: 80px; right: 80px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 100;
+  }
+  .section-label {
+    font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--gold); font-weight: 700; display: flex; align-items: center; gap: 8px;
+  }
+  .section-label::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block;
+  }
+  .progress-wrap {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .progress-text {
+    font-size: 12.5px; font-weight: 600; color: var(--text-secondary); font-family: var(--font-mono);
+  }
+  .progress-bar-bg {
+    width: 130px; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%; background: var(--gold); width: 0%;
+    transition: width 0.3s ease;
+  }
+  
+  /* Typography */
+  .eyebrow {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--gold); margin-bottom: 10px; font-weight: 800; display: flex; align-items: center; gap: 8px;
+  }
+  .big-heading { 
+    font-size: clamp(1.8rem, 2.8vw, 2.9rem); 
+    font-weight: 800; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.02em; 
+  }
+  .sub-heading {
+    font-size: 1.05rem; color: var(--text-secondary); max-width: 920px; margin-bottom: 20px; line-height: 1.45;
+  }
+  .body-lg { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
+  
+  /* Founder takeaway banner */
+  .founder-takeaway {
+    margin-top: auto; padding: 14px 20px; border-radius: 10px;
+    background: linear-gradient(90deg, rgba(214,168,79,0.09) 0%, rgba(20,23,31,0.7) 100%);
+    border-left: 4px solid var(--gold); border-top: 1px solid rgba(214,168,79,0.25);
+    display: flex; align-items: flex-start; gap: 14px; flex-shrink: 0;
+  }
+  .founder-takeaway-badge {
+    font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.12em;
+    background: var(--gold); color: #000; font-weight: 800; padding: 4px 7px; border-radius: 4px; flex-shrink: 0;
+  }
+  .founder-takeaway p {
+    font-size: 15.5px; font-weight: 600; color: var(--text-primary); line-height: 1.4;
+  }
+
+  /* Grid & Cards */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1; align-items: center; min-height: 0; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; flex: 1; align-items: stretch; min-height: 0; }
+  
+  .card {
+    background: var(--surface); border: 1px solid var(--surface-border);
+    border-radius: 12px; padding: 20px; display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+  .card-highlight-gold { border-top: 3px solid var(--gold); }
+  .card-highlight-cyan { border-top: 3px solid var(--cyan); }
+  .card-highlight-red { border-top: 3px solid var(--red); }
+  .card-highlight-green { border-top: 3px solid var(--green); }
+
+  /* Algorithmic Penalty & Risk Callout Box */
+  .algo-box {
+    background: rgba(240, 106, 114, 0.08);
+    border: 1px solid rgba(240, 106, 114, 0.32);
+    border-left: 4px solid var(--red);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .algo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .algo-badge {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--red);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .algo-system-name {
+    font-size: 10.5px;
+    font-family: var(--font-mono);
+    color: #ff9da4;
+    background: rgba(240, 106, 114, 0.2);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .algo-trigger {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+  .algo-loss {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #ffadb3;
+    line-height: 1.4;
+  }
+
+  /* SERP Simulation Mockup */
+  .serp-card {
+    background: #1b1e24; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
+    padding: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .serp-url { font-size: 11px; color: #9aa0a6; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  .serp-title { font-size: 16px; color: #8ab4f8; font-weight: 500; line-height: 1.3; margin-bottom: 4px; cursor: pointer; }
+  .serp-title:hover { text-decoration: underline; }
+  .serp-snippet { font-size: 12px; color: #bdc1c6; line-height: 1.45; }
+  .serp-stars { color: #f2994a; font-size: 12px; font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .serp-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .serp-badge { font-size: 10.5px; font-weight: 600; padding: 2px 6px; border-radius: 4px; }
+  .serp-badge-warn { background: rgba(240,106,114,0.15); color: var(--red); border: 1px solid rgba(240,106,114,0.3); }
+  .serp-badge-good { background: rgba(88,197,138,0.15); color: var(--green); border: 1px solid rgba(88,197,138,0.3); }
+  .serp-badge-gold { background: rgba(214,168,79,0.15); color: var(--gold); border: 1px solid rgba(214,168,79,0.3); }
+
+  /* Phone Mockups */
+  .phone-comparison {
+    display: flex; gap: 20px; justify-content: center; align-items: center; height: 100%;
+  }
+  .phone-wrap {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .phone-mockup-frame {
+    width: 230px; height: 390px; border: 8px solid #232730; border-radius: 28px;
+    background: #000; overflow: hidden; position: relative; box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+    cursor: zoom-in; transition: transform 0.2s;
+  }
+  .phone-mockup-frame:hover { transform: scale(1.02); }
+  .phone-mockup-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .phone-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    padding: 3px 8px; border-radius: 100px;
+  }
+
+  /* Browser Simulation Window */
+  .browser-window {
+    background: var(--surface); border: 1px solid var(--surface-border);
+    border-radius: 10px; overflow: hidden; box-shadow: 0 16px 32px rgba(0,0,0,0.5);
+  }
+  .browser-header {
+    background: var(--surface-light); height: 32px; padding: 0 12px;
+    display: flex; align-items: center; gap: 6px; border-bottom: 1px solid var(--surface-border);
+  }
+  .browser-dots { display: flex; gap: 5px; }
+  .browser-dot { width: 9px; height: 9px; border-radius: 50%; }
+  .browser-url-bar {
+    flex: 1; height: 22px; background: rgba(0,0,0,0.3); border-radius: 5px;
+    display: flex; align-items: center; padding: 0 10px; font-family: var(--font-mono);
+    font-size: 11px; color: var(--text-secondary); margin: 0 16px; overflow: hidden;
+  }
+
+  /* Interactive Elements */
+  .interactive-pill {
+    display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px; font-size: 11px; font-weight: 600; color: var(--text-secondary);
+  }
+  
+  /* Image Zoom Modal */
+  #img-modal {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.92); z-index: 2000; display: none;
+    align-items: center; justify-content: center; flex-direction: column;
+  }
+  #img-modal.active { display: flex; }
+  #img-modal img { max-width: 90vw; max-height: 85vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.8); }
+  #img-modal .modal-caption { margin-top: 14px; color: var(--text-secondary); font-size: 13.5px; }
+  
+  /* Evidence Modal */
+  #evidence-modal {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(8,9,11,0.96); z-index: 1500; display: none;
+    padding: 60px 80px; flex-direction: column; overflow-y: auto;
+  }
+  #evidence-modal.active { display: flex; }
+
+  /* Nav Controls at bottom */
+  .bottom-nav {
+    position: absolute; bottom: 18px; right: 80px; display: flex; gap: 10px; z-index: 100;
+  }
+  .nav-btn {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--surface-light);
+    border: 1px solid var(--surface-border); color: var(--text-primary);
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+    font-size: 13px; transition: all 0.2s; user-select: none;
+  }
+  .nav-btn:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+  .key-hint {
+    position: absolute; bottom: 22px; left: 80px; font-size: 11px; color: var(--text-muted);
+    display: flex; align-items: center; gap: 14px; font-family: var(--font-mono);
+  }
+
+  /* Utilities */
+  .text-gold { color: var(--gold); }
+  .text-cyan { color: var(--cyan); }
+  .text-green { color: var(--green); }
+  .text-red { color: var(--red); }
+</style>
+</head>
+<body>
+
+<div id="presentation">
+  <div class="top-ui">
+    <div class="section-label" id="section-label">01 / INTRODUCTION</div>
+    <div class="progress-wrap">
+      <div class="progress-text" id="progress-text">01 / 21</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 1: Title Hook -->
+  <div class="slide active" data-section="01 / INTRODUCTION">
+    <div class="eyebrow">RISHIKESH YOGA ASHRAM &bull; DIGITAL GROWTH AUDIT</div>
+    <h1 class="big-heading" style="font-size:clamp(2.6rem, 4.4vw, 4.2rem); margin-bottom:12px;">
+      FROM WEBSITE AUDIT<br>TO <span class="text-gold">DIGITAL GROWTH</span>
+    </h1>
+    <p class="sub-heading" style="font-size:1.25rem; margin-bottom:28px;">
+      A high-stakes algorithmic investigation of <strong class="text-gold">rishikeshyogaashram.com</strong>: Where Google's search algorithms, student trust, and ashram revenue collide.
+    </p>
+
+    <div class="grid-3" style="margin-bottom:20px;">
+      <div class="card card-highlight-cyan">
+        <div style="font-size:11px; font-weight:800; color:var(--cyan); letter-spacing:0.1em; margin-bottom:6px;">LENS 1 &bull; THE STUDENT</div>
+        <h4 style="font-size:16px; margin-bottom:4px;">Can they trust the school in 3 seconds?</h4>
+        <p class="body-lg" style="font-size:13.5px;">Traveling 5,000 miles to Rishikesh is a major life decision. Does the mobile website give immediate clarity on courses, fees, and credibility?</p>
+      </div>
+      <div class="card card-highlight-gold">
+        <div style="font-size:11px; font-weight:800; color:var(--gold); letter-spacing:0.1em; margin-bottom:6px;">LENS 2 &bull; GOOGLE ALGORITHMS</div>
+        <h4 style="font-size:16px; margin-bottom:4px;">Are you triggering ranking penalties?</h4>
+        <p class="body-lg" style="font-size:13.5px;">Core Web Vitals, Intrusive Interstitials, and missing Course schemas actively suppress rankings and disqualify your site from rich search features.</p>
+      </div>
+      <div class="card card-highlight-green">
+        <div style="font-size:11px; font-weight:800; color:var(--green); letter-spacing:0.1em; margin-bottom:6px;">LENS 3 &bull; THE BUSINESS</div>
+        <h4 style="font-size:16px; margin-bottom:4px;">Does the funnel convert into admissions?</h4>
+        <p class="body-lg" style="font-size:13.5px;">Every checkout domain redirect, slow mobile render, and missed rich snippet bleeds direct student tuition to competing ashrams.</p>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER PERSPECTIVE</div>
+      <p>This isn't an academic SEO lecture. I prepared an actionable audit to protect your rankings from Google penalties and fill upcoming batches with international students.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: About Me -->
+  <div class="slide" data-section="01 / INTRODUCTION">
+    <div class="eyebrow">ABOUT SWASTIK AGNIHOTRI</div>
+    <h2 class="big-heading">ENGINEERING FOUNDATION.<br><span class="text-gold">DIGITAL GROWTH EXECUTION.</span></h2>
+    <p class="sub-heading">Why my approach to SEO is fundamentally different from a traditional marketing agency or keyword writer.</p>
+
+    <div class="grid-2">
+      <div class="card card-highlight-gold" style="justify-content:center;">
+        <div style="font-size:12px; font-weight:800; color:var(--gold); letter-spacing:0.1em; margin-bottom:14px;">THE CAPABILITY EVOLUTION</div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-family:var(--font-heading); font-weight:700;">
+          <div style="padding:10px 14px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between;">
+            <span>Software Development</span> <span style="color:var(--text-muted); font-size:12px; font-weight:400;">Code, DOM, Server Systems</span>
+          </div>
+          <div style="padding:10px 14px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between;">
+            <span>Site Reliability (SRE) & DevOps</span> <span style="color:var(--text-muted); font-size:12px; font-weight:400;">Speed, Network, Infrastructure</span>
+          </div>
+          <div style="padding:10px 14px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--gold); display:flex; justify-content:space-between;">
+            <span class="text-gold">SEO & Growth Strategy</span> <span style="color:var(--text-muted); font-size:12px; font-weight:400;">Search Intent, Entities, CRO</span>
+          </div>
+          <div style="padding:10px 14px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--green); display:flex; justify-content:space-between;">
+            <span class="text-green">AI & Workflow Automation</span> <span style="color:var(--text-muted); font-size:12px; font-weight:400;">Monitoring, Scrapers, Alerts</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card">
+          <h4 style="font-size:16px; color:var(--text-primary); margin-bottom:4px;">1. I speak your developer's language</h4>
+          <p class="body-lg" style="font-size:13.5px;">I write exact Schema JSON-LD, profile network bottlenecks in DevTools, and work alongside your developer as a technical peer without handoffs or confusion.</p>
+        </div>
+        <div class="card">
+          <h4 style="font-size:16px; color:var(--text-primary); margin-bottom:4px;">2. I understand Google's algorithmic penalties</h4>
+          <p class="body-lg" style="font-size:13.5px;">I don't just guess. I know the exact algorithmic triggers behind Page Experience penalties, mobile interstitials, and why search bots demote unoptimized sites.</p>
+        </div>
+        <div class="card">
+          <h4 style="font-size:16px; color:var(--text-primary); margin-bottom:4px;">3. I build automated growth loops</h4>
+          <p class="body-lg" style="font-size:13.5px;">Instead of manual weekly spreadsheets, I deploy automated rank monitors and anomaly detectors to protect your traffic before drops occur.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>You don't need another person who just forwards automated PDF reports. You need an engineering-minded partner who understands Google's underlying mechanics and fixes them with your team.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: The 3 Lenses of Growth -->
+  <div class="slide" data-section="01 / INTRODUCTION">
+    <div class="eyebrow">THE DIGITAL GROWTH FRAMEWORK</div>
+    <h2 class="big-heading">WHY TRADITIONAL SEO FAILS<br>WITHOUT <span class="text-gold">USER TRUST & CONVERSION</span></h2>
+    <p class="sub-heading">When any of these three pillars breaks, you lose students to rival ashrams across Rishikesh.</p>
+
+    <div class="grid-3">
+      <div class="card" style="border:1px solid rgba(85,199,232,0.3); background:linear-gradient(180deg, rgba(85,199,232,0.05) 0%, var(--surface) 100%);">
+        <div style="font-size:1.8rem; margin-bottom:8px;">🤖</div>
+        <h3 style="color:var(--cyan); font-size:18px; margin-bottom:8px;">1. GOOGLE</h3>
+        <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">DISCOVERABILITY & ENTITIES</div>
+        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
+          <li>&bull; Are courses recognized as accredited entities?</li>
+          <li>&bull; Are batch dates & fees machine-readable?</li>
+          <li>&bull; Can foreign students find you in German/Spanish?</li>
+          <li>&bull; Does mobile speed pass Core Web Vitals?</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border:1px solid rgba(255,255,255,0.2); background:linear-gradient(180deg, rgba(255,255,255,0.03) 0%, var(--surface) 100%);">
+        <div style="font-size:1.8rem; margin-bottom:8px;">🧘</div>
+        <h3 style="color:#fff; font-size:18px; margin-bottom:8px;">2. THE STUDENT</h3>
+        <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">PSYCHOLOGY & CONFIDENCE</div>
+        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
+          <li>&bull; Do they see real classrooms & alumni proof?</li>
+          <li>&bull; Can they read the syllabus without popup fatigue?</li>
+          <li>&bull; Do buttons allow easy one-thumb browsing?</li>
+          <li>&bull; Do they feel 100% secure booking from abroad?</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border:1px solid rgba(214,168,79,0.3); background:linear-gradient(180deg, rgba(214,168,79,0.05) 0%, var(--surface) 100%);">
+        <div style="font-size:1.8rem; margin-bottom:8px;">💼</div>
+        <h3 style="color:var(--gold); font-size:18px; margin-bottom:8px;">3. THE BUSINESS</h3>
+        <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">ADMISSIONS & REVENUE</div>
+        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
+          <li>&bull; Frictionless checkout & payment journey</li>
+          <li>&bull; Enquiries captured at peak decision intent</li>
+          <li>&bull; Predictable monthly student batch intake</li>
+          <li>&bull; Brand protection against phishing/spoofing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>Google brings the attention. The website builds the trust. The checkout captures the booking. If one breaks, SEO alone cannot grow the ashram.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: Methodology -->
+  <div class="slide" data-section="02 / INVESTIGATION">
+    <div class="eyebrow">AUDIT METHODOLOGY</div>
+    <h2 class="big-heading">I DIDN'T JUST RUN AN AUTOMATED TOOL.<br><span class="text-gold">I MANUALLY VERIFIED THE LIVE CODE.</span></h2>
+    <p class="sub-heading">Tools spit out hundreds of false alarms. Real engineering judgment connects technical anomalies to student behavior and Google algorithms.</p>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin:20px 0;">
+      <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 1</div>
+        <h4 style="font-size:15px; margin-bottom:3px;">DISCOVER</h4>
+        <p style="font-size:12px; color:var(--text-secondary);">Full site crawl of all URLs, assets, headers & internal links.</p>
+      </div>
+      <div style="color:var(--gold); font-size:18px;">&rarr;</div>
+      <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 2</div>
+        <h4 style="font-size:15px; margin-bottom:3px;">VERIFY</h4>
+        <p style="font-size:12px; color:var(--text-secondary);">Live DevTools inspection, mobile network profiling & packet audits.</p>
+      </div>
+      <div style="color:var(--gold); font-size:18px;">&rarr;</div>
+      <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 3</div>
+        <h4 style="font-size:15px; margin-bottom:3px;">UNDERSTAND</h4>
+        <p style="font-size:12px; color:var(--text-secondary);">Map user journey from a foreign student's perspective.</p>
+      </div>
+      <div style="color:var(--gold); font-size:18px;">&rarr;</div>
+      <div class="card" style="flex:1; text-align:center; padding:16px 12px; border-top:3px solid var(--gold);">
+        <div style="font-size:10.5px; font-weight:800; color:var(--gold); margin-bottom:4px;">PHASE 4</div>
+        <h4 style="font-size:15px; margin-bottom:3px;">PRIORITIZE</h4>
+        <p style="font-size:12px; color:var(--text-secondary);">Filter for revenue impact: P0 Critical vs P2 Polish.</p>
+      </div>
+      <div style="color:var(--gold); font-size:18px;">&rarr;</div>
+      <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--green); margin-bottom:4px;">PHASE 5</div>
+        <h4 style="font-size:15px; margin-bottom:3px;">MEASURE</h4>
+        <p style="font-size:12px; color:var(--text-secondary);">Verify before vs after via Search Console & Analytics.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background:rgba(214,168,79,0.04); border:1px solid rgba(214,168,79,0.2); padding:16px 20px;">
+      <h4 style="color:var(--gold); font-size:14px; margin-bottom:4px;">MY WORKING PRINCIPLE:</h4>
+      <p style="font-size:13.5px; color:var(--text-secondary);">An SEO scanner can tell you something is 'unusual'. It takes human empathy and business context to know if that issue actually triggers a Google penalty or stops a student from booking a $1,200 course.</p>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>I don't blindly forward automated checklists to your developer. I verify the root cause, translate it into plain business impact, and prioritize what moves the needle.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: Audit Scope -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">AUDIT OVERVIEW &bull; ALGORITHMIC THRESHOLDS</div>
+    <h2 class="big-heading">31 FINDINGS ACROSS 6 PILLARS.<br><span class="text-gold">HERE ARE THE 10 THAT TRIGGER GOOGLE PENALTIES.</span></h2>
+    <p class="sub-heading">Google's modern search algorithms don't just reward good content—they actively penalize friction, slow speeds, and misleading user journeys.</p>
+
+    <div class="grid-3" style="gap:14px; margin-bottom:16px;">
+      <div class="card" style="padding:14px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--gold); margin-bottom:3px;">01 &bull; ON-PAGE & CRO</div>
+        <h4 style="font-size:14px; margin-bottom:3px;">Information Architecture</h4>
+        <p style="font-size:12.5px; color:var(--text-secondary);">Text walls cause short-click bounces; RankBrain flags low intent satisfaction.</p>
+      </div>
+      <div class="card" style="padding:14px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:3px;">02 &bull; CONVERSION TRUST</div>
+        <h4 style="font-size:14px; margin-bottom:3px;">Checkout Trust Leaks</h4>
+        <p style="font-size:12.5px; color:var(--text-secondary);">Redirecting booking to another domain triggers commercial E-E-A-T trust drops.</p>
+      </div>
+      <div class="card" style="padding:14px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--red); margin-bottom:3px;">03 &bull; MOBILE PERFORMANCE</div>
+        <h4 style="font-size:14px; margin-bottom:3px;">Speed & Core Web Vitals</h4>
+        <p style="font-size:12.5px; color:var(--text-secondary);">5.4s LCP triggers Google's official Page Experience ranking demotion.</p>
+      </div>
+      <div class="card" style="padding:14px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:3px;">04 &bull; TECHNICAL SEO</div>
+        <h4 style="font-size:14px; margin-bottom:3px;">Course Schema Entities</h4>
+        <p style="font-size:12.5px; color:var(--text-secondary);">0 schemas; complete disqualification from Google Course Carousels & rich stars.</p>
+      </div>
+      <div class="card" style="padding:14px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--gold); margin-bottom:3px;">05 &bull; INTERNATIONAL SEO</div>
+        <h4 style="font-size:14px; margin-bottom:3px;">Language Discoverability</h4>
+        <p style="font-size:12.5px; color:var(--text-secondary);">JavaScript widget isn't indexed; 100% invisible on Google Germany/Spain.</p>
+      </div>
+      <div class="card" style="padding:14px;">
+        <div style="font-size:10.5px; font-weight:800; color:var(--green); margin-bottom:3px;">06 &bull; TECHNICAL HYGIENE</div>
+        <h4 style="font-size:14px; margin-bottom:3px;">Security & Reputation</h4>
+        <p style="font-size:12.5px; color:var(--text-secondary);">Missing DMARC policy allows domain spoofing, risking Gmail blacklisting.</p>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>I will not overwhelm you with 31 problems. Let's examine the 10 critical failure points that directly threaten your rankings, student bookings, and institutional revenue.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: Opp 01 - Homepage Comparison -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 01 &bull; FIRST IMPRESSION & CRO &bull; PRIORITY: HIGH (P0)</div>
+    <h2 class="big-heading">HOMEPAGE BURIES ESSENTIAL DETAILS:<br><span class="text-gold">TRIGGERING HIGH-BOUNCE ALGORITHMIC DEMOTION</span></h2>
+    <p class="sub-heading">Real smartphone comparison: Your mobile homepage vs the #1 ranking competitor in Rishikesh.</p>
+
+    <div class="grid-2" style="align-items:stretch;">
+      <div class="phone-comparison">
+        <div class="phone-wrap">
+          <div class="phone-label" style="background:var(--red-dim); color:var(--red); border:1px solid rgba(240,106,114,0.3);">YOUR WEBSITE (CLIENT)</div>
+          <div class="phone-mockup-frame" onclick="openZoomModal('client_mobile.jpg', 'Rishikesh Yoga Ashram Mobile: 6 paragraphs of history text before courses, floating buttons covering text, zero social proof above fold.')">
+            <img src="client_mobile.jpg" onerror="this.src='PHOTO-2026-10-01-20-26-27.jpg'" alt="Client Mobile">
+          </div>
+        </div>
+        <div class="phone-wrap">
+          <div class="phone-label" style="background:var(--green-dim); color:var(--green); border:1px solid rgba(88,197,138,0.3);">#1 COMPETITOR (VINYASA)</div>
+          <div class="phone-mockup-frame" onclick="openZoomModal('competitor_mobile.jpg', 'Top Competitor Mobile: Real classroom photo, 4 trust stats (10,000+ students, 15+ yrs, 4.8★), Yoga Alliance RYS 500 stamp, clean bottom bar.')">
+            <img src="competitor_mobile.jpg" onerror="this.src='PHOTO-2026-10-01-21-06-25.jpg'" alt="Competitor Mobile">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; justify-content:space-between; gap:10px;">
+        <div class="card card-highlight-red" style="padding:14px;">
+          <div style="font-size:11px; font-weight:800; color:var(--red); margin-bottom:2px;">❌ CURRENT MOBILE FIRST IMPRESSION</div>
+          <p class="body-lg" style="font-size:13px;">A foreign student lands looking for courses, dates & fees. They get 6 paragraphs of history before reaching course cards, with floating WhatsApp pills blocking the text.</p>
+        </div>
+        <div class="card card-highlight-green" style="padding:14px;">
+          <div style="font-size:11px; font-weight:800; color:var(--green); margin-bottom:2px;">✅ WHAT THE TOP COMPETITOR DOES IN 3 SECONDS</div>
+          <p class="body-lg" style="font-size:13px;">Classroom photo + 4 proof stats (10,000+ Students, 15+ Yrs, 4.8★) + Yoga Alliance RYS 500 badge in the first phone viewport.</p>
+        </div>
+
+        <!-- Algorithmic Risk Box -->
+        <div class="algo-box">
+          <div class="algo-header">
+            <span class="algo-badge">⚠️ GOOGLE ALGORITHMIC PENALTY RISK</span>
+            <span class="algo-system-name">RankBrain & Helpful Content System</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Detection Trigger:</strong> <em>Short-Click Bounce Rate (Pogo-Sticking)</em>. When foreign searchers land, see text walls, and bounce back to Google within 4 seconds, Google marks the page as <em>Unsatisfied Search Intent</em>.
+          </div>
+          <div class="algo-loss">
+            <strong>Business Impact:</strong> Algorithmic demotion from Page 1 (Top 3) to Page 2 (less than 3% click share). Forfeits <strong>$15,000–$30,000 (₹12L–₹25L) per batch</strong> in direct foreign tuition to rival ashrams.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>We don't remove your authentic spiritual writing—we simply bring course cards, batch dates, and trust credentials into the top 3 seconds, stopping high-bounce algorithmic demotion.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: Opp 02 - Cross-Domain Booking Leak -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 02 &bull; CONVERSION TRUST &bull; PRIORITY: CRITICAL (P0)</div>
+    <h2 class="big-heading">AT THE EXACT MOMENT OF PAYMENT:<br><span class="text-red">UNANNOUNCED EXTERNAL DOMAIN REDIRECT</span></h2>
+    <p class="sub-heading">Live finding: Clicking the primary "Booking" button redirects off `rishikeshyogaashram.com` to `gurukulyogashala.com`.</p>
+
+    <div class="grid-2">
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div class="browser-window">
+          <div class="browser-header">
+            <div class="browser-dots">
+              <div class="browser-dot" style="background:#ff5f56;"></div>
+              <div class="browser-dot" style="background:#ffbd2e;"></div>
+              <div class="browser-dot" style="background:#27c93f;"></div>
+            </div>
+            <div class="browser-url-bar text-cyan">https://rishikeshyogaashram.com/200-hour-yoga...</div>
+          </div>
+          <div style="padding:18px; background:var(--surface);">
+            <div style="font-size:14px; font-weight:700; margin-bottom:6px;">Student reads course syllabus & feels inspired...</div>
+            <div style="display:inline-block; padding:6px 16px; background:var(--gold); color:#000; font-weight:800; border-radius:6px; font-size:12px;">
+              [ BOOKING / ENROL NOW ]
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; color:var(--red); font-size:18px; font-weight:800;">
+          &darr; UNANNOUNCED BROWSER REDIRECT &darr;
+        </div>
+
+        <div class="browser-window" style="border:1px solid rgba(240,106,114,0.4);">
+          <div class="browser-header" style="background:rgba(240,106,114,0.1);">
+            <div class="browser-dots">
+              <div class="browser-dot" style="background:#ff5f56;"></div>
+              <div class="browser-dot" style="background:#ffbd2e;"></div>
+              <div class="browser-dot" style="background:#27c93f;"></div>
+            </div>
+            <div class="browser-url-bar text-red" style="font-weight:700;">https://gurukulyogashala.com/payment.php</div>
+          </div>
+          <div style="padding:16px; background:var(--surface);">
+            <div style="font-size:13px; color:var(--red); font-weight:700;">⚠️ STUDENT HESITATION TRIGGERED:</div>
+            <div style="font-size:12px; color:var(--text-secondary); margin-top:3px;">"Wait, why did the website name change? Am I paying the right school? Is this checkout safe?"</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card card-highlight-red" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--red);">The Worst Place for Uncertainty</h4>
+          <p class="body-lg" style="font-size:13px;">When an international student is about to transfer a $300–$500 deposit for a teacher training course, trust is fragile. An unfamiliar domain switch creates instant panic and cart abandonment.</p>
+        </div>
+
+        <!-- Algorithmic & Trust Penalty Box -->
+        <div class="algo-box">
+          <div class="algo-header">
+            <span class="algo-badge">⚠️ COMMERCIAL TRUST & E-E-A-T PENALTY</span>
+            <span class="algo-system-name">Google Quality Rater & SpamBrain Systems</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Detection Trigger:</strong> <em>Unannounced Third-Party Checkout Divert</em>. Google's commercial quality evaluators trace transaction flows. Diverting payment intent to an unverified external domain triggers high-risk merchant trust flags.
+          </div>
+          <div class="algo-loss">
+            <strong>Business Consequence:</strong> <strong>60%–70% checkout abandonment</strong>. When foreign students wire $500–$1,200, an abrupt URL switch causes instant fraud suspicion and abandoned bookings right at the finish line.
+          </div>
+        </div>
+
+        <div class="card card-highlight-gold" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--gold);">How I Would Fix It With Your Developer</h4>
+          <p class="body-lg" style="font-size:13px;">Unify the checkout experience under an on-brand subdomain or embed a secure on-site checkout on `rishikeshyogaashram.com` so the student never feels they have left your sanctuary.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>The visitor was 10 seconds away from becoming a paid student. Keeping the checkout journey seamless and on-brand directly protects your revenue.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: Opp 03 - Mobile Speed -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 03 &bull; PERFORMANCE & SEO &bull; PRIORITY: HIGH (P0)</div>
+    <h2 class="big-heading">MOBILE SPEED: 5.4s LOAD TIME<br><span class="text-red">TRIGGERS OFFICIAL GOOGLE RANKING DEMOTION</span></h2>
+    <p class="sub-heading">Real test data from Google PageSpeed Insights under simulated mobile network conditions.</p>
+
+    <div class="grid-2">
+      <div class="card" style="text-align:center; padding:28px; justify-content:center;">
+        <div style="font-size:7rem; font-weight:800; font-family:var(--font-heading); color:var(--red); line-height:0.9;">
+          54<span style="font-size:2.2rem; color:var(--text-muted);">/100</span>
+        </div>
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.12em; color:var(--red); margin-top:10px; text-transform:uppercase;">
+          Google Mobile Performance Score
+        </div>
+        <div style="margin-top:20px; display:flex; justify-content:space-around; border-top:1px solid var(--surface-border); padding-top:16px;">
+          <div>
+            <div style="font-size:11px; color:var(--text-muted);">LCP (MAIN CONTENT)</div>
+            <div style="font-size:1.8rem; font-weight:800; color:var(--red); font-family:var(--font-mono);">5.4s</div>
+            <div style="font-size:10px; color:var(--text-muted);">Target: &lt; 2.5s</div>
+          </div>
+          <div>
+            <div style="font-size:11px; color:var(--text-muted);">TBT (BLOCKING TIME)</div>
+            <div style="font-size:1.8rem; font-weight:800; color:var(--red); font-family:var(--font-mono);">730ms</div>
+            <div style="font-size:10px; color:var(--text-muted);">Target: &lt; 200ms</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card card-highlight-cyan" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--cyan);">The Real Student Experience</h4>
+          <p class="body-lg" style="font-size:13px;">Foreign students browse on international roaming, airport 4G, or hotel Wi-Fi. Staring at a blank loading screen for 5.4 seconds feels broken. Google data proves that <strong>53% of mobile visits are abandoned</strong> if a page takes over 3 seconds to render.</p>
+        </div>
+
+        <!-- Algorithmic Penalty Box -->
+        <div class="algo-box">
+          <div class="algo-header">
+            <span class="algo-badge">🚨 OFFICIAL GOOGLE RANKING DEMOTION</span>
+            <span class="algo-system-name">Page Experience & Core Web Vitals System</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Detection Trigger:</strong> <em>Failing LCP (>2.5s) & CrUX Field Data</em>. At 5.4s, Google officially classifies your mobile speed as <strong>"POOR"</strong>. Google's core ranking systems use this as an active demotion signal.
+          </div>
+          <div class="algo-loss">
+            <strong>Business Consequence:</strong> In competitive Rishikesh search queries, Google actively pushes sub-2-second competitor sites ahead of you, cutting your mobile student lead volume in half.
+          </div>
+        </div>
+
+        <div class="card card-highlight-green" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--green);">The Collaboration Plan</h4>
+          <p class="body-lg" style="font-size:13px;">We will optimize heavy image payloads, defer non-critical scripts, and fix video preload bottlenecks with your developer to push speed back into the green zone.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>Speed isn't just an engineering statistic. For an international student comparing three Rishikesh schools on a phone, speed is part of your first impression.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: Opp 04 - YouTube Preload Bloat -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 04 &bull; PERFORMANCE QUICK WIN &bull; PRIORITY: QUICK WIN (P1)</div>
+    <h2 class="big-heading">YOUTUBE LOADS 600KB+ OF HEAVY CODE<br><span class="text-gold">FREEZING THE PHONE'S MAIN THREAD FOR 730ms</span></h2>
+    <p class="sub-heading">Why the homepage is slow: Live network DevTools inspection reveals premature video iframe initialization.</p>
+
+    <div class="grid-2">
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card card-highlight-red" style="padding:14px;">
+          <div style="font-size:11px; font-weight:800; color:var(--red); margin-bottom:3px;">CURRENT BEHAVIOR (EAGER LOADING)</div>
+          <h4 style="font-size:15px; margin-bottom:3px;">Browser immediately downloads full YouTube player</h4>
+          <p class="body-lg" style="font-size:12.5px;">Even though review videos are far down the page and the visitor hasn't clicked Play, the phone immediately downloads hundreds of kilobytes of YouTube tracking scripts, fonts, and player modules.</p>
+        </div>
+
+        <div class="card card-highlight-green" style="padding:14px;">
+          <div style="font-size:11px; font-weight:800; color:var(--green); margin-bottom:3px;">BETTER APPROACH (FACADE / ON-DEMAND LOADING)</div>
+          <h4 style="font-size:15px; margin-bottom:3px;">Displays crisp, lightweight preview image (&lt;30KB)</h4>
+          <p class="body-lg" style="font-size:12.5px;">The heavy YouTube player code downloads ONLY when the student taps the play icon. Zero delay on initial mobile render; saves 1.5s mobile render time.</p>
+        </div>
+
+        <!-- Algorithmic Risk Box -->
+        <div class="algo-box">
+          <div class="algo-header">
+            <span class="algo-badge">⚠️ CORE WEB VITALS THRESHOLD FAILURE</span>
+            <span class="algo-system-name">Total Blocking Time (TBT) & INP Evaluation</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Detection Trigger:</strong> <em>Long-Task Main Thread Freezes (730ms)</em>. The phone's CPU locks executing unrequested third-party video tracking scripts, causing unresponsive mobile scrolling.
+          </div>
+          <div class="algo-loss">
+            <strong>Algorithmic Penalty:</strong> Degrades the domain's aggregate Core Web Vitals score in Search Console, leading to site-wide mobile ranking suppression.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="justify-content:center; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%); padding:28px;">
+        <h3 style="font-size:20px; color:var(--gold); margin-bottom:12px;">The Analogy:</h3>
+        <p class="body-lg" style="font-size:15px; line-height:1.6; margin-bottom:18px;">
+          <em>"It's like turning on the television and air conditioning in a hotel room before the guest has even checked in at the front desk."</em>
+        </p>
+        <div style="border-top:1px solid var(--surface-border); padding-top:14px;">
+          <h4 style="font-size:14px; color:var(--text-primary); margin-bottom:4px;">We Keep 100% of Video Reviews:</h4>
+          <p class="body-lg" style="font-size:12.5px;">Video reviews from past students are vital trust markers. We don't delete them—we simply load them on demand when requested.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>A simple technical optimization with your developer that immediately speeds up the website without losing a single piece of student proof.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: Opp 05 - Premature 2-Second Popup -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 05 &bull; USER CONVERSION TIMING &bull; PRIORITY: HIGH (P0)</div>
+    <h2 class="big-heading">THE 2-SECOND FULLSCREEN POPUP:<br><span class="text-gold">TRIGGERING GOOGLE'S INTRUSIVE INTERSTITIAL PENALTY</span></h2>
+    <p class="sub-heading">Live behavior: In a fresh incognito session, a fullscreen enquiry form covers the screen within 2 seconds of arrival.</p>
+
+    <div class="grid-2">
+      <div class="card card-highlight-red" style="text-align:center; padding:28px; justify-content:center;">
+        <div style="font-size:6.5rem; font-weight:800; font-family:var(--font-mono); color:var(--red); line-height:0.9;">
+          00:02
+        </div>
+        <div style="font-size:12px; font-weight:800; letter-spacing:0.12em; color:var(--text-muted); margin-top:14px; text-transform:uppercase;">
+          Seconds before fullscreen popup appears
+        </div>
+        <div style="margin-top:18px; padding:14px; background:rgba(240,106,114,0.1); border-radius:8px; border:1px solid rgba(240,106,114,0.2);">
+          <div style="font-size:12.5px; color:var(--red); font-weight:700;">Student Psychology at 2 Seconds:</div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:3px;">"I don't even know if you teach 200hr or 300hr yet. Why are you demanding my personal phone number?"</div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--text-primary);">The Natural Decision Journey</h4>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-top:6px; font-size:12px; color:var(--text-secondary);">
+            <div style="padding:5px 10px; background:var(--surface-light); border-radius:6px;">1. Land &rarr; Inspect ashram environment & credentials</div>
+            <div style="padding:5px 10px; background:var(--surface-light); border-radius:6px;">2. Read &rarr; Understand syllabus, teachers & dates</div>
+            <div style="padding:5px 10px; background:var(--surface-light); border-radius:6px;">3. Trust &rarr; Review student testimonials & accreditations</div>
+            <div style="padding:5px 10px; background:rgba(214,168,79,0.15); color:var(--gold); font-weight:700; border-radius:6px;">4. Enquire &rarr; Peak readiness to submit contact details</div>
+          </div>
+        </div>
+
+        <!-- Official Penalty Box -->
+        <div class="algo-box">
+          <div class="algo-header">
+            <span class="algo-badge">🚨 OFFICIAL GOOGLE SEARCH PENALTY</span>
+            <span class="algo-system-name">Google Intrusive Interstitials Penalty</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Official Google Policy:</strong> <em>"Pages that display a popup that covers the main content immediately after the user navigates from search results may not rank as highly."</em> Google's mobile crawler penalizes immediate full-viewport interstitials.
+          </div>
+          <div class="algo-loss">
+            <strong>Business Consequence:</strong> Direct suppression of mobile keyword rankings across the entire domain. Visitors get annoyed and bounce, losing the highest-intent organic leads.
+          </div>
+        </div>
+
+        <div class="card card-highlight-gold" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:3px; color:var(--gold);">How We Improve Lead Quality</h4>
+          <p class="body-lg" style="font-size:12.5px;">Trigger interactive lead modals after 45s of active syllabus reading or on exit intent. Generates serious, high-intent enquiries while keeping Google 100% happy.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>Lead generation is about timing. Build trust first, show the value, and the prospective student will gladly share their details without triggering Google's interstitial penalty.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: Opp 06 - Aerial Yoga URL Typo -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 06 &bull; STRUCTURAL RELEVANCE &bull; PRIORITY: QUICK POLISH (P2)</div>
+    <h2 class="big-heading">ATTENTION TO DETAIL IN SEARCH:<br><span class="text-gold">URL SLUG TYPO (`/Arial-yoga.php`)</span></h2>
+    <p class="sub-heading">Live audit observation: Under the "Short Courses" navigation, the Aerial Yoga Teacher Training course has a structural URL typo.</p>
+
+    <div class="grid-2">
+      <div class="card card-highlight-cyan" style="justify-content:center; text-align:center; padding:28px;">
+        <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:10px;">COURSE TITLE ON WEBSITE</div>
+        <div style="font-size:2rem; font-weight:800; color:var(--text-primary); margin-bottom:16px;">Aerial Yoga</div>
+        <div style="font-size:20px; color:var(--text-muted);">&darr; LIVE LINK IN NAVIGATION &darr;</div>
+        <div style="margin-top:16px; font-family:var(--font-mono); font-size:1.5rem; color:var(--red); background:rgba(240,106,114,0.15); padding:10px 18px; border-radius:8px; border:1px solid rgba(240,106,114,0.3);">
+          /Arial-yoga.php
+        </div>
+        <div style="margin-top:14px; font-size:13px; font-weight:700; color:var(--gold);">"Arial" (Computer Font) &ne; "Aerial" (Yoga Practice)</div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--text-primary);">Why URL Architecture Matters to Google</h4>
+          <p class="body-lg" style="font-size:13px;">Google matches search queries to web address keywords. When an international student searches for <em>"Aerial Yoga teacher training in Rishikesh"</em>, having clean, exact keyword matching in the URL slug signals 100% topical relevance.</p>
+        </div>
+
+        <!-- Algorithmic Risk Box -->
+        <div class="algo-box">
+          <div class="algo-header">
+            <span class="algo-badge">⚠️ TOPICAL RELEVANCE & ENTITY MISMATCH</span>
+            <span class="algo-system-name">Query-to-URL Alignment Algorithm</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Detection Trigger:</strong> <em>Semantic Disconnect</em>. The URL matches the computer font "Arial" rather than the sport "Aerial". Google's NLP models cannot establish high-confidence topical authority for the query <em>"Aerial Yoga Rishikesh"</em>.
+          </div>
+          <div class="algo-loss">
+            <strong>Business Consequence:</strong> Surrendering position #1 to competitors with clean slugs, completely forfeiting high-margin specialized course bookings ($1,500+ per student).
+          </div>
+        </div>
+
+        <div class="card card-highlight-green" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--green);">The Safe 2-Minute Fix</h4>
+          <p class="body-lg" style="font-size:13px;">Create `/aerial-yoga-teacher-training.php` and deploy a permanent 301 redirect. Zero broken links; flawless keyword relevance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>I don't present this as a catastrophe. I show it because thorough SEO means caring about the fine details that reinforce overall domain quality.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: Opp 07 - Course Schema & Entities (THE CORE FIX) -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 07 &bull; TECHNICAL SEO & ENTITIES &bull; PRIORITY: CRITICAL (P0)</div>
+    <h2 class="big-heading">GOOGLE SEES A BLOG POST.<br><span class="text-gold">WE SELL A $1,200 ACCREDITED COURSE.</span></h2>
+    <p class="sub-heading">How search engines currently evaluate `rishikeshyogaashram.com` vs how we make your courses dominate Google Search.</p>
+
+    <div class="grid-2" style="align-items:stretch;">
+      <!-- Current State -->
+      <div class="card card-highlight-red" style="padding:18px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <span style="font-size:11px; font-weight:800; color:var(--red);">CURRENT REALITY (TESTED ON LIVE URL)</span>
+          <span class="serp-badge serp-badge-warn">0 Schemas Detected</span>
+        </div>
+        
+        <div class="serp-card" style="margin-bottom:12px;">
+          <div class="serp-url">https://rishikeshyogaashram.com › 200-hour-yoga-teacher-training</div>
+          <div class="serp-title">200 Hour Yoga Teacher Training in Rishikesh - Rishikesh Yoga Ashram</div>
+          <div class="serp-snippet">Join our 200 hour yoga teacher training course in Rishikesh. Learn authentic hatha and ashtanga yoga in the foothills of Himalayas with experienced masters...</div>
+          <div class="serp-badges">
+            <span class="serp-badge serp-badge-warn">Plain WebPage</span>
+            <span class="serp-badge serp-badge-warn">No Star Ratings</span>
+            <span class="serp-badge serp-badge-warn">No Pricing</span>
+            <span class="serp-badge serp-badge-warn">No Batch Dates</span>
+          </div>
+        </div>
+
+        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.45;">
+          <strong>Why this hurts the business:</strong> Google's crawler only reads unstructured English paragraphs. It doesn't know this is an official course product with certification, specific batch dates, and tuition.
+        </div>
+      </div>
+
+      <!-- Optimized State -->
+      <div class="card card-highlight-green" style="padding:18px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <span style="font-size:11px; font-weight:800; color:var(--green);">THE OPPORTUNITY (STRUCTURED COURSE ENTITY)</span>
+          <span class="serp-badge serp-badge-good">@type: Course JSON-LD</span>
+        </div>
+
+        <div class="serp-card" style="margin-bottom:12px; border-color:rgba(88,197,138,0.4);">
+          <div class="serp-url">https://rishikeshyogaashram.com › courses › 200-hour-yttc</div>
+          <div class="serp-title">200-Hour Yoga Teacher Training Rishikesh | Yoga Alliance RYS 200</div>
+          <div class="serp-stars">⭐⭐⭐⭐⭐ 4.9 <span style="color:#bdc1c6; font-weight:normal;">(128 reviews) · Course · 28 Days · $1,200</span></div>
+          <div class="serp-snippet">Official Yoga Alliance certified 200-hour TTC. Next batches start Nov 1 & Dec 1, 2026. Includes private accommodation, 3 Ayurvedic meals daily & full certification.</div>
+          <div class="serp-badges">
+            <span class="serp-badge serp-badge-good">Verified Course Entity</span>
+            <span class="serp-badge serp-badge-good">Rich Star Snippets</span>
+            <span class="serp-badge serp-badge-gold">Batch Dates Highlighted</span>
+            <span class="serp-badge serp-badge-good">Yoga Alliance RYS 200</span>
+          </div>
+        </div>
+
+        <div style="font-size:12.5px; color:var(--text-secondary); line-height:1.45;">
+          <strong>Why international students click this:</strong> Foreign students searching on Google from Germany or the US immediately see reviews, dates, and accreditations. <strong>Rich snippets deliver 35%+ higher click-through rates.</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Algorithmic Disqualification Penalty Box -->
+    <div class="algo-box" style="margin-top:10px;">
+      <div class="algo-header">
+        <span class="algo-badge">🚨 COMPLETE DISQUALIFICATION FROM RICH RESULTS</span>
+        <span class="algo-system-name">Google Knowledge Graph & Course Entity System</span>
+      </div>
+      <div class="algo-trigger">
+        <strong>Algorithmic Mechanism:</strong> Google requires valid <code>@type: Course</code> JSON-LD schemas to identify accredited educational offerings. With 0 schemas detected, Google disqualifies your site from Google Course Carousels, Knowledge Panels, and rich snippet enhancements.
+      </div>
+      <div class="algo-loss">
+        <strong>Revenue Impact:</strong> Competitors featuring review stars, pricing, and batch dates capture <strong>35%–45% higher click-through rates</strong>. Rishikesh Yoga Ashram remains an invisible flat blue link, bleeding organic admissions.
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>A web page explains your course to a human reader. Structured Course Schema explains your course to Google. Right now, Google has to guess what we're selling—and that costs us search visibility.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: Opp 08 - International Language Discovery -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 08 &bull; GLOBAL SEARCH &bull; PRIORITY: HIGH (P0)</div>
+    <h2 class="big-heading">INTERNATIONAL STUDENTS SEARCH IN GERMAN & SPANISH.<br><span class="text-gold">A BROWSER WIDGET IS INVISIBLE TO GOOGLE.</span></h2>
+    <p class="sub-heading">Why your website is currently missing out on non-English European and Latin American search volume.</p>
+
+    <div class="grid-2">
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card card-highlight-red" style="padding:14px;">
+          <div style="font-size:11px; font-weight:800; color:var(--red); margin-bottom:3px;">HOW THE WEBSITE CURRENTLY HANDLES LANGUAGE</div>
+          <h4 style="font-size:15px; margin-bottom:4px;">Client-Side Google Translate Dropdown Widget</h4>
+          <p class="body-lg" style="font-size:12.5px;">If a German student lands on your English page, they can click the dropdown to translate text on their screen. But Google's search crawlers <strong>do not click widgets</strong>. There are no indexable German URLs (`/de/` or `hreflang` tags).</p>
+        </div>
+
+        <div class="card card-highlight-green" style="padding:14px;">
+          <div style="font-size:11px; font-weight:800; color:var(--green); margin-bottom:3px;">HOW INTERNATIONAL SEO ACTUALLY WORKS</div>
+          <h4 style="font-size:15px; margin-bottom:4px;">Dedicated Indexable Language Architecture</h4>
+          <p class="body-lg" style="font-size:12.5px;">When someone in Munich searches on Google.de for <em>"200 Stunden Yogalehrerausbildung Rishikesh"</em>, Google looks for indexable German pages. By creating discoverable language paths, we open up direct search visibility in Germany, France, and Spain.</p>
+        </div>
+
+        <!-- Algorithmic Invisibility Box -->
+        <div class="algo-box">
+          <div class="algo-header">
+            <span class="algo-badge">🚨 COMPLETE LOCAL SEARCH INVISIBILITY</span>
+            <span class="algo-system-name">Google Multilingual Hreflang & Regional Indexing</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Algorithmic Mechanism:</strong> Googlebot does not interact with client-side JavaScript translation widgets. Google creates ZERO indexed pages for German, French, or Spanish search terms.
+          </div>
+          <div class="algo-loss">
+            <strong>Business Consequence:</strong> Total exclusion on European search engines (Google.de, Google.es, Google.fr). German students searching <em>"Yogalehrerausbildung Rishikesh"</em> will NEVER see your ashram, forfeiting hundreds of thousands of Euros in foreign tuition.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="justify-content:center; padding:24px; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%);">
+        <h4 style="font-size:15px; color:var(--gold); margin-bottom:10px; text-transform:uppercase; letter-spacing:0.08em;">The Ashram's Primary Market</h4>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-family:var(--font-heading); font-weight:700; margin-bottom:16px;">
+          <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇩🇪 GERMANY & AUSTRIA</div>
+          <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇫🇷 FRANCE & BELGIUM</div>
+          <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇪🇸 SPAIN & LATAM</div>
+          <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇯🇵 JAPAN & ASIA</div>
+        </div>
+        <p class="body-lg" style="font-size:12.5px;">International students pay full tuition in foreign currency and stay for full 28-day immersions. Structuring international search turns your website into a global student magnet.</p>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>A widget translates for people who already found you. International SEO helps people find you who are searching natively in their home country.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: Opp 09 - Mobile UI Collisions -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 09 &bull; MOBILE USABILITY &bull; PRIORITY: QUICK WIN (P1)</div>
+    <h2 class="big-heading">MOBILE TOUCH FRICTION:<br><span class="text-gold">FLOATING BUTTONS FIGHTING OVER TEXT</span></h2>
+    <p class="sub-heading">Live finding: The floating green WhatsApp icon and red 'Enquire Now' pill collide on smartphone screens.</p>
+
+    <div class="grid-2">
+      <div class="card" style="padding:22px; justify-content:center; background:#11141a; position:relative; overflow:hidden;">
+        <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:12px;">PHYSICAL PHONE SCREEN VIEWPORT</div>
+        <div style="padding:16px; background:#1a1e27; border-radius:10px; border:1px solid rgba(255,255,255,0.08); position:relative; min-height:180px;">
+          <p style="font-size:13px; color:var(--text-secondary); line-height:1.55;">
+            "...authentic spiritual discipline taught by masters in Rishikesh. Prospective teachers should come to the town to undergo full immersion in Hatha and Ashtanga..."
+          </p>
+          <!-- Floating button collision simulation -->
+          <div style="position:absolute; bottom:12px; right:12px; display:flex; flex-direction:column; align-items:flex-end; gap:6px;">
+            <div style="background:#25D366; color:#fff; font-size:11px; font-weight:bold; padding:8px 14px; border-radius:100px; box-shadow:0 6px 12px rgba(0,0,0,0.5);">
+              WhatsApp
+            </div>
+            <div style="background:var(--red); color:#fff; font-size:11px; font-weight:bold; padding:7px 14px; border-radius:100px; box-shadow:0 6px 12px rgba(0,0,0,0.5); transform:translateY(-6px);">
+              Enquire Now
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:10px; font-size:11.5px; color:var(--red); font-weight:700;">
+          ⚠️ Text beneath buttons is obstructed; accidental misclicks occur during scrolling.
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card card-highlight-gold" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--gold);">The One-Thumb Mobile Reality</h4>
+          <p class="body-lg" style="font-size:12.5px;">Over 75% of your mobile traffic holds their phone with one hand on a couch or train. When floating action buttons block syllabus text or trigger accidental taps, it causes subtle but real user frustration.</p>
+        </div>
+
+        <!-- Search Console Usability Penalty Box -->
+        <div class="algo-box">
+          <div class="algo-header">
+            <span class="algo-badge">⚠️ GOOGLE SEARCH CONSOLE USABILITY VIOLATION</span>
+            <span class="algo-system-name">Mobile-First Usability & Tap Target Guidelines</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Detection Trigger:</strong> <em>Clickable Elements Too Close Together (<48px separation)</em>. Googlebot's mobile rendering engine flags overlapping buttons, issuing automated warnings in Search Console and degrading mobile page experience ranking factors.
+          </div>
+          <div class="algo-loss">
+            <strong>Business Consequence:</strong> Physical thumb friction leads to misclicks and high bounce rates, reducing mobile lead submission rates by 20–30%.
+          </div>
+        </div>
+
+        <div class="card card-highlight-green" style="padding:14px;">
+          <h4 style="font-size:15px; margin-bottom:4px; color:var(--green);">The Elegant Solution: Pinned Conversion Bar</h4>
+          <p class="body-lg" style="font-size:12.5px;">Replace floating collision pills with a clean, pinned bottom conversion bar: <code>[ Send Enquiry ] | [ WhatsApp ]</code> docked cleanly at the base of the screen. Zero text obstruction, perfect Google tap-target compliance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>Mobile optimization isn't just whether the site technically loads on a phone. It's whether the student can comfortably read and enquire with zero physical annoyance.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: Opp 10 - Technical Hygiene & Email Spoofing -->
+  <div class="slide" data-section="03 / AUDIT FINDINGS">
+    <div class="eyebrow">OPPORTUNITY 10 &bull; TECHNICAL HYGIENE & TRUST &bull; PRIORITY: RELIABILITY (P1)</div>
+    <h2 class="big-heading">NOT EVERY PROBLEM IS SEO:<br><span class="text-gold">BACKEND HYGIENE & BRAND PROTECTION</span></h2>
+    <p class="sub-heading">Going deeper than surface keywords: Protecting the ashram's institutional reputation and email security.</p>
+
+    <div class="grid-2">
+      <div class="card card-highlight-gold" style="padding:18px;">
+        <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:4px;">FINDING A &bull; EMAIL AUTHENTICATION (DMARC)</div>
+        <h4 style="font-size:15px; margin-bottom:6px;">Domain email policy has no spoofing enforcement (`p=none`)</h4>
+        <p class="body-lg" style="font-size:12.5px; margin-bottom:10px;">When a student wires course fees, email imposters can forge emails pretending to be <code>admissions@rishikeshyogaashram.com</code>. Closing this gap protects your students from payment fraud.</p>
+        <div style="font-family:var(--font-mono); font-size:10.5px; background:var(--surface-light); padding:7px; border-radius:6px; color:var(--text-secondary);">
+          DNS Status: DMARC record exists but lacks strict quarantine/reject flags.
+        </div>
+
+        <!-- Phishing Blacklist Penalty Box -->
+        <div class="algo-box" style="margin-top:10px;">
+          <div class="algo-header">
+            <span class="algo-badge">🚨 REPUTATION BLACKLIST & PHISHING RISK</span>
+            <span class="algo-system-name">Google Safe Browsing & SpamBrain Email Defense</span>
+          </div>
+          <div class="algo-trigger">
+            <strong>Vulnerability:</strong> <em>Unenforced DMARC Policy (`p=none`)</em> allows attackers to send forged emails claiming to be <code>admissions@rishikeshyogaashram.com</code>. If attackers spoof deposit invoices, Gmail & Yahoo blacklist the domain.
+          </div>
+          <div class="algo-loss">
+            <strong>Business Catastrophe:</strong> Genuine student acceptance emails land in Spam, foreign students lose confidence, and wire fraud causes irreparable brand damage.
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-highlight-cyan" style="padding:18px;">
+        <div style="font-size:11px; font-weight:800; color:var(--cyan); margin-bottom:4px;">FINDING B &bull; SERVER HEADER EXPOSURE</div>
+        <h4 style="font-size:15px; margin-bottom:6px;">Server response headers advertise exact backend software versions</h4>
+        <p class="body-lg" style="font-size:12.5px; margin-bottom:10px;">Public HTTP response headers broadcast the exact server software and PHP versions to automated network scanners. Suppressing these headers is a standard DevSecOps hygiene practice.</p>
+        <div style="font-family:var(--font-mono); font-size:10.5px; background:var(--surface-light); padding:7px; border-radius:6px; color:var(--text-secondary); margin-bottom:14px;">
+          Response Header: X-Powered-By & Server banner publicly visible in curl audits.
+        </div>
+        <div class="card" style="background:var(--surface-light); padding:12px;">
+          <h4 style="font-size:13.5px; color:var(--text-primary); margin-bottom:4px;">Why Swastik Looks at This:</h4>
+          <p class="body-lg" style="font-size:12px;">Traditional SEO agencies stop at blog posts. With an engineering and reliability background, I ensure the entire server infrastructure underneath your marketing is clean, professional, and secure.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>I don't claim these are Google ranking factors. I present them because an engineering mindset looks after the entire digital asset—from search rankings down to security and institutional trust.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 16: Execution Plan -->
+  <div class="slide" data-section="04 / EXECUTION PLAN">
+    <div class="eyebrow">ROADMAP &bull; 30-60-90 DAYS</div>
+    <h2 class="big-heading">IF I JOIN NAVAVYUH:<br><span class="text-gold">HOW I WILL EXECUTE STEP-BY-STEP</span></h2>
+    <p class="sub-heading">A disciplined execution framework that delivers early quick wins while building long-term growth systems.</p>
+
+    <div class="grid-3" style="gap:16px;">
+      <div class="card card-highlight-cyan">
+        <div style="font-size:11px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 1 &bull; DAYS 1 TO 15</div>
+        <h4 style="font-size:17px; margin-bottom:6px;">Baseline & Setup</h4>
+        <ul style="list-style:none; font-size:12.5px; color:var(--text-secondary); line-height:1.65;">
+          <li>&bull; Connect Google Search Console & GA4 audit</li>
+          <li>&bull; Set up conversion tracking on all booking buttons</li>
+          <li>&bull; Benchmark top 5 competitor keyword rankings</li>
+          <li>&bull; Map all existing URL redirects & indexation status</li>
+        </ul>
+      </div>
+
+      <div class="card card-highlight-gold">
+        <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:4px;">PHASE 2 &bull; DAYS 15 TO 45</div>
+        <h4 style="font-size:17px; margin-bottom:6px;">Core Fixes With Dev</h4>
+        <ul style="list-style:none; font-size:12.5px; color:var(--text-secondary); line-height:1.65;">
+          <li>&bull; Deploy JSON-LD Course Schemas for all TTC programs</li>
+          <li>&bull; Implement YouTube thumbnail facade loading</li>
+          <li>&bull; Unify the booking journey on-brand</li>
+          <li>&bull; Resolve mobile button overlap & popup timing</li>
+        </ul>
+      </div>
+
+      <div class="card card-highlight-green">
+        <div style="font-size:11px; font-weight:800; color:var(--green); margin-bottom:4px;">PHASE 3 &bull; DAYS 45 TO 90</div>
+        <h4 style="font-size:17px; margin-bottom:6px;">Scale & Automate</h4>
+        <ul style="list-style:none; font-size:12.5px; color:var(--text-secondary); line-height:1.65;">
+          <li>&bull; Build indexable international paths (German/Spanish)</li>
+          <li>&bull; Create high-intent landing pages for upcoming batches</li>
+          <li>&bull; Deploy automated rank tracking & anomaly alerts</li>
+          <li>&bull; Establish weekly executive conversion dashboard</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>We don't create endless debate. We establish a verified baseline, execute high-impact fixes with your developer, and build automated systems that compound month after month.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 17: Developer Collaboration -->
+  <div class="slide" data-section="04 / EXECUTION PLAN">
+    <div class="eyebrow">TEAM DYNAMICS &bull; HOW WE WORK</div>
+    <h2 class="big-heading">I DON'T REPLACE YOUR DEVELOPER.<br><span class="text-gold">I MAKE YOUR DEVELOPER MORE EFFECTIVE.</span></h2>
+    <p class="sub-heading">A clear, collaborative partnership that eliminates technical friction and accelerates execution.</p>
+
+    <div class="grid-2">
+      <div class="card" style="border-top:4px solid var(--cyan); background:var(--surface);">
+        <div style="font-size:11px; font-weight:800; color:var(--cyan); margin-bottom:6px;">YOUR DEVELOPER'S FOCUS</div>
+        <h3 style="font-size:20px; margin-bottom:10px;">"HOW DO WE BUILD IT?"</h3>
+        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.75;">
+          <li>&bull; Manages production codebase & hosting infrastructure</li>
+          <li>&bull; Builds custom website features & design templates</li>
+          <li>&bull; Handles database security, PHP scripts & deployments</li>
+          <li>&bull; Ensures website stability and uptime</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-top:4px solid var(--gold); background:var(--surface);">
+        <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:6px;">MY FOCUS AS SEO & GROWTH</div>
+        <h3 style="font-size:20px; margin-bottom:10px;">"WHAT SHOULD WE BUILD & WHY?"</h3>
+        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.75;">
+          <li>&bull; Identifies high-impact opportunities from live search data</li>
+          <li>&bull; Supplies exact Schema code, redirect maps & specs</li>
+          <li>&bull; Prioritizes tasks by revenue so developer time isn't wasted</li>
+          <li>&bull; Verifies that technical fixes actually moved Google rankings</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>I speak developer language. You won't have to play translator between marketing and tech. We work as peers to move faster and grow student enrollments.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 18: What I Bring -->
+  <div class="slide" data-section="05 / DIFFERENTIATION">
+    <div class="eyebrow">VALUE PROPOSITION</div>
+    <h2 class="big-heading">THE TRIAD OF DIGITAL GROWTH:<br><span class="text-gold">SEO &bull; ENGINEERING &bull; AUTOMATION</span></h2>
+    <p class="sub-heading">Why hiring someone who bridges all three areas creates an unfair advantage for Rishikesh Yoga Ashram.</p>
+
+    <div class="grid-3">
+      <div class="card card-highlight-gold">
+        <div style="font-size:1.6rem; margin-bottom:6px;">🎯</div>
+        <h3 style="font-size:18px; color:var(--gold); margin-bottom:6px;">1. SEO & SEARCH</h3>
+        <p class="body-lg" style="font-size:12.5px; line-height:1.65;">
+          Search intent research, competitor keyword gaps, entity structuring, content relevance, Google Search Console audits, and SERP feature optimization.
+        </p>
+      </div>
+
+      <div class="card card-highlight-cyan">
+        <div style="font-size:1.6rem; margin-bottom:6px;">⚙️</div>
+        <h3 style="font-size:18px; color:var(--cyan); margin-bottom:6px;">2. ENGINEERING</h3>
+        <p class="body-lg" style="font-size:12.5px; line-height:1.65;">
+          Network waterfall analysis, Core Web Vitals optimization, server header hygiene, Schema JSON-LD generation, DOM architecture, and peer developer collaboration.
+        </p>
+      </div>
+
+      <div class="card card-highlight-green">
+        <div style="font-size:1.6rem; margin-bottom:6px;">⚡</div>
+        <h3 style="font-size:18px; color:var(--green); margin-bottom:6px;">3. AI & AUTOMATION</h3>
+        <p class="body-lg" style="font-size:12.5px; line-height:1.65;">
+          Automated keyword tracking, SERP scrapers, early anomaly detection alerts, workflow automation, and transforming manual weekly tasks into scalable software.
+        </p>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>Most SEOs only understand keywords. Most developers only build code. I connect the code to Google and Google to your business.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 19: The 6 Systems -->
+  <div class="slide" data-section="05 / DIFFERENTIATION">
+    <div class="eyebrow">PROOF OF CAPABILITY &bull; SYSTEMS BUILT</div>
+    <h2 class="big-heading">I DON'T JUST TALK ABOUT SYSTEMS.<br><span class="text-gold">I HAVE ACTUALLY BUILT THEM.</span></h2>
+    <p class="sub-heading">These are not random side projects. They represent different stages of the exact digital-growth loop I will apply to your ashram.</p>
+
+    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:14px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
+        <div><strong style="color:var(--cyan); font-size:13.5px;">1. CrawlMindAI (Research)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Crawls search intent and maps high-value keyword clusters</span></div>
+        <span class="interactive-pill">DISCOVER</span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
+        <div><strong style="color:var(--cyan); font-size:13.5px;">2. SearchFoundry (Create)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Structures entity-driven content blueprints matching Google schemas</span></div>
+        <span class="interactive-pill">STRUCTURE</span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--gold);">
+        <div><strong style="color:var(--gold); font-size:13.5px;">3. RankTracker (Measure)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Monitors daily keyword movement across different international countries</span></div>
+        <span class="interactive-pill">TRACK</span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--red);">
+        <div><strong style="color:var(--red); font-size:13.5px;">4. TrafficSentinel (Detect)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Catches sudden search drops and indexation anomalies before they hurt revenue</span></div>
+        <span class="interactive-pill">ALERT</span>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--green);">
+        <div><strong style="color:var(--green); font-size:13.5px;">5. OmniGrowth (Automate)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Automates reporting and marketing workflows without manual busywork</span></div>
+        <span class="interactive-pill">SCALE</span>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>When a process is repetitive or data-heavy, I automate it. This frees up our time to focus on strategic content, student trust, and scaling admissions.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 20: Why Hire Me -->
+  <div class="slide" data-section="05 / DIFFERENTIATION">
+    <div class="eyebrow">SUMMARY FOR THE FOUNDER</div>
+    <h2 class="big-heading">WHY HIRE SWASTIK?<br><span class="text-gold">WHAT I TAKE FULL OWNERSHIP OF.</span></h2>
+    <p class="sub-heading">Four clear differentiators that make this partnership high-impact from Day 1.</p>
+
+    <div class="grid-2">
+      <div class="card card-highlight-gold" style="padding:16px;">
+        <h4 style="font-size:16px; margin-bottom:4px; color:var(--gold);">1. I Own the Entire SEO Problem</h4>
+        <p class="body-lg" style="font-size:13px; line-height:1.55;">I don't wait for tasks to be assigned. I independently crawl the site, analyze Search Console queries, benchmark competitors, and deliver prioritized solutions that directly protect rankings and fill courses.</p>
+      </div>
+
+      <div class="card card-highlight-cyan" style="padding:16px;">
+        <h4 style="font-size:16px; margin-bottom:4px; color:var(--cyan);">2. Deep Technical Competence</h4>
+        <p class="body-lg" style="font-size:13px; line-height:1.55;">I understand website architecture, network performance, and JSON-LD schemas. I write the technical specifications so your existing developer can implement changes without friction or confusion.</p>
+      </div>
+
+      <div class="card card-highlight-green" style="padding:16px;">
+        <h4 style="font-size:16px; margin-bottom:4px; color:var(--green);">3. Business & Revenue-First Mindset</h4>
+        <p class="body-lg" style="font-size:13px; line-height:1.55;">I judge success by full student batches and revenue, not vanity impressions. If a technical issue stops a student from booking a $1,200 course, fixing it takes priority over writing another blog post.</p>
+      </div>
+
+      <div class="card card-highlight-red" style="padding:16px;">
+        <h4 style="font-size:16px; margin-bottom:4px; color:var(--red);">4. Systems & Automation Focus</h4>
+        <p class="body-lg" style="font-size:13px; line-height:1.55;">I replace repetitive manual reporting with automated monitoring loops. We gain clear visibility into rankings and traffic without spending 10 hours a week creating manual Excel spreadsheets.</p>
+      </div>
+    </div>
+
+    <div class="founder-takeaway">
+      <div class="founder-takeaway-badge">FOUNDER TAKEAWAY</div>
+      <p>You get an SEO specialist who thinks like an engineer, acts like a partner, and is obsessed with filling your courses with students.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 21: Closing Vision -->
+  <div class="slide" data-section="06 / CLOSING" style="justify-content:center; text-align:center;">
+    <div class="eyebrow" style="justify-content:center;">THE CLOSING VISION</div>
+    <h2 class="big-heading" style="font-size:clamp(2.4rem, 3.8vw, 3.6rem); margin-bottom:18px;">
+      "I DON'T JUST WANT TO REPORT WHAT HAPPENED.<br>
+      <span class="text-gold">I WANT TO HELP BUILD THE SYSTEM<br>THAT CONTINUOUSLY IMPROVES IT."</span>
+    </h2>
+
+    <div style="display:flex; justify-content:center; gap:16px; margin:28px 0; font-family:var(--font-heading); font-size:1.2rem; font-weight:800;">
+      <span style="color:var(--text-muted);">DISCOVER</span> <span style="color:var(--gold);">&rarr;</span>
+      <span style="color:var(--text-muted);">OPTIMIZE</span> <span style="color:var(--gold);">&rarr;</span>
+      <span style="color:var(--text-muted);">MEASURE</span> <span style="color:var(--gold);">&rarr;</span>
+      <span style="color:var(--text-muted);">AUTOMATE</span> <span style="color:var(--gold);">&rarr;</span>
+      <span class="text-gold">GROW</span>
+    </div>
+
+    <p class="body-lg" style="max-width:700px; margin:0 auto 32px; font-size:16px;">
+      Thank you for your time and for sharing your vision for Rishikesh Yoga Ashram. I would love to answer your questions or discuss any of these growth opportunities in detail.
+    </p>
+
+    <div style="font-family:var(--font-heading); font-size:14px; font-weight:700; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.1em;">
+      SWASTIK AGNIHOTRI &bull; SEO EXECUTIVE / DIGITAL GROWTH
+    </div>
+  </div>
+
+  <!-- Navigation controls -->
+  <div class="key-hint">
+    <span>[ &larr; / &rarr; ] NAVIGATE</span>
+    <span>[ F ] FULLSCREEN</span>
+    <span>[ E ] EVIDENCE</span>
+  </div>
+
+  <div class="bottom-nav">
+    <div class="nav-btn" onclick="previousSlide()" title="Previous slide">&larr;</div>
+    <div class="nav-btn" onclick="nextSlide()" title="Next slide">&rarr;</div>
+  </div>
+</div>
+
+<!-- Image Zoom Modal -->
+<div id="img-modal" onclick="closeZoomModal()">
+  <img id="modal-img" src="" alt="Zoomed Screenshot">
+  <div class="modal-caption" id="modal-caption"></div>
+  <div style="margin-top:10px; font-size:11px; color:rgba(255,255,255,0.4); font-family:var(--font-mono);">CLICK ANYWHERE TO CLOSE [ESC]</div>
+</div>
+
+<!-- Evidence Modal -->
+<div id="evidence-modal">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+    <h2 class="big-heading" style="color:var(--gold); margin:0; font-size:2rem;">EVIDENCE & TECHNICAL APPENDIX</h2>
+    <div style="cursor:pointer; font-size:12px; font-weight:bold; color:var(--text-secondary); padding:6px 14px; background:var(--surface-light); border-radius:8px;" onclick="toggleEvidence()">
+      CLOSE [ESC]
+    </div>
+  </div>
+  <p class="body-lg" style="margin-bottom:20px; font-size:14px;">
+    Official Google algorithm documentation, live test parameters, and diagnostic references recorded during the audit of <code>https://rishikeshyogaashram.com/</code>:
+  </p>
+  <div class="grid-2" style="gap:16px;">
+    <div class="card" style="padding:16px;">
+      <h4 style="color:var(--red); font-size:14px; margin-bottom:6px;">Google Intrusive Interstitials Penalty</h4>
+      <p style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+        Official Policy: Google Search Central (Jan 10, 2017)<br>
+        Standard: "Showing a popup that covers the main content immediately after the user navigates to a page from the search results makes content less accessible, leading to search demotions."
+      </p>
+    </div>
+    <div class="card" style="padding:16px;">
+      <h4 style="color:var(--red); font-size:14px; margin-bottom:6px;">Google Core Web Vitals (CWV) Penalty</h4>
+      <p style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+        Thresholds: LCP &lt; 2.5s (Good), 2.5s–4.0s (Needs Work), &gt; 4.0s (POOR)<br>
+        Audit Metric: 5.4s LCP (Ranked POOR / Red Zone).<br>
+        Algorithmic Effect: Official ranking demotion under Page Experience Core Ranking System.
+      </p>
+    </div>
+    <div class="card" style="padding:16px;">
+      <h4 style="color:var(--cyan); font-size:14px; margin-bottom:6px;">Google Course Schema Guidelines</h4>
+      <p style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+        Specification: schema.org/Course JSON-LD format.<br>
+        Live Audit: https://search.google.com/test/rich-results<br>
+        Status: 0 Course entities detected. Disqualified from Google Course Carousels.
+      </p>
+    </div>
+    <div class="card" style="padding:16px;">
+      <h4 style="color:var(--green); font-size:14px; margin-bottom:6px;">DNS & Email Spoofing Defense (DMARC)</h4>
+      <p style="font-size:12px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+        RFC 7489 / Google Workspace Sender Requirements (Feb 2024)<br>
+        Current: "v=DMARC1; p=none;" (Vulnerable to spoofed wire transfer invoices)<br>
+        Required: "v=DMARC1; p=reject;" to prevent Gmail/Yahoo phishing blacklisting.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let currentSlide = 0;
+  
+  const progressText = document.getElementById('progress-text');
+  const progressFill = document.getElementById('progress-fill');
+  const sectionLabel = document.getElementById('section-label');
+  const imgModal = document.getElementById('img-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalCaption = document.getElementById('modal-caption');
+  const evModal = document.getElementById('evidence-modal');
+
+  function updateUI() {
+    progressText.textContent = `${String(currentSlide + 1).padStart(2, '0')} / ${totalSlides}`;
+    progressFill.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+    const activeSection = slides[currentSlide].getAttribute('data-section') || '';
+    sectionLabel.textContent = activeSection;
+  }
+
+  function renderSlide() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active', 'prev');
+      if (index === currentSlide) {
+        slide.classList.add('active');
+      } else if (index < currentSlide) {
+        slide.classList.add('prev');
+      }
+    });
+    updateUI();
+  }
+
+  function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+      currentSlide++;
+      renderSlide();
+    }
+  }
+
+  function previousSlide() {
+    if (currentSlide > 0) {
+      currentSlide--;
+      renderSlide();
+    }
+  }
+  
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(()=>{});
+    } else {
+      document.exitFullscreen().catch(()=>{});
+    }
+  }
+  
+  function openZoomModal(src, caption) {
+    modalImg.src = src;
+    modalCaption.textContent = caption || '';
+    imgModal.classList.add('active');
+  }
+  
+  function closeZoomModal() {
+    imgModal.classList.remove('active');
+  }
+  
+  function toggleEvidence() {
+    evModal.classList.toggle('active');
+  }
+
+  function handleKeyboard(e) {
+    if (evModal.classList.contains('active')) {
+      if (e.key === 'Escape') toggleEvidence();
+      return;
+    }
+    if (imgModal.classList.contains('active')) {
+      if (e.key === 'Escape') closeZoomModal();
+      return;
+    }
+    
+    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown'].includes(e.key)) {
+      e.preventDefault();
+      nextSlide();
+    } else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) {
+      e.preventDefault();
+      previousSlide();
+    } else if (e.key === 'f' || e.key === 'F') {
+      e.preventDefault();
+      toggleFullscreen();
+    } else if (e.key === 'e' || e.key === 'E') {
+      e.preventDefault();
+      toggleEvidence();
+    }
+  }
+
+  document.addEventListener('keydown', handleKeyboard);
+  renderSlide();
+</script>
+</body>
+</html>
