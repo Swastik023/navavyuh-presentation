@@ -1,4 +1,4 @@
-# 🎙️ Founder Presentation Script (Slides 01 – 21)
+# 🎙️ Founder Presentation Script (Slides 01 – 20)
 
 ---
 
@@ -166,18 +166,7 @@
 
 ---
 
-## SLIDE 17 — WORKING WITH YOUR DEVELOPER
-* **Where to Point:** Developer (How) vs Swastik (What & Why).
-* **What to Say:**
-  > “Main aapke developer ko replace karne nahi aaya hoon—in fact, unka hona hamara sabse bada advantage hai.  
-  > Unka focus hai *how* the site runs (server, backend, code).  
-  > Mera focus hai *what* to build for search, exact Schema JSON-LD code dena, aur revenue-priority set karna taaki unka time waste na ho.  
-  > Aapko marketing aur dev ke beech me translator nahi banna padega. We collaborate as technical peers.”
-* **💡 Takeaway:** *“I speak developer language. You won't have to play mediator between marketing and tech. We work as peers to move faster and grow student enrollments.”*
-
----
-
-## SLIDE 18 — WHAT I BRING: THE TRIAD
+## SLIDE 17 — WHAT I BRING: THE TRIAD
 * **Where to Point:** SEO → Engineering → Automation.
 * **What to Say:**
   > “I work at the exact intersection of three disciplines:  
@@ -189,7 +178,7 @@
 
 ---
 
-## SLIDE 19 — PROOF OF SYSTEMS BUILT
+## SLIDE 18 — PROOF OF SYSTEMS BUILT
 * **Where to Point:** CrawlMindAI → SearchFoundry → RankTracker → TrafficSentinel → OmniGrowth.
 * **What to Say:**
   > “Yeh koi theoretical concept nahi hai—maine search lifecycle ke har stage ke liye custom tools build kiye hain:  
@@ -199,7 +188,7 @@
 
 ---
 
-## SLIDE 20 — WHY HIRE SWASTIK
+## SLIDE 19 — WHY HIRE SWASTIK
 * **Where to Point:** 4 Value Cards.
 * **What to Say:**
   > “In summary, why this partnership creates an unfair advantage:  
@@ -211,7 +200,7 @@
 
 ---
 
-## SLIDE 21 — THE CLOSING VISION
+## SLIDE 20 — THE CLOSING VISION
 * **Where to Point:** Manifesto quote.
 * **What to Say:**
   > “Sir, Ma'am, main sirf mahine ke end me report forward karne wala person nahi banna chahta.  

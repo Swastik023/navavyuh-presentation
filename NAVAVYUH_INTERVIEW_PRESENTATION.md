@@ -409,27 +409,7 @@
 
 ---
 
-# 🖥️ SLIDE 17: How I Work With Your Developer
-
-### Slide Content:
-- **Title:** Collaboration: How I Work With Your Developer
-- **Your Developer:** Implements code, manages infrastructure, builds features, handles deployment. *(How do we build/fix it?)*
-- **Me:** Identifies what needs changing & why, explains business/search impact, prioritizes by business impact, measures results. *(What should we build? Why? When?)*
-- **Outcome:** = BETTER DIGITAL GROWTH
-- **Bottom Banner:** *“I see the relationship as collaborative, not competitive.”*
-
-### 🗣️ Spoken Script (Time: 17:00 – 17:45 | 45s):
-> *"A key part of my execution plan involves your existing developer.*
->
-> *I actually think having a developer already is a great thing. I wouldn't want to duplicate that role. They focus on 'how' we build things.*
->
-> *Where I add value is answering: 'what should we build, why, and when?'*
->
-> *You don't need to translate every technical problem for me. I can investigate technical issues myself, understand their SEO and UX impact, prioritize them based on business impact, and collaborate directly with the developer to get them fixed."*
-
----
-
-# 🖥️ SLIDE 18: What I Bring (SEO + Engineering + Automation)
+# 🖥️ SLIDE 17: What I Bring (SEO + Engineering + Automation)
 
 ### Slide Content:
 - **Three Pillars:**
@@ -438,7 +418,7 @@
   - **AUTOMATION:** AI research • Automated reporting • Workflow efficiency
 - **Bottom Anchor:** **SEO + Engineering + Automation = Digital Growth**
 
-### 🗣️ Spoken Script (Time: 17:45 – 18:30 | 45s):
+### 🗣️ Spoken Script (Time: 17:00 – 17:45 | 45s):
 > *"This brings me to what I specifically bring to Navavyuh.*
 >
 > *I am not just trying to be another developer, and I am not just someone who runs marketing tools. I sit exactly between SEO, technology, and automation.*
@@ -447,7 +427,7 @@
 
 ---
 
-# 🖥️ SLIDE 19: My Projects Are Connected
+# 🖥️ SLIDE 18: My Projects Are Connected
 
 ### Slide Content:
 - **Title:** I Don't Just Talk About These Systems — I've Built Them
@@ -460,7 +440,7 @@
   - **JOURNEY:** `Pathfinder`
 - **Bottom Banner:** *“These are not six random projects. They represent different stages of the same digital-growth loop.”*
 
-### 🗣️ Spoken Script (Time: 18:30 – 19:15 | 45s):
+### 🗣️ Spoken Script (Time: 17:45 – 18:30 | 45s):
 > *"To give you an idea of how I build systems, I've developed tools across each stage of the search and growth lifecycle.*
 >
 > *From researching search demand, to structuring content, tracking rankings, detecting traffic anomalies, automating workflows, and mapping user journeys.*
@@ -469,7 +449,7 @@
 
 ---
 
-# 🖥️ SLIDE 20: Why Hire Me (What I Add to the Team)
+# 🖥️ SLIDE 19: Why Hire Me (What I Add to the Team)
 
 ### Slide Content:
 - **Title:** Why I Believe I Can Add Value at Navavyuh
@@ -478,7 +458,7 @@
 - **3. I can work directly with your developer:** Collaborate with technical fluency as a peer.
 - **4. I can turn repetitive work into systems:** Automate reporting, monitoring, and research.
 
-### 🗣️ Spoken Script (Time: 19:15 – 20:00 | 45s):
+### 🗣️ Spoken Script (Time: 18:30 – 19:15 | 45s):
 > *"In summary, this is why I believe I can add value to your team.*
 >
 > *I don't just execute instructions; I own the SEO problem end-to-end. I understand the underlying technology, so I can investigate issues myself without needing everything translated.*
@@ -491,7 +471,7 @@
 
 ---
 
-# 🖥️ SLIDE 21: Closing Vision
+# 🖥️ SLIDE 20: Closing Vision
 
 ### Slide Content:
 - **Formula:** `SEO + Technology + Automation = Digital Growth`
@@ -499,7 +479,7 @@
   > *“I don't just want to report what happened on the website. I want to help build the system that continuously improves it.”*
 - **Footer:** *Thank you. I'm glad to answer any questions or discuss any part in detail.*
 
-### 🗣️ Spoken Script (Time: 20:00 – 21:00 | 60s):
+### 🗣️ Spoken Script (Time: 19:15 – 20:00 | 45s):
 > *"Sir, I want to bring my background in SEO, engineering, and automation to help build a predictable growth engine for Navavyuh.*
 >
 > *I don't just want to report what happened on the website. I want to help build the system that continuously improves it.*

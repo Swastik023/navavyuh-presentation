@@ -3,13 +3,13 @@
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════════╗
-║         From Website Audit to Digital Growth · 21 Slides · ~21 minutes        ║
+║         From Website Audit to Digital Growth · 20 Slides · ~20 minutes        ║
 ╚════════════════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-### ⏱️ 21-SLIDE FLOW & TIMING
+### ⏱️ 20-SLIDE FLOW & TIMING
 
 ```
 [00:00 - 01:30]  SLIDE 01: TITLE — Set the frame: "Google · Student · Business"
@@ -28,11 +28,10 @@
 [14:15 - 15:00]  SLIDE 14: PROB 09 — Mobile UI collisions (floating button overlap)
 [15:00 - 15:45]  SLIDE 15: PROB 10 — Technical reliability (not every problem is SEO)
 [15:45 - 17:00]  SLIDE 16: IF I JOIN — BASELINE → EXECUTE → MEASURE → AUTOMATE
-[17:00 - 17:45]  SLIDE 17: DEVELOPER — Collaborative bridge, not competitive role
-[17:45 - 18:30]  SLIDE 18: WHAT I BRING — SEO + Engineering + Automation
-[18:30 - 19:15]  SLIDE 19: MY PROJECTS — 6-tool growth system (proof, not bragging)
-[19:15 - 20:00]  SLIDE 20: WHY HIRE ME — 4 concrete differentiators
-[20:00 - 21:00]  SLIDE 21: CLOSING — DISCOVER → OPTIMIZE → MEASURE → AUTOMATE → GROW
+[17:00 - 17:45]  SLIDE 17: WHAT I BRING — SEO + Engineering + Automation
+[17:45 - 18:30]  SLIDE 18: MY PROJECTS — 6-tool growth system (proof, not bragging)
+[18:30 - 19:15]  SLIDE 19: WHY HIRE ME — 4 concrete differentiators
+[19:15 - 20:00]  SLIDE 20: CLOSING — DISCOVER → OPTIMIZE → MEASURE → AUTOMATE → GROW
 ```
 
 ---

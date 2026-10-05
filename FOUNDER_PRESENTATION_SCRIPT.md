@@ -1,6 +1,6 @@
 # 🎙️ Founder Presentation Spoken Script & Navigation Playbook
 ## Swastik Agnihotri · Candidate for SEO Executive / Digital Growth · Navavyuh
-### Target Website: `rishikeshyogaashram.com` | Presentation: 21 Slides (~20–22 Minutes)
+### Target Website: `rishikeshyogaashram.com` | Presentation: 20 Slides (~10–12 Minutes)
 
 ---
 
@@ -31,7 +31,7 @@
 * **Your mouth provides the story.** Speak naturally, calmly, and authoritatively.
 * **Your mouse provides the direction.** Point at specific elements on screen before advancing.
 * **The Founder Takeaway is your anchor.** Each slide features a dedicated bottom takeaway callout that crystallizes the core business conclusion in one sentence.
-* **When you finish Slide 21:** Stop talking. Smile. Let the founder speak first.
+* **When you finish Slide 20:** Stop talking. Smile. Let the founder speak first.
 
 ---
 
@@ -566,45 +566,12 @@ Trace across Phase 1 → Phase 2 → Phase 3.
   > *“Setting up precise conversion tracking in Google Analytics and Search Console. Before we touch any code or content, we need to know exactly how many enquiries and bookings each page is currently generating.”*
 
 ### ➡️ Transition
-> *“A central part of this execution is how I collaborate with your existing developer.”*  
+> *“To execute this 90-day roadmap with speed and zero friction, it requires a specific combination of capabilities.”*  
 *(Click Next / Press →)*
 
 ---
 
-## SLIDE 17 — HOW I WORK WITH YOUR DEVELOPER
-
-### 🖥️ On Screen
-`I DON'T REPLACE YOUR DEVELOPER. I MAKE YOUR DEVELOPER MORE EFFECTIVE.`  
-*Your Developer: "How do we build it?" • Swastik: "What should we build & why?"*
-
-### 👉 Where to Point
-Point to the Developer card on the left → point to your card on the right.
-
-### 🗣️ What to Say Naturally
-> “I want to be very clear about team dynamics: **I do not want to replace your developer.**
->
-> I actually think having an existing developer is a great advantage.
->
-> Your developer is responsible for *how* the site is built—infrastructure, backend code, templates, and server uptime.
->
-> My responsibility is *what* we should build, *why* it matters, *how* we prioritize it by revenue, and *measuring* whether it actually moved search rankings.
->
-> You won't have to play translator between marketing and development. I can write the exact Schema JSON-LD, explain technical requirements in their language, and work as a collaborative peer.”
-
-### 💡 Founder Takeaway (Spoken Anchor)
-> *“I speak developer language. You won't have to play translator between marketing and tech. We work as peers to move faster and grow student enrollments.”*
-
-### ❓ If the Founder Asks
-* **“What if our developer disagrees with an SEO recommendation?”**
-  > *“We evaluate it together based on data and effort versus impact. If a technical fix takes 40 hours of engineering for a 1% gain, I will deprioritize it myself. My job is to respect developer time and focus on what moves the business.”*
-
-### ➡️ Transition
-> *“This collaborative model works because of the distinct combination of capabilities I bring.”*  
-*(Click Next / Press →)*
-
----
-
-## SLIDE 18 — WHAT I BRING: THE TRIAD
+## SLIDE 17 — WHAT I BRING: THE TRIAD
 
 ### 🖥️ On Screen
 `THE TRIAD OF DIGITAL GROWTH: SEO • ENGINEERING • AUTOMATION`  
@@ -639,7 +606,7 @@ Point to Pillar 1 (SEO) → Pillar 2 (Engineering) → Pillar 3 (Automation).
 
 ---
 
-## SLIDE 19 — PROOF OF SYSTEMS
+## SLIDE 18 — PROOF OF SYSTEMS
 
 ### 🖥️ On Screen
 `I DON'T JUST TALK ABOUT SYSTEMS. I HAVE ACTUALLY BUILT THEM.`  
@@ -670,7 +637,7 @@ Trace down through the 5 systems on screen.
 
 ---
 
-## SLIDE 20 — WHY HIRE SWASTIK
+## SLIDE 19 — WHY HIRE SWASTIK
 
 ### 🖥️ On Screen
 `WHY HIRE SWASTIK? WHAT I TAKE FULL OWNERSHIP OF.`  
@@ -703,7 +670,7 @@ Point down through the 4 value cards.
 
 ---
 
-## SLIDE 21 — THE CLOSING VISION
+## SLIDE 20 — THE CLOSING VISION
 
 ### 🖥️ On Screen
 `DISCOVER → OPTIMIZE → MEASURE → AUTOMATE → GROW`  
@@ -724,7 +691,7 @@ Point to the manifesto quote in gold.
 
 ---
 
-### 🛑 CRITICAL INSTRUCTION UPON FINISHING SLIDE 21:
+### 🛑 CRITICAL INSTRUCTION UPON FINISHING SLIDE 20:
 1. **STOP TALKING IMMEDIATELY.**
 2. **Smile.**
 3. **Keep your hands on the desk.**
