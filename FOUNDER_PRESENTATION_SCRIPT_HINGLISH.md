@@ -48,9 +48,9 @@
   > “Mera background ek typical digital marketer se thoda different hai.  
   > I started in software development, then worked in DevOps and site reliability—jahan website performance, server uptime aur technical infrastructure main focus hota hai.  
   > Over time, I shifted into digital growth because modern SEO sirf keyword writing nahi hai. Behind every ranking, there is server speed, clean DOM architecture, structured schema data aur crawl budgets.  
-  > That's my core advantage: I bridge the gap between creative marketing strategy and the actual code running on the website.”
+  > Iska ek direct financial benefit yeh hai: **Main aapse ₹30,000–₹40,000/month ke expensive agency software packages khareedne ko nahi bolunga.** Because I can code, I build custom Python monitors and query Google Search Console APIs directly.”
 * **Founder Takeaway:**  
-  *“Aapko ek aur aisi agency nahi chahiye jo bas automated PDF reports forward kare. You need someone who understands technical mechanics and fixes them directly with your developer.”*
+  *“Aapko ek aisi agency nahi chahiye jo bloated software bills aur automated PDF forward kare. You need an engineering partner jo code, speed aur direct systems khud handle kare.”*
 * *(Next Slide →)*
 
 ---
@@ -104,12 +104,13 @@
 * **What to Say (50/50 Hinglish):**
   > “Sir, this was the very first thing I noticed on mobile.  
   > Aapki website par authentic spiritual information kaafi achhi hai. Problem yeh nahi hai that information is missing—the issue is **where it appears**.  
-  > When a foreign student lands on your mobile homepage, they have 4 quick questions: *What courses? When do they start? What are the fees? And can I trust this school?*  
+  > When a foreign student lands on mobile, they have 4 quick questions: *What courses? When do they start? What are the fees? And can I trust this school?*  
   > Currently, unhe course cards tak pahunchne ke liye 6 long paragraphs scroll karne padte hain.  
-  > Look at the top competitor on the right: within the first 3 seconds, unhone live classroom photo, student numbers, aur Yoga Alliance accreditation dikha di.  
-  > My recommendation is not to delete your authentic philosophy. Hum bas **hierarchy reorder** karenge: course cards, batch dates aur trust credentials ko top par le aayenge, and deeper reading ko directly niche rakhenge.”
+  > Jab user ko 3 second me clarity nahi milti, toh wo Back button daba kar Google par wapas chala jata hai. Google isko **‘Pogo-Sticking’** bolta hai.  
+  > In 2026 search, **engagement is the #1 tell for Google**: agar searchers bounce ho rahe hain, Google ranking drop kar deta hai.  
+  > Hum aapki ashram philosophy ko delete nahi karenge—hum bas **hierarchy reorder** karenge taaki course cards, batch dates aur Yoga Alliance trust markers top 3 seconds me dikhein.”
 * **Founder Takeaway:**  
-  *“Hum aapki ashram philosophy ko nahi hata rahe—we simply bring course cards, batch dates, and trust credentials into the top 3 seconds so foreign students stay engaged.”*
+  *“Reordering proof above the fold stops pogo-sticking, keeps foreign students engaged, and protects our organic Google rankings.”*
 * *(Next Slide →)*
 
 ---
@@ -189,18 +190,18 @@
 
 ---
 
-### SLIDE 12 — OPP 07: COURSE SCHEMA & ENTITIES
+### SLIDE 12 — OPP 07: COURSE SCHEMA & ENTITIES (THE CORE FIX)
 * **Screen:** `GOOGLE SEES A BLOG POST. WE SELL A $1,200 ACCREDITED COURSE.`
 * **Where to Point:** Left (`0 Schemas Detected`) vs Right (Rich snippet with stars & batch dates).
 * **What to Say (50/50 Hinglish):**
   > “This is where technical SEO directly impacts business revenue.  
-  > When a human visits your website, they read English and understand that you teach a 200-Hour teacher training course.  
-  > But Google's crawler is a bot—it reads structured code. Right now, Google evaluates the page as a generic article or blog post (`WebPage`).  
-  > Google's Rich Results tool shows **zero Course schemas** on this page.  
-  > By deploying schema.org Course standards, we tell Google programmatically: *This is an official accredited course, certified by Yoga Alliance, with specific batch dates and pricing*.  
-  > Isse Google search results me aapke link ke niche star ratings, course duration aur batch dates aane lagti hain, which typically increases click-through rates by 30% or more.”
+  > In 2026, most cheap agencies will pitch: *‘Sir, hum mahine ke 30 AI blogs daalenge.’* But Google is cracking down on AI slop—sites churning out generic articles are losing 50% to 80% organic traffic.  
+  > I don't want to publish 30 generic AI articles. I want to turn your **real teachers, real student transformations, daily routine, and accredited syllabus** into machine-readable ground truth that AI cannot reproduce.  
+  > Right now, Google evaluates this course page as a generic blog post (`WebPage`) because Google's Rich Results tool shows **zero Course schemas**.  
+  > When we deploy schema.org Course standards, we tell Google programmatically: *This is an official Yoga Alliance RYS 200 course with specific batch dates and $1,200 tuition*.  
+  > Isse Google Search me star ratings aur batch dates aane lagti hain, and AI engines like ChatGPT and Google Gemini cite your ashram as the primary trusted authority.”
 * **Founder Takeaway:**  
-  *“Web page insaan ko course samjhata hai, Course Schema code Google ko. Right now, Google has to guess what we're selling—and that costs us search visibility.”*
+  *“Instead of churning out 30 AI blogs, we structure your real teachers and courses into un-fakeable ground truth that Google and AI search engines cite, trust, and rank.”*
 * *(Next Slide →)*
 
 ---
@@ -254,14 +255,13 @@
 * **Screen:** `HOW I WILL EXECUTE STEP-BY-STEP`
 * **Where to Point:** Trace across: *Phase 1 (1–15) → Phase 2 (15–45) → Phase 3 (45–90)*.
 * **What to Say (50/50 Hinglish):**
-  > “Sir, finding observations is easy. The real question is: **how do we execute?**  
-  > If I join Navavyuh, here is how I would structure my first 90 days:  
-  > **First 15 Days (Baseline):** Complete Search Console and analytics audit, conversion tracking on every enquiry button, and competitor keyword benchmarking.  
-  > **Days 15 to 45 (Core Fixes):** Working directly with your developer on structured Course schemas, YouTube facade loading, and mobile touch targets.  
-  > **Days 45 to 90 (Scale & Automate):** Building international language paths, dedicated batch landing pages, and setting up automated ranking alerts.  
-  > Baseline first, high-impact fixes with your developer second, and continuous automation third.”
+  > “Sir, finding observations is easy. The real question is: **how do we execute day-to-day?**  
+  > Many people assume SEO means sitting and writing blogs every day. For me, daily execution is operational engineering:  
+  > **Daily:** Search Console me indexation anomalies aur crawl leaks monitor karna.  
+  > **Weekly:** Keyword arbitration—jo queries position 4–10 par hain, unka intent sharpen karke top 3 me push karna, aur link authority ko direct TTC admission pages par route karna.  
+  > **The 90-Day Arc:** First 15 days baseline setup, Days 15 to 45 core fixes with your developer (Course schemas, speed), aur Days 45 to 90 international language expansion.”
 * **Founder Takeaway:**  
-  *“We don't create endless debate. We establish a verified baseline, execute high-impact fixes with your developer, and build automated systems that compound month after month.”*
+  *“Real SEO is continuous operational engineering—protecting domain health, arbitrating keywords, and turning rankings into confirmed student admissions.”*
 * *(Next Slide →)*
 
 ---
@@ -315,13 +315,13 @@
 * **Screen:** `WHY HIRE SWASTIK? WHAT I TAKE FULL OWNERSHIP OF.`
 * **Where to Point:** Point down across the 4 value cards.
 * **What to Say (50/50 Hinglish):**
-  > “In summary, here is what I take full ownership of from Day 1:  
-  > **1. End-to-End Ownership:** Mujhe task assign hone ka wait nahi karna padta—I investigate, prioritize, and execute.  
-  > **2. Technical Fluency:** Working directly with your developer as a technical peer.  
-  > **3. Business-First Mindset:** Success is not vanity impressions—it's filled student batches and foreign currency revenue.  
-  > **4. Automation Mindset:** Building systems that compound results month after month.”
+  > “In summary, here is why this partnership creates an unfair advantage:  
+  > **1. End-to-End Ownership:** I don't wait for tasks—I investigate code, prioritize by revenue, and execute.  
+  > **2. Technical Peer to Dev:** I write exact JSON-LD schemas and test DevTools waterfalls alongside your developer.  
+  > **3. Real Evidence Over AI Slop:** Agencies sell 30 generic AI blogs that risk Google's 50%–80% spam penalties. I turn your real teachers, student transformations, and ashram life into un-fakeable ground truth.  
+  > **4. Systems & Zero SaaS Bloat:** No ₹40,000/month tool bills. I build automated Python scripts and GSC monitors to track movements for free.”
 * **Founder Takeaway:**  
-  *“You get an SEO specialist who thinks like an engineer, acts like a partner, and is obsessed with filling your courses with international students.”*
+  *“Agencies sell activity (generic blogs and PDF reports). I build durable, algorithm-proof digital assets that protect domain health and drive foreign admissions.”*
 * *(Next Slide →)*
 
 ---
