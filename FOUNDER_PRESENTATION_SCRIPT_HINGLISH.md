@@ -1,7 +1,16 @@
 # 🎙️ Founder Presentation Playbook (Natural 50/50 Hinglish)
 ## Swastik Agnihotri · Digital Growth Audit · Navavyuh
-### Target: `rishikeshyogaashram.com` | Duration: ~12–15 Minutes (~30–45s per slide)
+### Target: `rishikeshyogaashram.com` | Target Pitch Duration: ~10 Minutes (~25–30s per slide)
 ### Tone: Professional, Conversational 50/50 Hinglish (Educated Tech Consultant · Respectful to Founder & Mother)
+
+---
+
+## ⏱️ The Golden Executive Rule: Respect Their Time (Under 10 Minutes)
+
+* **The 25-Second Per Slide Limit:** Speak 2–3 punchy sentences per slide, state the one-sentence **Founder Takeaway**, and advance immediately.
+* **Don't Over-Explain or Stretch:** Never lecture or read slide text. The slide shows the visual proof, your mouth gives the business insight.
+* **Let the Founder Drive Depth:** If the founder wants to discuss a slide, let them pause you. If they stay silent, keep moving swiftly.
+* **Upfront Time Commitment:** Open by acknowledging their time directly so they know you won't waste a single minute.
 
 ---
 
@@ -23,13 +32,11 @@
 * **Where to Point:** Hover cursor over the 3 cards: *Target Asset (`rishikeshyogaashram.com`) → Audit Scope (31 Touchpoints) → Strategic Objective (Admissions Pipeline)*.
 * **What to Say (50/50 Hinglish):**
   > “Namaste Sir, Namaste Ma'am. Thank you for your time today.  
-  > Before jumping into my resume ya background, I wanted to focus directly on your business and website.  
-  > Maine `rishikeshyogaashram.com` ka ek complete technical aur conversion audit kiya hai.  
-  > Jab koi international student 5,000 miles travel karke Rishikesh aane ka decision leta hai for a 200H ya 300H TTC, their entire decision happens on their phone.  
-  > Isliye maine 31 specific touchpoints inspect kiye hain across your code, mobile UX aur search architecture.  
-  > Today's objective bahut straightforward hai: Yeh dekhna ki how we can turn your organic Google visibility into a steady, predictable admissions pipeline for upcoming batches.”
+  > I know aapka time bahut valuable hai, isliye I have kept this presentation crisp—under 10 minutes—taaki hum directly action points par focus kar sakein.  
+  > Before my resume, I wanted to focus directly on your business. Maine `rishikeshyogaashram.com` ka ek complete technical aur conversion audit kiya hai across 31 touchpoints.  
+  > Today's objective bahut straightforward hai: Yeh dekhna ki how we can turn your organic Google visibility into a steady, predictable foreign admissions pipeline for upcoming batches.”
 * **Founder Takeaway (Spoken Anchor):**  
-  *“Sir, this is not an academic SEO lecture. Yeh ek actionable, revenue-focused audit hai to turn website traffic into confirmed international student admissions.”*
+  *“Sir, this is an actionable, revenue-focused audit to turn website traffic into confirmed international student admissions.”*
 * *(Next Slide →)*
 
 ---
