@@ -72,17 +72,17 @@
     z-index: 100;
   }
   .section-label {
-    font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.14em;
+    font-size: 13px; text-transform: uppercase; letter-spacing: 0.14em;
     color: var(--gold); font-weight: 700; display: flex; align-items: center; gap: 8px;
   }
   .section-label::before {
-    content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; flex-shrink: 0;
+    content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); display: inline-block; flex-shrink: 0;
   }
   .progress-wrap {
     display: flex; align-items: center; gap: 14px;
   }
   .progress-text {
-    font-size: 12.5px; font-weight: 600; color: var(--text-secondary); font-family: var(--font-mono);
+    font-size: 13.5px; font-weight: 600; color: var(--text-secondary); font-family: var(--font-mono);
   }
   .progress-bar-bg {
     width: 130px; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px;
@@ -95,27 +95,27 @@
   
   /* Typography */
   .eyebrow {
-    font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em;
+    font-size: 13px; text-transform: uppercase; letter-spacing: 0.14em;
     color: var(--gold); margin-bottom: 10px; font-weight: 800; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
   }
   .big-heading { 
-    font-size: clamp(1.8rem, 2.8vw, 2.9rem); 
+    font-size: clamp(2rem, 3.2vw, 3.1rem); 
     font-weight: 800; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.02em; 
   }
   .hero-title {
-    font-size: clamp(2.3rem, 4.4vw, 4.2rem); 
-    margin-bottom: 12px;
+    font-size: clamp(2.4rem, 4.6vw, 4.2rem); 
+    margin-bottom: 14px;
     line-height: 1.12;
   }
   .closing-title {
-    font-size: clamp(2rem, 3.8vw, 3.6rem); 
+    font-size: clamp(2.1rem, 3.9vw, 3.6rem); 
     margin-bottom: 18px;
     line-height: 1.15;
   }
   .sub-heading {
-    font-size: 1.05rem; color: var(--text-secondary); max-width: 920px; margin-bottom: 20px; line-height: 1.45;
+    font-size: 1.12rem; color: var(--text-secondary); max-width: 960px; margin-bottom: 20px; line-height: 1.48;
   }
-  .body-lg { font-size: 15px; color: var(--text-secondary); line-height: 1.55; }
+  .body-lg { font-size: 15.5px; color: var(--text-secondary); line-height: 1.55; }
   
   /* Metric Displays */
   .perf-score {
@@ -133,11 +133,11 @@
     display: flex; align-items: flex-start; gap: 14px; flex-shrink: 0;
   }
   .founder-takeaway-badge {
-    font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.12em;
+    font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.12em;
     background: var(--gold); color: #000; font-weight: 800; padding: 4px 7px; border-radius: 4px; flex-shrink: 0;
   }
   .founder-takeaway p {
-    font-size: 15.5px; font-weight: 600; color: var(--text-primary); line-height: 1.4;
+    font-size: 16px; font-weight: 600; color: var(--text-primary); line-height: 1.4;
   }
 
   /* Grid & Cards */
@@ -175,7 +175,7 @@
     flex-wrap: wrap;
   }
   .algo-badge {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
     letter-spacing: 0.08em;
     color: var(--red);
@@ -185,24 +185,24 @@
     gap: 6px;
   }
   .algo-system-name {
-    font-size: 10.5px;
+    font-size: 11.5px;
     font-family: var(--font-mono);
     color: #ff9da4;
     background: rgba(240, 106, 114, 0.2);
-    padding: 2px 7px;
+    padding: 3px 8px;
     border-radius: 4px;
     font-weight: 600;
   }
   .algo-trigger {
-    font-size: 12.5px;
+    font-size: 13.8px;
     color: var(--text-secondary);
-    line-height: 1.45;
+    line-height: 1.48;
   }
   .algo-loss {
-    font-size: 12.5px;
+    font-size: 13.8px;
     font-weight: 700;
     color: #ffadb3;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   /* SERP Simulation Mockup */
@@ -210,13 +210,13 @@
     background: #1b1e24; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
     padding: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
-  .serp-url { font-size: 11px; color: #9aa0a6; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; word-break: break-all; }
-  .serp-title { font-size: 16px; color: #8ab4f8; font-weight: 500; line-height: 1.3; margin-bottom: 4px; cursor: pointer; }
+  .serp-url { font-size: 12.5px; color: #9aa0a6; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; word-break: break-all; }
+  .serp-title { font-size: 17.5px; color: #8ab4f8; font-weight: 500; line-height: 1.3; margin-bottom: 4px; cursor: pointer; }
   .serp-title:hover { text-decoration: underline; }
-  .serp-snippet { font-size: 12px; color: #bdc1c6; line-height: 1.45; }
-  .serp-stars { color: #f2994a; font-size: 12px; font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .serp-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
-  .serp-badge { font-size: 10.5px; font-weight: 600; padding: 2px 6px; border-radius: 4px; }
+  .serp-snippet { font-size: 13.8px; color: #bdc1c6; line-height: 1.48; }
+  .serp-stars { color: #f2994a; font-size: 13.5px; font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .serp-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .serp-badge { font-size: 11.5px; font-weight: 600; padding: 3px 8px; border-radius: 4px; }
   .serp-badge-warn { background: rgba(240,106,114,0.15); color: var(--red); border: 1px solid rgba(240,106,114,0.3); }
   .serp-badge-good { background: rgba(88,197,138,0.15); color: var(--green); border: 1px solid rgba(88,197,138,0.3); }
   .serp-badge-gold { background: rgba(214,168,79,0.15); color: var(--gold); border: 1px solid rgba(214,168,79,0.3); }
@@ -557,19 +557,19 @@
 
     <div class="grid-3" style="margin-bottom:20px;">
       <div class="card card-highlight-cyan">
-        <div style="font-size:11px; font-weight:800; color:var(--cyan); letter-spacing:0.1em; margin-bottom:6px;">LENS 1 &bull; THE STUDENT</div>
-        <h4 style="font-size:16px; margin-bottom:4px;">Can they trust the school in 3 seconds?</h4>
-        <p class="body-lg" style="font-size:13.5px;">Traveling 5,000 miles to Rishikesh is a major life decision. Does the mobile website give immediate clarity on courses, fees, and credibility?</p>
+        <div style="font-size:12.5px; font-weight:800; color:var(--cyan); letter-spacing:0.1em; margin-bottom:6px;">LENS 1 &bull; THE STUDENT</div>
+        <h4 style="font-size:18px; margin-bottom:6px;">Can they trust the school in 3 seconds?</h4>
+        <p class="body-lg" style="font-size:15px;">Traveling 5,000 miles to Rishikesh is a major life decision. Does the mobile website give immediate clarity on courses, fees, and credibility?</p>
       </div>
       <div class="card card-highlight-gold">
-        <div style="font-size:11px; font-weight:800; color:var(--gold); letter-spacing:0.1em; margin-bottom:6px;">LENS 2 &bull; GOOGLE DISCOVERABILITY</div>
-        <h4 style="font-size:16px; margin-bottom:4px;">Can search engines understand the courses?</h4>
-        <p class="body-lg" style="font-size:13.5px;">Core Web Vitals, mobile UX, and structured Course schemas determine whether search engines feature your courses in rich snippets and carousels.</p>
+        <div style="font-size:12.5px; font-weight:800; color:var(--gold); letter-spacing:0.1em; margin-bottom:6px;">LENS 2 &bull; GOOGLE DISCOVERABILITY</div>
+        <h4 style="font-size:18px; margin-bottom:6px;">Can search engines understand the courses?</h4>
+        <p class="body-lg" style="font-size:15px;">Core Web Vitals, mobile UX, and structured Course schemas determine whether search engines feature your courses in rich snippets and carousels.</p>
       </div>
       <div class="card card-highlight-green">
-        <div style="font-size:11px; font-weight:800; color:var(--green); letter-spacing:0.1em; margin-bottom:6px;">LENS 3 &bull; THE BUSINESS</div>
-        <h4 style="font-size:16px; margin-bottom:4px;">Does the funnel convert into admissions?</h4>
-        <p class="body-lg" style="font-size:13.5px;">Every checkout hesitation, slow mobile render, and missed rich snippet reduces potential course admissions for upcoming batches.</p>
+        <div style="font-size:12.5px; font-weight:800; color:var(--green); letter-spacing:0.1em; margin-bottom:6px;">LENS 3 &bull; THE BUSINESS</div>
+        <h4 style="font-size:18px; margin-bottom:6px;">Does the funnel convert into admissions?</h4>
+        <p class="body-lg" style="font-size:15px;">Every checkout hesitation, slow mobile render, and missed rich snippet reduces potential course admissions for upcoming batches.</p>
       </div>
     </div>
   </div>
@@ -582,35 +582,35 @@
 
     <div class="grid-2">
       <div class="card card-highlight-gold" style="justify-content:center;">
-        <div style="font-size:12px; font-weight:800; color:var(--gold); letter-spacing:0.1em; margin-bottom:14px;">THE CAPABILITY EVOLUTION</div>
+        <div style="font-size:13px; font-weight:800; color:var(--gold); letter-spacing:0.1em; margin-bottom:14px;">THE CAPABILITY EVOLUTION</div>
         <div style="display:flex; flex-direction:column; gap:10px; font-family:var(--font-heading); font-weight:700;">
-          <div style="padding:10px 14px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between;">
-            <span>Software Development</span> <span style="color:var(--text-muted); font-size:12px; font-weight:400;">Code, DOM, Server Systems</span>
+          <div style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:15px;">Software Development</span> <span style="color:var(--text-muted); font-size:13px; font-weight:500;">Code, DOM, Server Systems</span>
           </div>
-          <div style="padding:10px 14px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between;">
-            <span>Site Reliability (SRE) &amp; DevOps</span> <span style="color:var(--text-muted); font-size:12px; font-weight:400;">Speed, Network, Infrastructure</span>
+          <div style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:15px;">Site Reliability (SRE) &amp; DevOps</span> <span style="color:var(--text-muted); font-size:13px; font-weight:500;">Speed, Network, Infrastructure</span>
           </div>
-          <div style="padding:10px 14px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--gold); display:flex; justify-content:space-between;">
-            <span class="text-gold">SEO &amp; Growth Strategy</span> <span style="color:var(--text-muted); font-size:12px; font-weight:400;">Search Intent, Entities, CRO</span>
+          <div style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--gold); display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-gold" style="font-size:15px;">SEO &amp; Growth Strategy</span> <span style="color:var(--text-muted); font-size:13px; font-weight:500;">Search Intent, Entities, CRO</span>
           </div>
-          <div style="padding:10px 14px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--green); display:flex; justify-content:space-between;">
-            <span class="text-green">AI &amp; Workflow Automation</span> <span style="color:var(--text-muted); font-size:12px; font-weight:400;">Monitoring, Scrapers, Alerts</span>
+          <div style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--green); display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-green" style="font-size:15px;">AI &amp; Workflow Automation</span> <span style="color:var(--text-muted); font-size:13px; font-weight:500;">Monitoring, Scrapers, Alerts</span>
           </div>
         </div>
       </div>
 
       <div style="display:flex; flex-direction:column; gap:12px;">
         <div class="card">
-          <h4 style="font-size:16px; color:var(--text-primary); margin-bottom:4px;">1. I speak your developer's language</h4>
-          <p class="body-lg" style="font-size:13.5px;">I write exact Schema JSON-LD, profile network bottlenecks in DevTools, and work alongside your developer as a technical peer without handoffs or confusion.</p>
+          <h4 style="font-size:18px; color:var(--text-primary); margin-bottom:4px;">1. I speak your developer's language</h4>
+          <p class="body-lg" style="font-size:15px;">I write exact Schema JSON-LD, profile network bottlenecks in DevTools, and work alongside your developer as a technical peer without handoffs or confusion.</p>
         </div>
         <div class="card">
-          <h4 style="font-size:16px; color:var(--text-primary); margin-bottom:4px;">2. I understand modern search systems</h4>
-          <p class="body-lg" style="font-size:13.5px;">I analyze the technical factors behind Page Experience, mobile usability, and how Google evaluates educational entities.</p>
+          <h4 style="font-size:18px; color:var(--text-primary); margin-bottom:4px;">2. I understand modern search systems</h4>
+          <p class="body-lg" style="font-size:15px;">I analyze the technical factors behind Page Experience, mobile usability, and how Google evaluates educational entities.</p>
         </div>
         <div class="card">
-          <h4 style="font-size:16px; color:var(--text-primary); margin-bottom:4px;">3. I build automated growth loops</h4>
-          <p class="body-lg" style="font-size:13.5px;">Instead of manual weekly spreadsheets, I deploy automated rank monitors and anomaly detectors to protect your traffic before drops occur.</p>
+          <h4 style="font-size:18px; color:var(--text-primary); margin-bottom:4px;">3. I build automated growth loops</h4>
+          <p class="body-lg" style="font-size:15px;">Instead of manual weekly spreadsheets, I deploy automated rank monitors and anomaly detectors to protect your traffic before drops occur.</p>
         </div>
       </div>
     </div>
@@ -624,10 +624,10 @@
 
     <div class="grid-3">
       <div class="card" style="border:1px solid rgba(85,199,232,0.3); background:linear-gradient(180deg, rgba(85,199,232,0.05) 0%, var(--surface) 100%);">
-        <div style="font-size:1.8rem; margin-bottom:8px;">🤖</div>
-        <h3 style="color:var(--cyan); font-size:18px; margin-bottom:8px;">1. GOOGLE</h3>
-        <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">DISCOVERABILITY & ENTITIES</div>
-        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
+        <div style="font-size:2rem; margin-bottom:8px;">🤖</div>
+        <h3 style="color:var(--cyan); font-size:20px; margin-bottom:6px;">1. GOOGLE</h3>
+        <div style="font-size:12.5px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">DISCOVERABILITY & ENTITIES</div>
+        <ul style="list-style:none; font-size:15px; color:var(--text-secondary); line-height:1.7;">
           <li>&bull; Are courses recognized as accredited entities?</li>
           <li>&bull; Are batch dates & fees machine-readable?</li>
           <li>&bull; Can foreign students find you in German/Spanish?</li>
@@ -636,10 +636,10 @@
       </div>
 
       <div class="card" style="border:1px solid rgba(255,255,255,0.2); background:linear-gradient(180deg, rgba(255,255,255,0.03) 0%, var(--surface) 100%);">
-        <div style="font-size:1.8rem; margin-bottom:8px;">🧘</div>
-        <h3 style="color:#fff; font-size:18px; margin-bottom:8px;">2. THE STUDENT</h3>
-        <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">PSYCHOLOGY & CONFIDENCE</div>
-        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
+        <div style="font-size:2rem; margin-bottom:8px;">🧘</div>
+        <h3 style="color:#fff; font-size:20px; margin-bottom:6px;">2. THE STUDENT</h3>
+        <div style="font-size:12.5px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">PSYCHOLOGY & CONFIDENCE</div>
+        <ul style="list-style:none; font-size:15px; color:var(--text-secondary); line-height:1.7;">
           <li>&bull; Do they see real classrooms & alumni proof?</li>
           <li>&bull; Can they read the syllabus without popup fatigue?</li>
           <li>&bull; Do buttons allow easy one-thumb browsing?</li>
@@ -648,10 +648,10 @@
       </div>
 
       <div class="card" style="border:1px solid rgba(214,168,79,0.3); background:linear-gradient(180deg, rgba(214,168,79,0.05) 0%, var(--surface) 100%);">
-        <div style="font-size:1.8rem; margin-bottom:8px;">💼</div>
-        <h3 style="color:var(--gold); font-size:18px; margin-bottom:8px;">3. THE BUSINESS</h3>
-        <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">ADMISSIONS & REVENUE</div>
-        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.65;">
+        <div style="font-size:2rem; margin-bottom:8px;">💼</div>
+        <h3 style="color:var(--gold); font-size:20px; margin-bottom:6px;">3. THE BUSINESS</h3>
+        <div style="font-size:12.5px; font-weight:700; color:var(--text-muted); margin-bottom:10px;">ADMISSIONS & REVENUE</div>
+        <ul style="list-style:none; font-size:15px; color:var(--text-secondary); line-height:1.7;">
           <li>&bull; Frictionless checkout & payment journey</li>
           <li>&bull; Enquiries captured at peak decision intent</li>
           <li>&bull; Predictable monthly student batch intake</li>
@@ -668,40 +668,40 @@
     <p class="sub-heading">Tools spit out hundreds of false alarms. Real engineering judgment connects technical anomalies to student behavior and Google algorithms.</p>
 
     <div class="methodology-flow" style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin:20px 0;">
-      <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 1</div>
-        <h4 style="font-size:15px; margin-bottom:3px;">DISCOVER</h4>
-        <p style="font-size:12px; color:var(--text-secondary);">Full site crawl of all URLs, assets, headers & internal links.</p>
+      <div class="card" style="flex:1; text-align:center; padding:18px 14px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 1</div>
+        <h4 style="font-size:17px; margin-bottom:4px;">DISCOVER</h4>
+        <p style="font-size:13.8px; color:var(--text-secondary);">Full site crawl of all URLs, assets, headers & internal links.</p>
       </div>
-      <div class="methodology-arrow" style="color:var(--gold); font-size:18px;">&rarr;</div>
-      <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 2</div>
-        <h4 style="font-size:15px; margin-bottom:3px;">VERIFY</h4>
-        <p style="font-size:12px; color:var(--text-secondary);">Live DevTools inspection, mobile network profiling & packet audits.</p>
+      <div class="methodology-arrow" style="color:var(--gold); font-size:20px;">&rarr;</div>
+      <div class="card" style="flex:1; text-align:center; padding:18px 14px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 2</div>
+        <h4 style="font-size:17px; margin-bottom:4px;">VERIFY</h4>
+        <p style="font-size:13.8px; color:var(--text-secondary);">Live DevTools inspection, mobile network profiling & packet audits.</p>
       </div>
-      <div class="methodology-arrow" style="color:var(--gold); font-size:18px;">&rarr;</div>
-      <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 3</div>
-        <h4 style="font-size:15px; margin-bottom:3px;">UNDERSTAND</h4>
-        <p style="font-size:12px; color:var(--text-secondary);">Map user journey from a foreign student's perspective.</p>
+      <div class="methodology-arrow" style="color:var(--gold); font-size:20px;">&rarr;</div>
+      <div class="card" style="flex:1; text-align:center; padding:18px 14px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 3</div>
+        <h4 style="font-size:17px; margin-bottom:4px;">UNDERSTAND</h4>
+        <p style="font-size:13.8px; color:var(--text-secondary);">Map user journey from a foreign student's perspective.</p>
       </div>
-      <div class="methodology-arrow" style="color:var(--gold); font-size:18px;">&rarr;</div>
-      <div class="card" style="flex:1; text-align:center; padding:16px 12px; border-top:3px solid var(--gold);">
-        <div style="font-size:10.5px; font-weight:800; color:var(--gold); margin-bottom:4px;">PHASE 4</div>
-        <h4 style="font-size:15px; margin-bottom:3px;">PRIORITIZE</h4>
-        <p style="font-size:12px; color:var(--text-secondary);">Filter for revenue impact: P0 Critical vs P2 Polish.</p>
+      <div class="methodology-arrow" style="color:var(--gold); font-size:20px;">&rarr;</div>
+      <div class="card" style="flex:1; text-align:center; padding:18px 14px; border-top:3px solid var(--gold);">
+        <div style="font-size:12.5px; font-weight:800; color:var(--gold); margin-bottom:4px;">PHASE 4</div>
+        <h4 style="font-size:17px; margin-bottom:4px;">PRIORITIZE</h4>
+        <p style="font-size:13.8px; color:var(--text-secondary);">Filter for revenue impact: P0 Critical vs P2 Polish.</p>
       </div>
-      <div class="methodology-arrow" style="color:var(--gold); font-size:18px;">&rarr;</div>
-      <div class="card" style="flex:1; text-align:center; padding:16px 12px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--green); margin-bottom:4px;">PHASE 5</div>
-        <h4 style="font-size:15px; margin-bottom:3px;">MEASURE</h4>
-        <p style="font-size:12px; color:var(--text-secondary);">Verify before vs after via Search Console & Analytics.</p>
+      <div class="methodology-arrow" style="color:var(--gold); font-size:20px;">&rarr;</div>
+      <div class="card" style="flex:1; text-align:center; padding:18px 14px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--green); margin-bottom:4px;">PHASE 5</div>
+        <h4 style="font-size:17px; margin-bottom:4px;">MEASURE</h4>
+        <p style="font-size:13.8px; color:var(--text-secondary);">Verify before vs after via Search Console & Analytics.</p>
       </div>
     </div>
 
     <div class="card" style="background:rgba(214,168,79,0.04); border:1px solid rgba(214,168,79,0.2); padding:16px 20px;">
-      <h4 style="color:var(--gold); font-size:14px; margin-bottom:4px;">MY WORKING PRINCIPLE:</h4>
-      <p style="font-size:13.5px; color:var(--text-secondary);">An SEO scanner can tell you something is 'unusual'. It takes human empathy and business context to know if that issue actually impacts search visibility or stops a student from booking a $1,200 course.</p>
+      <h4 style="color:var(--gold); font-size:15.5px; margin-bottom:6px;">MY WORKING PRINCIPLE:</h4>
+      <p style="font-size:15px; color:var(--text-secondary); line-height:1.55;">An SEO scanner can tell you something is 'unusual'. It takes human empathy and business context to know if that issue actually impacts search visibility or stops a student from booking a $1,200 course.</p>
     </div>
   </div>
 
@@ -712,35 +712,35 @@
     <p class="sub-heading">I prioritized the 10 highest-impact opportunities most relevant to user experience, search visibility, and course conversion.</p>
 
     <div class="grid-3" style="gap:14px; margin-bottom:16px;">
-      <div class="card" style="padding:14px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--gold); margin-bottom:3px;">01 &bull; ON-PAGE &amp; CRO</div>
-        <h4 style="font-size:14px; margin-bottom:3px;">Information Architecture</h4>
-        <p style="font-size:12.5px; color:var(--text-secondary);">Text-heavy layout causes visitor bounce; affects user engagement signals.</p>
+      <div class="card" style="padding:16px;">
+        <div style="font-size:12px; font-weight:800; color:var(--gold); margin-bottom:4px;">01 &bull; ON-PAGE &amp; CRO</div>
+        <h4 style="font-size:16.5px; margin-bottom:4px;">Information Architecture</h4>
+        <p style="font-size:14px; color:var(--text-secondary);">Text-heavy layout causes visitor bounce; affects user engagement signals.</p>
       </div>
-      <div class="card" style="padding:14px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:3px;">02 &bull; CONVERSION TRUST</div>
-        <h4 style="font-size:14px; margin-bottom:3px;">Booking Continuity</h4>
-        <p style="font-size:12.5px; color:var(--text-secondary);">Verifying domain consistency across payment links to preserve student confidence.</p>
+      <div class="card" style="padding:16px;">
+        <div style="font-size:12px; font-weight:800; color:var(--cyan); margin-bottom:4px;">02 &bull; CONVERSION TRUST</div>
+        <h4 style="font-size:16.5px; margin-bottom:4px;">Booking Continuity</h4>
+        <p style="font-size:14px; color:var(--text-secondary);">Verifying domain consistency across payment links to preserve student confidence.</p>
       </div>
-      <div class="card" style="padding:14px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--red); margin-bottom:3px;">03 &bull; MOBILE PERFORMANCE</div>
-        <h4 style="font-size:14px; margin-bottom:3px;">Speed &amp; Core Web Vitals</h4>
-        <p style="font-size:12.5px; color:var(--text-secondary);">5.4s LCP creates mobile loading friction and impacts search experience.</p>
+      <div class="card" style="padding:16px;">
+        <div style="font-size:12px; font-weight:800; color:var(--red); margin-bottom:4px;">03 &bull; MOBILE PERFORMANCE</div>
+        <h4 style="font-size:16.5px; margin-bottom:4px;">Speed &amp; Core Web Vitals</h4>
+        <p style="font-size:14px; color:var(--text-secondary);">5.4s LCP creates mobile loading friction and impacts search experience.</p>
       </div>
-      <div class="card" style="padding:14px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--cyan); margin-bottom:3px;">04 &bull; TECHNICAL SEO</div>
-        <h4 style="font-size:14px; margin-bottom:3px;">Course Schema Entities</h4>
-        <p style="font-size:12.5px; color:var(--text-secondary);">0 schemas; missing eligibility for Course rich snippets, stars, and carousels.</p>
+      <div class="card" style="padding:16px;">
+        <div style="font-size:12px; font-weight:800; color:var(--cyan); margin-bottom:4px;">04 &bull; TECHNICAL SEO</div>
+        <h4 style="font-size:16.5px; margin-bottom:4px;">Course Schema Entities</h4>
+        <p style="font-size:14px; color:var(--text-secondary);">0 schemas; missing eligibility for Course rich snippets, stars, and carousels.</p>
       </div>
-      <div class="card" style="padding:14px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--gold); margin-bottom:3px;">05 &bull; INTERNATIONAL SEO</div>
-        <h4 style="font-size:14px; margin-bottom:3px;">Language Discoverability</h4>
-        <p style="font-size:12.5px; color:var(--text-secondary);">Dropdown widget isn't indexed; opportunity for dedicated European landing pages.</p>
+      <div class="card" style="padding:16px;">
+        <div style="font-size:12px; font-weight:800; color:var(--gold); margin-bottom:4px;">05 &bull; INTERNATIONAL SEO</div>
+        <h4 style="font-size:16.5px; margin-bottom:4px;">Language Discoverability</h4>
+        <p style="font-size:14px; color:var(--text-secondary);">Dropdown widget isn't indexed; opportunity for dedicated European landing pages.</p>
       </div>
-      <div class="card" style="padding:14px;">
-        <div style="font-size:10.5px; font-weight:800; color:var(--green); margin-bottom:3px;">06 &bull; TECHNICAL HYGIENE</div>
-        <h4 style="font-size:14px; margin-bottom:3px;">Reputation &amp; Trust</h4>
-        <p style="font-size:12.5px; color:var(--text-secondary);">Email authentication policies and server header hygiene protect domain standing.</p>
+      <div class="card" style="padding:16px;">
+        <div style="font-size:12px; font-weight:800; color:var(--green); margin-bottom:4px;">06 &bull; TECHNICAL HYGIENE</div>
+        <h4 style="font-size:16.5px; margin-bottom:4px;">Reputation &amp; Trust</h4>
+        <p style="font-size:14px; color:var(--text-secondary);">Email authentication policies and server header hygiene protect domain standing.</p>
       </div>
     </div>
   </div>
@@ -767,14 +767,14 @@
         </div>
       </div>
 
-      <div style="display:flex; flex-direction:column; justify-content:space-between; gap:10px;">
-        <div class="card card-highlight-red" style="padding:14px;">
-          <div style="font-size:11px; font-weight:800; color:var(--red); margin-bottom:2px;">❌ CURRENT MOBILE FIRST IMPRESSION</div>
-          <p class="body-lg" style="font-size:13px;">A foreign student lands looking for courses, dates &amp; fees. They get 6 paragraphs of history before reaching course cards, with floating WhatsApp pills blocking the text.</p>
+      <div style="display:flex; flex-direction:column; justify-content:space-between; gap:12px;">
+        <div class="card card-highlight-red" style="padding:16px;">
+          <div style="font-size:12.5px; font-weight:800; color:var(--red); margin-bottom:4px;">❌ CURRENT MOBILE FIRST IMPRESSION</div>
+          <p class="body-lg" style="font-size:15px;">A foreign student lands looking for courses, dates &amp; fees. They get 6 paragraphs of history before reaching course cards, with floating WhatsApp pills blocking the text.</p>
         </div>
-        <div class="card card-highlight-green" style="padding:14px;">
-          <div style="font-size:11px; font-weight:800; color:var(--green); margin-bottom:2px;">✅ WHAT THE TOP COMPETITOR DOES IN 3 SECONDS</div>
-          <p class="body-lg" style="font-size:13px;">Classroom photo + 4 proof stats (10,000+ Students, 15+ Yrs, 4.8★) + Yoga Alliance RYS 500 badge in the first phone viewport.</p>
+        <div class="card card-highlight-green" style="padding:16px;">
+          <div style="font-size:12.5px; font-weight:800; color:var(--green); margin-bottom:4px;">✅ WHAT THE TOP COMPETITOR DOES IN 3 SECONDS</div>
+          <p class="body-lg" style="font-size:15px;">Classroom photo + 4 proof stats (10,000+ Students, 15+ Yrs, 4.8★) + Yoga Alliance RYS 500 badge in the first phone viewport.</p>
         </div>
 
         <!-- Algorithmic Risk Box -->
@@ -812,14 +812,14 @@
             <div class="browser-url-bar text-cyan">https://rishikeshyogaashram.com/200-hour-yoga...</div>
           </div>
           <div style="padding:18px; background:var(--surface);">
-            <div style="font-size:14px; font-weight:700; margin-bottom:6px;">Student reads course syllabus & feels inspired...</div>
-            <div style="display:inline-block; padding:6px 16px; background:var(--gold); color:#000; font-weight:800; border-radius:6px; font-size:12px;">
+            <div style="font-size:16px; font-weight:700; margin-bottom:8px;">Student reads course syllabus & feels inspired...</div>
+            <div style="display:inline-block; padding:8px 18px; background:var(--gold); color:#000; font-weight:800; border-radius:6px; font-size:13.5px;">
               [ BOOKING / ENROL NOW ]
             </div>
           </div>
         </div>
 
-        <div style="text-align:center; color:var(--gold); font-size:15px; font-weight:800;">
+        <div style="text-align:center; color:var(--gold); font-size:16px; font-weight:800;">
           &darr; VERIFYING PAYMENT DESTINATION &amp; DOMAIN CONTINUITY &darr;
         </div>
 
@@ -833,16 +833,16 @@
             <div class="browser-url-bar text-gold" style="font-weight:700;">Destination Check: On-Brand vs External Routing</div>
           </div>
           <div style="padding:16px; background:var(--surface);">
-            <div style="font-size:13px; color:var(--gold); font-weight:700;">⚠️ STUDENT CONFIDENCE CHECKPOINT:</div>
-            <div style="font-size:12px; color:var(--text-secondary); margin-top:3px;">"Is the checkout page 100% on-brand? Does an international applicant see consistent school branding and secure payment reassurance?"</div>
+            <div style="font-size:14.5px; color:var(--gold); font-weight:700;">⚠️ STUDENT CONFIDENCE CHECKPOINT:</div>
+            <div style="font-size:13.8px; color:var(--text-secondary); margin-top:4px; line-height:1.45;">"Is the checkout page 100% on-brand? Does an international applicant see consistent school branding and secure payment reassurance?"</div>
           </div>
         </div>
       </div>
 
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <div class="card card-highlight-gold" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--gold);">The Most Sensitive Step in the Journey</h4>
-          <p class="body-lg" style="font-size:13px;">When an international student prepares to transfer a $300–$500 course deposit from abroad, trust is delicate. I would audit every booking link with your developer to ensure complete continuity.</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card card-highlight-gold" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--gold);">The Most Sensitive Step in the Journey</h4>
+          <p class="body-lg" style="font-size:15px;">When an international student prepares to transfer a $300–$500 course deposit from abroad, trust is delicate. I would audit every booking link with your developer to ensure complete continuity.</p>
         </div>
 
         <!-- Trust & Continuity Box -->
@@ -859,9 +859,9 @@
           </div>
         </div>
 
-        <div class="card card-highlight-green" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--green);">The Collaborative Solution</h4>
-          <p class="body-lg" style="font-size:13px;">Review the payment pathway with your developer to verify that on-site booking is unified, responsive, and backed by clear SSL trust badges and deposit receipts.</p>
+        <div class="card card-highlight-green" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--green);">The Collaborative Solution</h4>
+          <p class="body-lg" style="font-size:15px;">Review the payment pathway with your developer to verify that on-site booking is unified, responsive, and backed by clear SSL trust badges and deposit receipts.</p>
         </div>
       </div>
     </div>
@@ -876,29 +876,29 @@
     <div class="grid-2">
       <div class="card" style="text-align:center; padding:24px; justify-content:center;">
         <div class="perf-score">
-          54<span style="font-size:2rem; color:var(--text-muted);">/100</span>
+          54<span style="font-size:2.2rem; color:var(--text-muted);">/100</span>
         </div>
-        <div style="font-size:12px; font-weight:800; letter-spacing:0.12em; color:var(--gold); margin-top:10px; text-transform:uppercase;">
+        <div style="font-size:13.5px; font-weight:800; letter-spacing:0.12em; color:var(--gold); margin-top:10px; text-transform:uppercase;">
           Google Mobile Performance Score
         </div>
         <div style="margin-top:18px; display:flex; justify-content:space-around; border-top:1px solid var(--surface-border); padding-top:14px;">
           <div>
-            <div style="font-size:11px; color:var(--text-muted);">LCP (MAIN CONTENT)</div>
-            <div style="font-size:1.8rem; font-weight:800; color:var(--gold); font-family:var(--font-mono);">5.4s</div>
-            <div style="font-size:10px; color:var(--text-muted);">Target: &lt; 2.5s</div>
+            <div style="font-size:12.5px; font-weight:700; color:var(--text-muted);">LCP (MAIN CONTENT)</div>
+            <div style="font-size:2.2rem; font-weight:800; color:var(--gold); font-family:var(--font-mono);">5.4s</div>
+            <div style="font-size:12px; color:var(--text-muted);">Target: &lt; 2.5s</div>
           </div>
           <div>
-            <div style="font-size:11px; color:var(--text-muted);">TBT (BLOCKING TIME)</div>
-            <div style="font-size:1.8rem; font-weight:800; color:var(--gold); font-family:var(--font-mono);">730ms</div>
-            <div style="font-size:10px; color:var(--text-muted);">Target: &lt; 200ms</div>
+            <div style="font-size:12.5px; font-weight:700; color:var(--text-muted);">TBT (BLOCKING TIME)</div>
+            <div style="font-size:2.2rem; font-weight:800; color:var(--gold); font-family:var(--font-mono);">730ms</div>
+            <div style="font-size:12px; color:var(--text-muted);">Target: &lt; 200ms</div>
           </div>
         </div>
       </div>
 
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <div class="card card-highlight-cyan" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--cyan);">The Real Student Experience</h4>
-          <p class="body-lg" style="font-size:13px;">Foreign students browse on international roaming, airport 4G, or hotel Wi-Fi. Staring at a blank loading screen for 5.4 seconds feels broken. Google data proves that <strong>53% of mobile visits are abandoned</strong> if a page takes over 3 seconds to render.</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card card-highlight-cyan" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--cyan);">The Real Student Experience</h4>
+          <p class="body-lg" style="font-size:15px;">Foreign students browse on international roaming, airport 4G, or hotel Wi-Fi. Staring at a blank loading screen for 5.4 seconds feels broken. Google data proves that <strong>53% of mobile visits are abandoned</strong> if a page takes over 3 seconds to render.</p>
         </div>
 
         <!-- Algorithmic Penalty Box -->
@@ -915,9 +915,9 @@
           </div>
         </div>
 
-        <div class="card card-highlight-green" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--green);">The Collaboration Plan</h4>
-          <p class="body-lg" style="font-size:13px;">We will optimize heavy image payloads, defer non-critical scripts, and fix video preload bottlenecks with your developer to push speed back into the green zone.</p>
+        <div class="card card-highlight-green" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--green);">The Collaboration Plan</h4>
+          <p class="body-lg" style="font-size:15px;">We will optimize heavy image payloads, defer non-critical scripts, and fix video preload bottlenecks with your developer to push speed back into the green zone.</p>
         </div>
       </div>
     </div>
@@ -930,17 +930,17 @@
     <p class="sub-heading">Why the homepage is slow: Live network DevTools inspection reveals premature video iframe initialization.</p>
 
     <div class="grid-2">
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <div class="card card-highlight-red" style="padding:14px;">
-          <div style="font-size:11px; font-weight:800; color:var(--red); margin-bottom:3px;">CURRENT BEHAVIOR (EAGER LOADING)</div>
-          <h4 style="font-size:15px; margin-bottom:3px;">Browser immediately downloads full YouTube player</h4>
-          <p class="body-lg" style="font-size:12.5px;">Even though review videos are far down the page and the visitor hasn't clicked Play, the phone immediately downloads hundreds of kilobytes of YouTube tracking scripts, fonts, and player modules.</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card card-highlight-red" style="padding:16px;">
+          <div style="font-size:12.5px; font-weight:800; color:var(--red); margin-bottom:4px;">CURRENT BEHAVIOR (EAGER LOADING)</div>
+          <h4 style="font-size:17px; margin-bottom:4px;">Browser immediately downloads full YouTube player</h4>
+          <p class="body-lg" style="font-size:15px;">Even though review videos are far down the page and the visitor hasn't clicked Play, the phone immediately downloads hundreds of kilobytes of YouTube tracking scripts, fonts, and player modules.</p>
         </div>
 
-        <div class="card card-highlight-green" style="padding:14px;">
-          <div style="font-size:11px; font-weight:800; color:var(--green); margin-bottom:3px;">BETTER APPROACH (FACADE / ON-DEMAND LOADING)</div>
-          <h4 style="font-size:15px; margin-bottom:3px;">Displays crisp, lightweight preview image (&lt;30KB)</h4>
-          <p class="body-lg" style="font-size:12.5px;">The heavy YouTube player code downloads ONLY when the student taps the play icon. Zero delay on initial mobile render; saves 1.5s mobile render time.</p>
+        <div class="card card-highlight-green" style="padding:16px;">
+          <div style="font-size:12.5px; font-weight:800; color:var(--green); margin-bottom:4px;">BETTER APPROACH (FACADE / ON-DEMAND LOADING)</div>
+          <h4 style="font-size:17px; margin-bottom:4px;">Displays crisp, lightweight preview image (&lt;30KB)</h4>
+          <p class="body-lg" style="font-size:15px;">The heavy YouTube player code downloads ONLY when the student taps the play icon. Zero delay on initial mobile render; saves 1.5s mobile render time.</p>
         </div>
 
         <!-- Algorithmic Risk Box -->
@@ -959,13 +959,13 @@
       </div>
 
       <div class="card" style="justify-content:center; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%); padding:24px;">
-        <h3 style="font-size:20px; color:var(--gold); margin-bottom:12px;">The Analogy:</h3>
-        <p class="body-lg" style="font-size:15px; line-height:1.6; margin-bottom:18px;">
+        <h3 style="font-size:22px; color:var(--gold); margin-bottom:12px;">The Analogy:</h3>
+        <p class="body-lg" style="font-size:16.5px; line-height:1.6; margin-bottom:18px;">
           <em>"It's like turning on the television and air conditioning in a hotel room before the guest has even checked in at the front desk."</em>
         </p>
-        <div style="border-top:1px solid var(--surface-border); padding-top:14px;">
-          <h4 style="font-size:14px; color:var(--text-primary); margin-bottom:4px;">We Keep 100% of Video Reviews:</h4>
-          <p class="body-lg" style="font-size:12.5px;">Video reviews from past students are vital trust markers. We don't delete them—we simply load them on demand when requested.</p>
+        <div style="border-top:1px solid var(--surface-border); padding-top:16px;">
+          <h4 style="font-size:16px; color:var(--text-primary); margin-bottom:4px;">We Keep 100% of Video Reviews:</h4>
+          <p class="body-lg" style="font-size:14.5px;">Video reviews from past students are vital trust markers. We don't delete them—we simply load them on demand when requested.</p>
         </div>
       </div>
     </div>
@@ -982,23 +982,23 @@
         <div class="popup-timer">
           00:02
         </div>
-        <div style="font-size:12px; font-weight:800; letter-spacing:0.12em; color:var(--text-muted); margin-top:14px; text-transform:uppercase;">
+        <div style="font-size:13.5px; font-weight:800; letter-spacing:0.12em; color:var(--text-muted); margin-top:14px; text-transform:uppercase;">
           Seconds before fullscreen popup appears
         </div>
-        <div style="margin-top:16px; padding:14px; background:rgba(240,106,114,0.1); border-radius:8px; border:1px solid rgba(240,106,114,0.2);">
-          <div style="font-size:12.5px; color:var(--red); font-weight:700;">Student Psychology at 2 Seconds:</div>
-          <div style="font-size:12px; color:var(--text-secondary); margin-top:3px;">"I don't even know if you teach 200hr or 300hr yet. Why are you demanding my personal phone number?"</div>
+        <div style="margin-top:16px; padding:16px; background:rgba(240,106,114,0.1); border-radius:8px; border:1px solid rgba(240,106,114,0.2);">
+          <div style="font-size:14.5px; color:var(--red); font-weight:700;">Student Psychology at 2 Seconds:</div>
+          <div style="font-size:14px; color:var(--text-secondary); margin-top:4px; line-height:1.45;">"I don't even know if you teach 200hr or 300hr yet. Why are you demanding my personal phone number?"</div>
         </div>
       </div>
 
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <div class="card" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--text-primary);">The Natural Decision Journey</h4>
-          <div style="display:flex; flex-direction:column; gap:6px; margin-top:6px; font-size:12px; color:var(--text-secondary);">
-            <div style="padding:5px 10px; background:var(--surface-light); border-radius:6px;">1. Land &rarr; Inspect ashram environment &amp; credentials</div>
-            <div style="padding:5px 10px; background:var(--surface-light); border-radius:6px;">2. Read &rarr; Understand syllabus, teachers &amp; dates</div>
-            <div style="padding:5px 10px; background:var(--surface-light); border-radius:6px;">3. Trust &rarr; Review student testimonials &amp; accreditations</div>
-            <div style="padding:5px 10px; background:rgba(214,168,79,0.15); color:var(--gold); font-weight:700; border-radius:6px;">4. Enquire &rarr; Peak readiness to submit contact details</div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:6px; color:var(--text-primary);">The Natural Decision Journey</h4>
+          <div style="display:flex; flex-direction:column; gap:6px; margin-top:6px; font-size:13.5px; color:var(--text-secondary);">
+            <div style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">1. Land &rarr; Inspect ashram environment &amp; credentials</div>
+            <div style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">2. Read &rarr; Understand syllabus, teachers &amp; dates</div>
+            <div style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">3. Trust &rarr; Review student testimonials &amp; accreditations</div>
+            <div style="padding:6px 12px; background:rgba(214,168,79,0.15); color:var(--gold); font-weight:700; border-radius:6px;">4. Enquire &rarr; Peak readiness to submit contact details</div>
           </div>
         </div>
 
@@ -1016,9 +1016,9 @@
           </div>
         </div>
 
-        <div class="card card-highlight-gold" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:3px; color:var(--gold);">How We Improve Lead Quality</h4>
-          <p class="body-lg" style="font-size:12.5px;">Trigger interactive lead modals after 45s of active syllabus reading or on exit intent. Generates serious, high-intent enquiries while keeping Google 100% happy.</p>
+        <div class="card card-highlight-gold" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--gold);">How We Improve Lead Quality</h4>
+          <p class="body-lg" style="font-size:15px;">Trigger interactive lead modals after 45s of active syllabus reading or on exit intent. Generates serious, high-intent enquiries while keeping Google 100% happy.</p>
         </div>
       </div>
     </div>
@@ -1031,20 +1031,20 @@
     <p class="sub-heading">Live audit observation: Under the "Short Courses" navigation, the Aerial Yoga Teacher Training course has a structural URL typo.</p>
 
     <div class="grid-2">
-      <div class="card card-highlight-cyan" style="justify-content:center; text-align:center; padding:24px;">
-        <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:10px;">COURSE TITLE ON WEBSITE</div>
-        <div style="font-size:2rem; font-weight:800; color:var(--text-primary); margin-bottom:16px;">Aerial Yoga</div>
-        <div style="font-size:20px; color:var(--text-muted);">&darr; LIVE LINK IN NAVIGATION &darr;</div>
-        <div style="margin-top:16px; font-family:var(--font-mono); font-size:1.4rem; color:var(--red); background:rgba(240,106,114,0.15); padding:10px 16px; border-radius:8px; border:1px solid rgba(240,106,114,0.3); word-break:break-all;">
+      <div class="card card-highlight-cyan" style="justify-content:center; text-align:center; padding:28px;">
+        <div style="font-size:13.5px; font-weight:800; color:var(--text-muted); margin-bottom:10px;">COURSE TITLE ON WEBSITE</div>
+        <div style="font-size:2.4rem; font-weight:800; color:var(--text-primary); margin-bottom:16px;">Aerial Yoga</div>
+        <div style="font-size:22px; color:var(--text-muted);">&darr; LIVE LINK IN NAVIGATION &darr;</div>
+        <div style="margin-top:16px; font-family:var(--font-mono); font-size:1.6rem; color:var(--red); background:rgba(240,106,114,0.15); padding:12px 18px; border-radius:8px; border:1px solid rgba(240,106,114,0.3); word-break:break-all;">
           /Arial-yoga.php
         </div>
-        <div style="margin-top:14px; font-size:13px; font-weight:700; color:var(--gold);">"Arial" (Computer Font) &ne; "Aerial" (Yoga Practice)</div>
+        <div style="margin-top:16px; font-size:15px; font-weight:700; color:var(--gold);">"Arial" (Computer Font) &ne; "Aerial" (Yoga Practice)</div>
       </div>
 
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <div class="card" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--text-primary);">Why URL Architecture Matters to Google</h4>
-          <p class="body-lg" style="font-size:13px;">Google matches search queries to web address keywords. When an international student searches for <em>"Aerial Yoga teacher training in Rishikesh"</em>, having clean, exact keyword matching in the URL slug signals 100% topical relevance.</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--text-primary);">Why URL Architecture Matters to Google</h4>
+          <p class="body-lg" style="font-size:15px;">Google matches search queries to web address keywords. When an international student searches for <em>"Aerial Yoga teacher training in Rishikesh"</em>, having clean, exact keyword matching in the URL slug signals 100% topical relevance.</p>
         </div>
 
         <!-- Algorithmic Risk Box -->
@@ -1061,9 +1061,9 @@
           </div>
         </div>
 
-        <div class="card card-highlight-green" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--green);">The Safe 2-Minute Fix</h4>
-          <p class="body-lg" style="font-size:13px;">Create `/aerial-yoga-teacher-training.php` and deploy a permanent 301 redirect. Zero broken links; flawless keyword relevance.</p>
+        <div class="card card-highlight-green" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--green);">The Safe 2-Minute Fix</h4>
+          <p class="body-lg" style="font-size:15px;">Create `/aerial-yoga-teacher-training.php` and deploy a permanent 301 redirect. Zero broken links; flawless keyword relevance.</p>
         </div>
       </div>
     </div>
@@ -1077,13 +1077,13 @@
 
     <div class="grid-2" style="align-items:stretch;">
       <!-- Current State -->
-      <div class="card card-highlight-red" style="padding:16px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:4px;">
-          <span style="font-size:11px; font-weight:800; color:var(--red);">CURRENT REALITY (TESTED ON LIVE URL)</span>
+      <div class="card card-highlight-red" style="padding:18px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:6px;">
+          <span style="font-size:12.5px; font-weight:800; color:var(--red);">CURRENT REALITY (TESTED ON LIVE URL)</span>
           <span class="serp-badge serp-badge-warn">0 Schemas Detected</span>
         </div>
         
-        <div class="serp-card" style="margin-bottom:10px;">
+        <div class="serp-card" style="margin-bottom:12px;">
           <div class="serp-url">https://rishikeshyogaashram.com › 200-hour-yoga-teacher-training</div>
           <div class="serp-title">200 Hour Yoga Teacher Training in Rishikesh - Rishikesh Yoga Ashram</div>
           <div class="serp-snippet">Join our 200 hour yoga teacher training course in Rishikesh. Learn authentic hatha and ashtanga yoga in the foothills of Himalayas with experienced masters...</div>
@@ -1095,19 +1095,19 @@
           </div>
         </div>
 
-        <div style="font-size:12px; color:var(--text-secondary); line-height:1.45;">
+        <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">
           <strong>Why this hurts the business:</strong> Google's crawler only reads unstructured English paragraphs. It doesn't know this is an official course product with certification, specific batch dates, and tuition.
         </div>
       </div>
 
       <!-- Optimized State -->
-      <div class="card card-highlight-green" style="padding:16px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:4px;">
-          <span style="font-size:11px; font-weight:800; color:var(--green);">THE OPPORTUNITY (STRUCTURED COURSE ENTITY)</span>
+      <div class="card card-highlight-green" style="padding:18px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:6px;">
+          <span style="font-size:12.5px; font-weight:800; color:var(--green);">THE OPPORTUNITY (STRUCTURED COURSE ENTITY)</span>
           <span class="serp-badge serp-badge-good">@type: Course JSON-LD</span>
         </div>
 
-        <div class="serp-card" style="margin-bottom:10px; border-color:rgba(88,197,138,0.4);">
+        <div class="serp-card" style="margin-bottom:12px; border-color:rgba(88,197,138,0.4);">
           <div class="serp-url">https://rishikeshyogaashram.com › courses › 200-hour-yttc</div>
           <div class="serp-title">200-Hour Yoga Teacher Training Rishikesh | Yoga Alliance RYS 200</div>
           <div class="serp-stars">⭐⭐⭐⭐⭐ 4.9 <span style="color:#bdc1c6; font-weight:normal;">(128 reviews) · Course · 28 Days · $1,200</span></div>
@@ -1120,14 +1120,14 @@
           </div>
         </div>
 
-        <div style="font-size:12px; color:var(--text-secondary); line-height:1.45;">
+        <div style="font-size:14px; color:var(--text-secondary); line-height:1.5;">
           <strong>Why international students click this:</strong> Foreign students searching on Google from Germany or the US immediately see reviews, dates, and accreditations. <strong>Rich snippets deliver 35%+ higher click-through rates.</strong>
         </div>
       </div>
     </div>
 
     <!-- Algorithmic Disqualification Penalty Box -->
-    <div class="algo-box" style="margin-top:10px;">
+    <div class="algo-box" style="margin-top:12px;">
       <div class="algo-header">
         <span class="algo-badge">⚠️ MISSING RICH SNIPPET ELIGIBILITY</span>
         <span class="algo-system-name">Google Knowledge Graph &amp; Course Entity System</span>
@@ -1148,17 +1148,17 @@
     <p class="sub-heading">Why your website is currently missing out on non-English European and Latin American search volume.</p>
 
     <div class="grid-2">
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <div class="card card-highlight-red" style="padding:14px;">
-          <div style="font-size:11px; font-weight:800; color:var(--red); margin-bottom:3px;">HOW THE WEBSITE CURRENTLY HANDLES LANGUAGE</div>
-          <h4 style="font-size:15px; margin-bottom:4px;">Client-Side Google Translate Dropdown Widget</h4>
-          <p class="body-lg" style="font-size:12.5px;">If a German student lands on your English page, they can click the dropdown to translate text on their screen. But Google's search crawlers <strong>do not click widgets</strong>. There are no indexable German URLs (`/de/` or `hreflang` tags).</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card card-highlight-red" style="padding:16px;">
+          <div style="font-size:12.5px; font-weight:800; color:var(--red); margin-bottom:4px;">HOW THE WEBSITE CURRENTLY HANDLES LANGUAGE</div>
+          <h4 style="font-size:17.5px; margin-bottom:4px;">Client-Side Google Translate Dropdown Widget</h4>
+          <p class="body-lg" style="font-size:15px;">If a German student lands on your English page, they can click the dropdown to translate text on their screen. But Google's search crawlers <strong>do not click widgets</strong>. There are no indexable German URLs (`/de/` or `hreflang` tags).</p>
         </div>
 
-        <div class="card card-highlight-green" style="padding:14px;">
-          <div style="font-size:11px; font-weight:800; color:var(--green); margin-bottom:3px;">HOW INTERNATIONAL SEO ACTUALLY WORKS</div>
-          <h4 style="font-size:15px; margin-bottom:4px;">Dedicated Indexable Language Architecture</h4>
-          <p class="body-lg" style="font-size:12.5px;">When someone in Munich searches on Google.de for <em>"200 Stunden Yogalehrerausbildung Rishikesh"</em>, Google looks for indexable German pages. By creating discoverable language paths, we open up direct search visibility in Germany, France, and Spain.</p>
+        <div class="card card-highlight-green" style="padding:16px;">
+          <div style="font-size:12.5px; font-weight:800; color:var(--green); margin-bottom:4px;">HOW INTERNATIONAL SEO ACTUALLY WORKS</div>
+          <h4 style="font-size:17.5px; margin-bottom:4px;">Dedicated Indexable Language Architecture</h4>
+          <p class="body-lg" style="font-size:15px;">When someone in Munich searches on Google.de for <em>"200 Stunden Yogalehrerausbildung Rishikesh"</em>, Google looks for indexable German pages. By creating discoverable language paths, we open up direct search visibility in Germany, France, and Spain.</p>
         </div>
 
         <!-- Algorithmic Invisibility Box -->
@@ -1176,15 +1176,15 @@
         </div>
       </div>
 
-      <div class="card" style="justify-content:center; padding:22px; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%);">
-        <h4 style="font-size:15px; color:var(--gold); margin-bottom:10px; text-transform:uppercase; letter-spacing:0.08em;">The Ashram's Primary Market</h4>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-family:var(--font-heading); font-weight:700; margin-bottom:14px;">
-          <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇩🇪 GERMANY & AUSTRIA</div>
-          <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇫🇷 FRANCE & BELGIUM</div>
-          <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇪🇸 SPAIN & LATAM</div>
-          <div style="padding:10px; background:rgba(255,255,255,0.04); border-radius:8px;">🇯🇵 JAPAN & ASIA</div>
+      <div class="card" style="justify-content:center; padding:24px; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%);">
+        <h4 style="font-size:16.5px; color:var(--gold); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.08em;">The Ashram's Primary Market</h4>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-family:var(--font-heading); font-weight:700; margin-bottom:16px;">
+          <div style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇩🇪 GERMANY & AUSTRIA</div>
+          <div style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇫🇷 FRANCE & BELGIUM</div>
+          <div style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇪🇸 SPAIN & LATAM</div>
+          <div style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇯🇵 JAPAN & ASIA</div>
         </div>
-        <p class="body-lg" style="font-size:12.5px;">International students pay full tuition in foreign currency and stay for full 28-day immersions. Structuring international search turns your website into a global student magnet.</p>
+        <p class="body-lg" style="font-size:15px; line-height:1.6;">International students pay full tuition in foreign currency and stay for full 28-day immersions. Structuring international search turns your website into a global student magnet.</p>
       </div>
     </div>
   </div>
@@ -1196,31 +1196,31 @@
     <p class="sub-heading">Live finding: The floating green WhatsApp icon and red 'Enquire Now' pill collide on smartphone screens.</p>
 
     <div class="grid-2">
-      <div class="card" style="padding:20px; justify-content:center; background:#11141a; position:relative; overflow:hidden;">
-        <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:12px;">PHYSICAL PHONE SCREEN VIEWPORT</div>
-        <div style="padding:16px; background:#1a1e27; border-radius:10px; border:1px solid rgba(255,255,255,0.08); position:relative; min-height:170px;">
-          <p style="font-size:13px; color:var(--text-secondary); line-height:1.55;">
+      <div class="card" style="padding:22px; justify-content:center; background:#11141a; position:relative; overflow:hidden;">
+        <div style="font-size:13px; font-weight:800; color:var(--text-muted); margin-bottom:12px;">PHYSICAL PHONE SCREEN VIEWPORT</div>
+        <div style="padding:18px; background:#1a1e27; border-radius:10px; border:1px solid rgba(255,255,255,0.08); position:relative; min-height:180px;">
+          <p style="font-size:14px; color:var(--text-secondary); line-height:1.6;">
             "...authentic spiritual discipline taught by masters in Rishikesh. Prospective teachers should come to the town to undergo full immersion in Hatha and Ashtanga..."
           </p>
           <!-- Floating button collision simulation -->
           <div style="position:absolute; bottom:12px; right:12px; display:flex; flex-direction:column; align-items:flex-end; gap:6px;">
-            <div style="background:#25D366; color:#fff; font-size:11px; font-weight:bold; padding:8px 14px; border-radius:100px; box-shadow:0 6px 12px rgba(0,0,0,0.5);">
+            <div style="background:#25D366; color:#fff; font-size:12.5px; font-weight:bold; padding:8px 16px; border-radius:100px; box-shadow:0 6px 12px rgba(0,0,0,0.5);">
               WhatsApp
             </div>
-            <div style="background:var(--red); color:#fff; font-size:11px; font-weight:bold; padding:7px 14px; border-radius:100px; box-shadow:0 6px 12px rgba(0,0,0,0.5); transform:translateY(-6px);">
+            <div style="background:var(--red); color:#fff; font-size:12.5px; font-weight:bold; padding:8px 16px; border-radius:100px; box-shadow:0 6px 12px rgba(0,0,0,0.5); transform:translateY(-4px);">
               Enquire Now
             </div>
           </div>
         </div>
-        <div style="margin-top:10px; font-size:11.5px; color:var(--red); font-weight:700;">
+        <div style="margin-top:12px; font-size:13px; color:var(--red); font-weight:700;">
           ⚠️ Text beneath buttons is obstructed; accidental misclicks occur during scrolling.
         </div>
       </div>
 
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <div class="card card-highlight-gold" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--gold);">The One-Thumb Mobile Reality</h4>
-          <p class="body-lg" style="font-size:12.5px;">Over 75% of your mobile traffic holds their phone with one hand on a couch or train. When floating action buttons block syllabus text or trigger accidental taps, it causes subtle but real user frustration.</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="card card-highlight-gold" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--gold);">The One-Thumb Mobile Reality</h4>
+          <p class="body-lg" style="font-size:15px;">Over 75% of your mobile traffic holds their phone with one hand on a couch or train. When floating action buttons block syllabus text or trigger accidental taps, it causes subtle but real user frustration.</p>
         </div>
 
         <!-- Search Console Usability Penalty Box -->
@@ -1237,9 +1237,9 @@
           </div>
         </div>
 
-        <div class="card card-highlight-green" style="padding:14px;">
-          <h4 style="font-size:15px; margin-bottom:4px; color:var(--green);">The Elegant Solution: Pinned Conversion Bar</h4>
-          <p class="body-lg" style="font-size:12.5px;">Replace floating collision pills with a clean, pinned bottom conversion bar: <code>[ Send Enquiry ] | [ WhatsApp ]</code> docked cleanly at the base of the screen. Zero text obstruction, perfect Google tap-target compliance.</p>
+        <div class="card card-highlight-green" style="padding:16px;">
+          <h4 style="font-size:17.5px; margin-bottom:4px; color:var(--green);">The Elegant Solution: Pinned Conversion Bar</h4>
+          <p class="body-lg" style="font-size:15px;">Replace floating collision pills with a clean, pinned bottom conversion bar: <code>[ Send Enquiry ] | [ WhatsApp ]</code> docked cleanly at the base of the screen. Zero text obstruction, perfect Google tap-target compliance.</p>
         </div>
       </div>
     </div>
@@ -1252,16 +1252,16 @@
     <p class="sub-heading">Going beyond keywords: Ensuring email authentication and server hygiene protect institutional credibility.</p>
 
     <div class="grid-2">
-      <div class="card card-highlight-gold" style="padding:16px;">
-        <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:4px;">FINDING A &bull; EMAIL AUTHENTICATION (DMARC)</div>
-        <h4 style="font-size:15px; margin-bottom:6px;">Domain email policy has no spoofing enforcement (`p=none`)</h4>
-        <p class="body-lg" style="font-size:12.5px; margin-bottom:8px;">When a student wires course fees, email imposters can forge emails pretending to be <code>admissions@rishikeshyogaashram.com</code>. Closing this gap protects your students from payment fraud.</p>
-        <div style="font-family:var(--font-mono); font-size:10.5px; background:var(--surface-light); padding:7px; border-radius:6px; color:var(--text-secondary);">
+      <div class="card card-highlight-gold" style="padding:18px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--gold); margin-bottom:4px;">FINDING A &bull; EMAIL AUTHENTICATION (DMARC)</div>
+        <h4 style="font-size:17.5px; margin-bottom:6px;">Domain email policy has no spoofing enforcement (`p=none`)</h4>
+        <p class="body-lg" style="font-size:15px; margin-bottom:10px;">When a student wires course fees, email imposters can forge emails pretending to be <code>admissions@rishikeshyogaashram.com</code>. Closing this gap protects your students from payment fraud.</p>
+        <div style="font-family:var(--font-mono); font-size:12.5px; background:var(--surface-light); padding:10px 12px; border-radius:6px; color:var(--text-secondary);">
           DNS Status: DMARC record exists but lacks strict quarantine/reject flags.
         </div>
 
         <!-- Phishing Blacklist Penalty Box -->
-        <div class="algo-box" style="margin-top:10px;">
+        <div class="algo-box" style="margin-top:12px;">
           <div class="algo-header">
             <span class="algo-badge">⚠️ EMAIL SPOOFING &amp; DELIVERABILITY RISK</span>
             <span class="algo-system-name">Domain Authentication &amp; Mail Deliverability</span>
@@ -1275,16 +1275,16 @@
         </div>
       </div>
 
-      <div class="card card-highlight-cyan" style="padding:16px;">
-        <div style="font-size:11px; font-weight:800; color:var(--cyan); margin-bottom:4px;">FINDING B &bull; SERVER HEADER EXPOSURE</div>
-        <h4 style="font-size:15px; margin-bottom:6px;">Server response headers advertise exact backend software versions</h4>
-        <p class="body-lg" style="font-size:12.5px; margin-bottom:8px;">Public HTTP response headers broadcast the exact server software and PHP versions to automated network scanners. Suppressing these headers is a standard DevSecOps hygiene practice.</p>
-        <div style="font-family:var(--font-mono); font-size:10.5px; background:var(--surface-light); padding:7px; border-radius:6px; color:var(--text-secondary); margin-bottom:12px;">
+      <div class="card card-highlight-cyan" style="padding:18px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--cyan); margin-bottom:4px;">FINDING B &bull; SERVER HEADER EXPOSURE</div>
+        <h4 style="font-size:17.5px; margin-bottom:6px;">Server response headers advertise exact backend software versions</h4>
+        <p class="body-lg" style="font-size:15px; margin-bottom:10px;">Public HTTP response headers broadcast the exact server software and PHP versions to automated network scanners. Suppressing these headers is a standard DevSecOps hygiene practice.</p>
+        <div style="font-family:var(--font-mono); font-size:12.5px; background:var(--surface-light); padding:10px 12px; border-radius:6px; color:var(--text-secondary); margin-bottom:14px;">
           Response Header: X-Powered-By &amp; Server banner publicly visible in curl audits.
         </div>
-        <div class="card" style="background:var(--surface-light); padding:12px;">
-          <h4 style="font-size:13.5px; color:var(--text-primary); margin-bottom:4px;">Why Swastik Looks at This:</h4>
-          <p class="body-lg" style="font-size:12px;">Traditional SEO agencies stop at blog posts. With an engineering and reliability background, I ensure the entire server infrastructure underneath your marketing is clean, professional, and secure.</p>
+        <div class="card" style="background:var(--surface-light); padding:14px;">
+          <h4 style="font-size:15.5px; color:var(--text-primary); margin-bottom:6px;">Why Swastik Looks at This:</h4>
+          <p class="body-lg" style="font-size:14px; line-height:1.55;">Traditional SEO agencies stop at blog posts. With an engineering and reliability background, I ensure the entire server infrastructure underneath your marketing is clean, professional, and secure.</p>
         </div>
       </div>
     </div>
@@ -1297,10 +1297,10 @@
     <p class="sub-heading">A disciplined execution framework that delivers early quick wins while building long-term growth systems.</p>
 
     <div class="grid-3" style="gap:16px;">
-      <div class="card card-highlight-cyan">
-        <div style="font-size:11px; font-weight:800; color:var(--cyan); margin-bottom:4px;">PHASE 1 &bull; DAYS 1 TO 15</div>
-        <h4 style="font-size:17px; margin-bottom:6px;">Baseline & Setup</h4>
-        <ul style="list-style:none; font-size:12.5px; color:var(--text-secondary); line-height:1.65;">
+      <div class="card card-highlight-cyan" style="padding:18px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--cyan); margin-bottom:6px;">PHASE 1 &bull; DAYS 1 TO 15</div>
+        <h4 style="font-size:19px; margin-bottom:8px;">Baseline & Setup</h4>
+        <ul style="list-style:none; font-size:14.5px; color:var(--text-secondary); line-height:1.75;">
           <li>&bull; Connect Google Search Console & GA4 audit</li>
           <li>&bull; Set up conversion tracking on all booking buttons</li>
           <li>&bull; Benchmark top 5 competitor keyword rankings</li>
@@ -1308,10 +1308,10 @@
         </ul>
       </div>
 
-      <div class="card card-highlight-gold">
-        <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:4px;">PHASE 2 &bull; DAYS 15 TO 45</div>
-        <h4 style="font-size:17px; margin-bottom:6px;">Core Fixes With Dev</h4>
-        <ul style="list-style:none; font-size:12.5px; color:var(--text-secondary); line-height:1.65;">
+      <div class="card card-highlight-gold" style="padding:18px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--gold); margin-bottom:6px;">PHASE 2 &bull; DAYS 15 TO 45</div>
+        <h4 style="font-size:19px; margin-bottom:8px;">Core Fixes With Dev</h4>
+        <ul style="list-style:none; font-size:14.5px; color:var(--text-secondary); line-height:1.75;">
           <li>&bull; Deploy JSON-LD Course Schemas for all TTC programs</li>
           <li>&bull; Implement YouTube thumbnail facade loading</li>
           <li>&bull; Unify the booking journey on-brand</li>
@@ -1319,10 +1319,10 @@
         </ul>
       </div>
 
-      <div class="card card-highlight-green">
-        <div style="font-size:11px; font-weight:800; color:var(--green); margin-bottom:4px;">PHASE 3 &bull; DAYS 45 TO 90</div>
-        <h4 style="font-size:17px; margin-bottom:6px;">Scale & Automate</h4>
-        <ul style="list-style:none; font-size:12.5px; color:var(--text-secondary); line-height:1.65;">
+      <div class="card card-highlight-green" style="padding:18px;">
+        <div style="font-size:12.5px; font-weight:800; color:var(--green); margin-bottom:6px;">PHASE 3 &bull; DAYS 45 TO 90</div>
+        <h4 style="font-size:19px; margin-bottom:8px;">Scale & Automate</h4>
+        <ul style="list-style:none; font-size:14.5px; color:var(--text-secondary); line-height:1.75;">
           <li>&bull; Build indexable international paths (German/Spanish)</li>
           <li>&bull; Create high-intent landing pages for upcoming batches</li>
           <li>&bull; Deploy automated rank tracking & anomaly alerts</li>
@@ -1339,10 +1339,10 @@
     <p class="sub-heading">A clear, collaborative partnership that eliminates technical friction and accelerates execution.</p>
 
     <div class="grid-2">
-      <div class="card" style="border-top:4px solid var(--cyan); background:var(--surface);">
-        <div style="font-size:11px; font-weight:800; color:var(--cyan); margin-bottom:6px;">YOUR DEVELOPER'S FOCUS</div>
-        <h3 style="font-size:20px; margin-bottom:10px;">"HOW DO WE BUILD IT?"</h3>
-        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.75;">
+      <div class="card" style="border-top:4px solid var(--cyan); background:var(--surface); padding:22px;">
+        <div style="font-size:13px; font-weight:800; color:var(--cyan); margin-bottom:8px;">YOUR DEVELOPER'S FOCUS</div>
+        <h3 style="font-size:22px; margin-bottom:12px;">"HOW DO WE BUILD IT?"</h3>
+        <ul style="list-style:none; font-size:15px; color:var(--text-secondary); line-height:1.8;">
           <li>&bull; Manages production codebase & hosting infrastructure</li>
           <li>&bull; Builds custom website features & design templates</li>
           <li>&bull; Handles database security, PHP scripts & deployments</li>
@@ -1350,10 +1350,10 @@
         </ul>
       </div>
 
-      <div class="card" style="border-top:4px solid var(--gold); background:var(--surface);">
-        <div style="font-size:11px; font-weight:800; color:var(--gold); margin-bottom:6px;">MY FOCUS AS SEO & GROWTH</div>
-        <h3 style="font-size:20px; margin-bottom:10px;">"WHAT SHOULD WE BUILD & WHY?"</h3>
-        <ul style="list-style:none; font-size:13.5px; color:var(--text-secondary); line-height:1.75;">
+      <div class="card" style="border-top:4px solid var(--gold); background:var(--surface); padding:22px;">
+        <div style="font-size:13px; font-weight:800; color:var(--gold); margin-bottom:8px;">MY FOCUS AS SEO & GROWTH</div>
+        <h3 style="font-size:22px; margin-bottom:12px;">"WHAT SHOULD WE BUILD & WHY?"</h3>
+        <ul style="list-style:none; font-size:15px; color:var(--text-secondary); line-height:1.8;">
           <li>&bull; Identifies high-impact opportunities from live search data</li>
           <li>&bull; Supplies exact Schema code, redirect maps & specs</li>
           <li>&bull; Prioritizes tasks by revenue so developer time isn't wasted</li>
@@ -1370,26 +1370,26 @@
     <p class="sub-heading">Why hiring someone who bridges all three areas creates an unfair advantage for Rishikesh Yoga Ashram.</p>
 
     <div class="grid-3">
-      <div class="card card-highlight-gold">
-        <div style="font-size:1.6rem; margin-bottom:6px;">🎯</div>
-        <h3 style="font-size:18px; color:var(--gold); margin-bottom:6px;">1. SEO & SEARCH</h3>
-        <p class="body-lg" style="font-size:12.5px; line-height:1.65;">
+      <div class="card card-highlight-gold" style="padding:22px;">
+        <div style="font-size:2rem; margin-bottom:8px;">🎯</div>
+        <h3 style="font-size:20px; color:var(--gold); margin-bottom:8px;">1. SEO & SEARCH</h3>
+        <p class="body-lg" style="font-size:15px; line-height:1.65;">
           Search intent research, competitor keyword gaps, entity structuring, content relevance, Google Search Console audits, and SERP feature optimization.
         </p>
       </div>
 
-      <div class="card card-highlight-cyan">
-        <div style="font-size:1.6rem; margin-bottom:6px;">⚙️</div>
-        <h3 style="font-size:18px; color:var(--cyan); margin-bottom:6px;">2. ENGINEERING</h3>
-        <p class="body-lg" style="font-size:12.5px; line-height:1.65;">
+      <div class="card card-highlight-cyan" style="padding:22px;">
+        <div style="font-size:2rem; margin-bottom:8px;">⚙️</div>
+        <h3 style="font-size:20px; color:var(--cyan); margin-bottom:8px;">2. ENGINEERING</h3>
+        <p class="body-lg" style="font-size:15px; line-height:1.65;">
           Network waterfall analysis, Core Web Vitals optimization, server header hygiene, Schema JSON-LD generation, DOM architecture, and peer developer collaboration.
         </p>
       </div>
 
-      <div class="card card-highlight-green">
-        <div style="font-size:1.6rem; margin-bottom:6px;">⚡</div>
-        <h3 style="font-size:18px; color:var(--green); margin-bottom:6px;">3. AI & AUTOMATION</h3>
-        <p class="body-lg" style="font-size:12.5px; line-height:1.65;">
+      <div class="card card-highlight-green" style="padding:22px;">
+        <div style="font-size:2rem; margin-bottom:8px;">⚡</div>
+        <h3 style="font-size:20px; color:var(--green); margin-bottom:8px;">3. AI & AUTOMATION</h3>
+        <p class="body-lg" style="font-size:15px; line-height:1.65;">
           Automated keyword tracking, SERP scrapers, early anomaly detection alerts, workflow automation, and transforming manual weekly tasks into scalable software.
         </p>
       </div>
@@ -1402,26 +1402,26 @@
     <h2 class="big-heading">I DON'T JUST TALK ABOUT SYSTEMS.<br><span class="text-gold">I HAVE ACTUALLY BUILT THEM.</span></h2>
     <p class="sub-heading">These are not random side projects. They represent different stages of the exact digital-growth loop I will apply to your ashram.</p>
 
-    <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:14px;">
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
-        <div><strong style="color:var(--cyan); font-size:13.5px;">1. CrawlMindAI (Research)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Crawls search intent and maps high-value keyword clusters</span></div>
-        <span class="interactive-pill">DISCOVER</span>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
+        <div><strong style="color:var(--cyan); font-size:15.5px;">1. CrawlMindAI (Research)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Crawls search intent and maps high-value keyword clusters</span></div>
+        <span class="interactive-pill" style="font-size:12px; font-weight:700;">DISCOVER</span>
       </div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
-        <div><strong style="color:var(--cyan); font-size:13.5px;">2. SearchFoundry (Create)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Structures entity-driven content blueprints matching Google schemas</span></div>
-        <span class="interactive-pill">STRUCTURE</span>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
+        <div><strong style="color:var(--cyan); font-size:15.5px;">2. SearchFoundry (Create)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Structures entity-driven content blueprints matching Google schemas</span></div>
+        <span class="interactive-pill" style="font-size:12px; font-weight:700;">STRUCTURE</span>
       </div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--gold);">
-        <div><strong style="color:var(--gold); font-size:13.5px;">3. RankTracker (Measure)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Monitors daily keyword movement across different international countries</span></div>
-        <span class="interactive-pill">TRACK</span>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--gold);">
+        <div><strong style="color:var(--gold); font-size:15.5px;">3. RankTracker (Measure)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Monitors daily keyword movement across different international countries</span></div>
+        <span class="interactive-pill" style="font-size:12px; font-weight:700;">TRACK</span>
       </div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--red);">
-        <div><strong style="color:var(--red); font-size:13.5px;">4. TrafficSentinel (Detect)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Catches sudden search drops and indexation anomalies before they hurt revenue</span></div>
-        <span class="interactive-pill">ALERT</span>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--red);">
+        <div><strong style="color:var(--red); font-size:15.5px;">4. TrafficSentinel (Detect)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Catches sudden search drops and indexation anomalies before they hurt revenue</span></div>
+        <span class="interactive-pill" style="font-size:12px; font-weight:700;">ALERT</span>
       </div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:var(--surface); border-radius:8px; border-left:4px solid var(--green);">
-        <div><strong style="color:var(--green); font-size:13.5px;">5. OmniGrowth (Automate)</strong> &mdash; <span style="font-size:12.5px; color:var(--text-secondary);">Automates reporting and marketing workflows without manual busywork</span></div>
-        <span class="interactive-pill">SCALE</span>
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--green);">
+        <div><strong style="color:var(--green); font-size:15.5px;">5. OmniGrowth (Automate)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Automates reporting and marketing workflows without manual busywork</span></div>
+        <span class="interactive-pill" style="font-size:12px; font-weight:700;">SCALE</span>
       </div>
     </div>
   </div>
@@ -1433,24 +1433,24 @@
     <p class="sub-heading">Four clear differentiators that make this partnership high-impact from Day 1.</p>
 
     <div class="grid-2">
-      <div class="card card-highlight-gold" style="padding:16px;">
-        <h4 style="font-size:16px; margin-bottom:4px; color:var(--gold);">1. I Own the Entire SEO Problem</h4>
-        <p class="body-lg" style="font-size:13px; line-height:1.55;">I don't wait for tasks to be assigned. I independently crawl the site, analyze Search Console queries, benchmark competitors, and deliver prioritized solutions that directly protect rankings and fill courses.</p>
+      <div class="card card-highlight-gold" style="padding:20px;">
+        <h4 style="font-size:18.5px; margin-bottom:6px; color:var(--gold);">1. I Own the Entire SEO Problem</h4>
+        <p class="body-lg" style="font-size:15px; line-height:1.6;">I don't wait for tasks to be assigned. I independently crawl the site, analyze Search Console queries, benchmark competitors, and deliver prioritized solutions that directly protect rankings and fill courses.</p>
       </div>
 
-      <div class="card card-highlight-cyan" style="padding:16px;">
-        <h4 style="font-size:16px; margin-bottom:4px; color:var(--cyan);">2. Deep Technical Competence</h4>
-        <p class="body-lg" style="font-size:13px; line-height:1.55;">I understand website architecture, network performance, and JSON-LD schemas. I write the technical specifications so your existing developer can implement changes without friction or confusion.</p>
+      <div class="card card-highlight-cyan" style="padding:20px;">
+        <h4 style="font-size:18.5px; margin-bottom:6px; color:var(--cyan);">2. Deep Technical Competence</h4>
+        <p class="body-lg" style="font-size:15px; line-height:1.6;">I understand website architecture, network performance, and JSON-LD schemas. I write the technical specifications so your existing developer can implement changes without friction or confusion.</p>
       </div>
 
-      <div class="card card-highlight-green" style="padding:16px;">
-        <h4 style="font-size:16px; margin-bottom:4px; color:var(--green);">3. Business & Revenue-First Mindset</h4>
-        <p class="body-lg" style="font-size:13px; line-height:1.55;">I judge success by full student batches and revenue, not vanity impressions. If a technical issue stops a student from booking a $1,200 course, fixing it takes priority over writing another blog post.</p>
+      <div class="card card-highlight-green" style="padding:20px;">
+        <h4 style="font-size:18.5px; margin-bottom:6px; color:var(--green);">3. Business & Revenue-First Mindset</h4>
+        <p class="body-lg" style="font-size:15px; line-height:1.6;">I judge success by full student batches and revenue, not vanity impressions. If a technical issue stops a student from booking a $1,200 course, fixing it takes priority over writing another blog post.</p>
       </div>
 
-      <div class="card card-highlight-red" style="padding:16px;">
-        <h4 style="font-size:16px; margin-bottom:4px; color:var(--red);">4. Systems & Automation Focus</h4>
-        <p class="body-lg" style="font-size:13px; line-height:1.55;">I replace repetitive manual reporting with automated monitoring loops. We gain clear visibility into rankings and traffic without spending 10 hours a week creating manual Excel spreadsheets.</p>
+      <div class="card card-highlight-red" style="padding:20px;">
+        <h4 style="font-size:18.5px; margin-bottom:6px; color:var(--red);">4. Systems & Automation Focus</h4>
+        <p class="body-lg" style="font-size:15px; line-height:1.6;">I replace repetitive manual reporting with automated monitoring loops. We gain clear visibility into rankings and traffic without spending 10 hours a week creating manual Excel spreadsheets.</p>
       </div>
     </div>
   </div>
@@ -1463,7 +1463,7 @@
       <span class="text-gold">I WANT TO HELP BUILD THE SYSTEM<br>THAT CONTINUOUSLY IMPROVES IT."</span>
     </h2>
 
-    <div style="display:flex; justify-content:center; gap:16px; margin:24px 0; font-family:var(--font-heading); font-size:1.2rem; font-weight:800; flex-wrap:wrap;">
+    <div style="display:flex; justify-content:center; gap:18px; margin:28px 0; font-family:var(--font-heading); font-size:1.35rem; font-weight:800; flex-wrap:wrap;">
       <span style="color:var(--text-muted);">DISCOVER</span> <span style="color:var(--gold);">&rarr;</span>
       <span style="color:var(--text-muted);">OPTIMIZE</span> <span style="color:var(--gold);">&rarr;</span>
       <span style="color:var(--text-muted);">MEASURE</span> <span style="color:var(--gold);">&rarr;</span>
@@ -1471,11 +1471,11 @@
       <span class="text-gold">GROW</span>
     </div>
 
-    <p class="body-lg" style="max-width:700px; margin:0 auto 32px; font-size:16px;">
+    <p class="body-lg" style="max-width:740px; margin:0 auto 36px; font-size:17.5px; line-height:1.65;">
       Thank you for your time and for sharing your vision for Rishikesh Yoga Ashram. I would love to answer your questions or discuss any of these growth opportunities in detail.
     </p>
 
-    <div style="font-family:var(--font-heading); font-size:14px; font-weight:700; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.1em;">
+    <div style="font-family:var(--font-heading); font-size:15px; font-weight:700; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.12em;">
       SWASTIK AGNIHOTRI &bull; SEO EXECUTIVE / DIGITAL GROWTH
     </div>
   </div>
@@ -1507,41 +1507,41 @@
 <!-- Evidence Modal -->
 <div id="evidence-modal">
   <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-    <h2 class="big-heading" style="color:var(--gold); margin:0; font-size:1.8rem;">EVIDENCE & TECHNICAL APPENDIX</h2>
-    <div style="cursor:pointer; font-size:12px; font-weight:bold; color:var(--text-secondary); padding:6px 14px; background:var(--surface-light); border-radius:8px;" onclick="toggleEvidence()">
+    <h2 class="big-heading" style="color:var(--gold); margin:0; font-size:2.2rem;">EVIDENCE &amp; TECHNICAL APPENDIX</h2>
+    <div style="cursor:pointer; font-size:13.5px; font-weight:bold; color:var(--text-secondary); padding:8px 16px; background:var(--surface-light); border-radius:8px;" onclick="toggleEvidence()">
       CLOSE [ESC]
     </div>
   </div>
-  <p class="body-lg" style="margin-bottom:18px; font-size:13.5px;">
+  <p class="body-lg" style="margin-bottom:22px; font-size:15.5px;">
     Official Google algorithm documentation, live test parameters, and diagnostic references recorded during the audit of <code>https://rishikeshyogaashram.com/</code>:
   </p>
-  <div class="grid-2" style="gap:14px;">
-    <div class="card" style="padding:14px;">
-      <h4 style="color:var(--red); font-size:14px; margin-bottom:4px;">Google Intrusive Interstitials Penalty</h4>
-      <p style="font-size:11.5px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
-        Official Policy: Google Search Central (Jan 10, 2017)<br>
+  <div class="grid-2" style="gap:16px;">
+    <div class="card" style="padding:18px;">
+      <h4 style="color:var(--red); font-size:16px; margin-bottom:6px;">Google Intrusive Interstitials Guidelines</h4>
+      <p style="font-size:13px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.6;">
+        Official Policy: Google Search Central (Mobile Search Policy)<br>
         Standard: "Showing a popup that covers the main content immediately after the user navigates to a page from the search results makes content less accessible, leading to search demotions."
       </p>
     </div>
-    <div class="card" style="padding:14px;">
-      <h4 style="color:var(--red); font-size:14px; margin-bottom:4px;">Google Core Web Vitals (CWV) Penalty</h4>
-      <p style="font-size:11.5px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+    <div class="card" style="padding:18px;">
+      <h4 style="color:var(--gold); font-size:16px; margin-bottom:6px;">Google Core Web Vitals (CWV) Standards</h4>
+      <p style="font-size:13px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.6;">
         Thresholds: LCP &lt; 2.5s (Good), 2.5s–4.0s (Needs Work), &gt; 4.0s (POOR)<br>
         Audit Metric: 5.4s LCP (Ranked POOR / Red Zone).<br>
-        Algorithmic Effect: Official ranking demotion under Page Experience Core Ranking System.
+        Algorithmic Effect: Active factor under Google's Page Experience Core Ranking System.
       </p>
     </div>
-    <div class="card" style="padding:14px;">
-      <h4 style="color:var(--cyan); font-size:14px; margin-bottom:4px;">Google Course Schema Guidelines</h4>
-      <p style="font-size:11.5px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+    <div class="card" style="padding:18px;">
+      <h4 style="color:var(--cyan); font-size:16px; margin-bottom:6px;">Google Course Schema Guidelines</h4>
+      <p style="font-size:13px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.6;">
         Specification: schema.org/Course JSON-LD format.<br>
         Live Audit: https://search.google.com/test/rich-results<br>
         Status: 0 Course entities detected. Disqualified from Google Course Carousels.
       </p>
     </div>
-    <div class="card" style="padding:14px;">
-      <h4 style="color:var(--green); font-size:14px; margin-bottom:4px;">DNS & Email Spoofing Defense (DMARC)</h4>
-      <p style="font-size:11.5px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.5;">
+    <div class="card" style="padding:18px;">
+      <h4 style="color:var(--green); font-size:16px; margin-bottom:6px;">DNS &amp; Email Spoofing Defense (DMARC)</h4>
+      <p style="font-size:13px; color:var(--text-secondary); font-family:var(--font-mono); line-height:1.6;">
         RFC 7489 / Google Workspace Sender Requirements (Feb 2024)<br>
         Current: "v=DMARC1; p=none;" (Vulnerable to spoofed wire transfer invoices)<br>
         Required: "v=DMARC1; p=reject;" to prevent Gmail/Yahoo phishing blacklisting.
