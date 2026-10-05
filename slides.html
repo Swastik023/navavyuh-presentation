@@ -238,38 +238,64 @@
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1; align-items: center; min-height: 0; }
   .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; flex: 1; align-items: stretch; min-height: 0; }
   
+  /* ============================================================
+     INTERACTIVE HOVER ELEVATION SYSTEM (MOUSE HOVER UPWARD FLOAT)
+     ============================================================ */
+  .card, 
+  .algo-box, 
+  .serp-card, 
+  .founder-takeaway, 
+  .phone-mockup-frame,
+  .browser-window,
+  .hover-lift {
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.25s ease !important;
+    will-change: transform, box-shadow;
+    cursor: default;
+  }
+
   .card {
     background: var(--surface); border: 1px solid var(--surface-border);
     border-radius: 12px; padding: 20px; display: flex; flex-direction: column;
     position: relative; overflow: hidden;
-    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(214, 168, 79, 0.35);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 20px rgba(214, 168, 79, 0.08);
+  
+  /* Smooth 8px Upward Lift on Mouse Hover */
+  .card:hover,
+  .hover-lift:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(214, 168, 79, 0.45) !important;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7), 0 0 24px rgba(214, 168, 79, 0.15) !important;
+    z-index: 10;
   }
   .card-highlight-gold { border-top: 3px solid var(--gold); }
   .card-highlight-gold:hover {
-    border-color: rgba(214, 168, 79, 0.5);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 22px rgba(214, 168, 79, 0.15);
+    transform: translateY(-8px) !important;
+    border-color: rgba(214, 168, 79, 0.7) !important;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7), 0 0 28px rgba(214, 168, 79, 0.22) !important;
+    z-index: 10;
   }
   .card-highlight-cyan { border-top: 3px solid var(--cyan); }
   .card-highlight-cyan:hover {
-    border-color: rgba(85, 199, 232, 0.5);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 22px rgba(85, 199, 232, 0.15);
+    transform: translateY(-8px) !important;
+    border-color: rgba(85, 199, 232, 0.7) !important;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7), 0 0 28px rgba(85, 199, 232, 0.22) !important;
+    z-index: 10;
   }
   .card-highlight-red { border-top: 3px solid var(--red); }
   .card-highlight-red:hover {
-    border-color: rgba(240, 106, 114, 0.5);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 22px rgba(240, 106, 114, 0.18);
+    transform: translateY(-8px) !important;
+    border-color: rgba(240, 106, 114, 0.7) !important;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7), 0 0 28px rgba(240, 106, 114, 0.24) !important;
+    z-index: 10;
   }
   .card-highlight-green { border-top: 3px solid var(--green); }
   .card-highlight-green:hover {
-    border-color: rgba(88, 197, 138, 0.5);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 22px rgba(88, 197, 138, 0.15);
+    transform: translateY(-8px) !important;
+    border-color: rgba(88, 197, 138, 0.7) !important;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7), 0 0 28px rgba(88, 197, 138, 0.22) !important;
+    z-index: 10;
   }
 
   /* Algorithmic Penalty & Risk Callout Box with Live Beacon */
@@ -283,14 +309,12 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .algo-box:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(240, 106, 114, 0.16);
-    border-color: rgba(240, 106, 114, 0.5);
+    transform: translateY(-6px) !important;
+    box-shadow: 0 18px 38px rgba(240, 106, 114, 0.22) !important;
+    border-color: rgba(240, 106, 114, 0.7) !important;
+    z-index: 10;
   }
   .algo-header {
     display: flex;
@@ -351,14 +375,12 @@
   .serp-card {
     background: #1b1e24; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
     padding: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .serp-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(138, 180, 248, 0.35);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+    transform: translateY(-6px) !important;
+    border-color: rgba(138, 180, 248, 0.6) !important;
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.75), 0 0 22px rgba(138, 180, 248, 0.2) !important;
+    z-index: 10;
   }
   .serp-url { font-size: 12.5px; color: #9aa0a6; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; word-break: break-all; }
   .serp-title { font-size: 17.5px; color: #8ab4f8; font-weight: 500; line-height: 1.3; margin-bottom: 4px; cursor: pointer; transition: color 0.2s; }
@@ -371,6 +393,14 @@
   .serp-badge-good { background: rgba(88,197,138,0.15); color: var(--green); border: 1px solid rgba(88,197,138,0.3); }
   .serp-badge-gold { background: rgba(214,168,79,0.15); color: var(--gold); border: 1px solid rgba(214,168,79,0.3); }
 
+  /* Browser Simulation Window Hover Lift */
+  .browser-window:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(214, 168, 79, 0.55) !important;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.75), 0 0 25px rgba(214, 168, 79, 0.18) !important;
+    z-index: 10;
+  }
+
   /* Phone Mockups */
   .phone-comparison {
     display: flex; gap: 20px; justify-content: center; align-items: center; height: 100%;
@@ -382,11 +412,11 @@
     width: 230px; height: 390px; border: 8px solid #232730; border-radius: 28px;
     background: #000; overflow: hidden; position: relative; box-shadow: 0 14px 30px rgba(0,0,0,0.6);
     cursor: zoom-in;
-    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .phone-mockup-frame:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 24px 48px rgba(0,0,0,0.75), 0 0 22px rgba(214,168,79,0.15);
+    transform: translateY(-10px) scale(1.02) !important;
+    box-shadow: 0 28px 56px rgba(0, 0, 0, 0.85), 0 0 28px rgba(214, 168, 79, 0.22) !important;
+    z-index: 10;
   }
 
   /* Choreographed Staggered Slide Entrances */
@@ -397,7 +427,7 @@
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
     }
   }
 
@@ -856,16 +886,16 @@
       <div class="card card-highlight-gold" style="justify-content:center;">
         <div style="font-size:13px; font-weight:800; color:var(--gold); letter-spacing:0.1em; margin-bottom:14px;">THE CAPABILITY EVOLUTION</div>
         <div style="display:flex; flex-direction:column; gap:10px; font-family:var(--font-heading); font-weight:700;">
-          <div style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between; align-items:center;">
+          <div class="hover-lift" style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between; align-items:center;">
             <span style="font-size:15px;">Software Development</span> <span style="color:var(--text-muted); font-size:13px; font-weight:500;">Code, DOM, Server Systems</span>
           </div>
-          <div style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between; align-items:center;">
+          <div class="hover-lift" style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--cyan); display:flex; justify-content:space-between; align-items:center;">
             <span style="font-size:15px;">Site Reliability (SRE) &amp; DevOps</span> <span style="color:var(--text-muted); font-size:13px; font-weight:500;">Speed, Network, Infrastructure</span>
           </div>
-          <div style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--gold); display:flex; justify-content:space-between; align-items:center;">
+          <div class="hover-lift" style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--gold); display:flex; justify-content:space-between; align-items:center;">
             <span class="text-gold" style="font-size:15px;">SEO &amp; Growth Strategy</span> <span style="color:var(--text-muted); font-size:13px; font-weight:500;">Search Intent, Entities, CRO</span>
           </div>
-          <div style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--green); display:flex; justify-content:space-between; align-items:center;">
+          <div class="hover-lift" style="padding:12px 16px; background:var(--surface-light); border-radius:8px; border-left:3px solid var(--green); display:flex; justify-content:space-between; align-items:center;">
             <span class="text-green" style="font-size:15px;">AI &amp; Workflow Automation</span> <span style="color:var(--text-muted); font-size:13px; font-weight:500;">Monitoring, Scrapers, Alerts</span>
           </div>
         </div>
@@ -1267,10 +1297,10 @@
         <div class="card" style="padding:16px;">
           <h4 style="font-size:17.5px; margin-bottom:6px; color:var(--text-primary);">The Natural Decision Journey</h4>
           <div style="display:flex; flex-direction:column; gap:6px; margin-top:6px; font-size:13.5px; color:var(--text-secondary);">
-            <div style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">1. Land &rarr; Inspect ashram environment &amp; credentials</div>
-            <div style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">2. Read &rarr; Understand syllabus, teachers &amp; dates</div>
-            <div style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">3. Trust &rarr; Review student testimonials &amp; accreditations</div>
-            <div style="padding:6px 12px; background:rgba(214,168,79,0.15); color:var(--gold); font-weight:700; border-radius:6px;">4. Enquire &rarr; Peak readiness to submit contact details</div>
+            <div class="hover-lift" style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">1. Land &rarr; Inspect ashram environment &amp; credentials</div>
+            <div class="hover-lift" style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">2. Read &rarr; Understand syllabus, teachers &amp; dates</div>
+            <div class="hover-lift" style="padding:6px 12px; background:var(--surface-light); border-radius:6px;">3. Trust &rarr; Review student testimonials &amp; accreditations</div>
+            <div class="hover-lift" style="padding:6px 12px; background:rgba(214,168,79,0.15); color:var(--gold); font-weight:700; border-radius:6px;">4. Enquire &rarr; Peak readiness to submit contact details</div>
           </div>
         </div>
 
@@ -1451,10 +1481,10 @@
       <div class="card" style="justify-content:center; padding:24px; background:linear-gradient(180deg, var(--surface-light) 0%, var(--surface) 100%);">
         <h4 style="font-size:16.5px; color:var(--gold); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.08em;">The Ashram's Primary Market</h4>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-family:var(--font-heading); font-weight:700; margin-bottom:16px;">
-          <div style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇩🇪 GERMANY & AUSTRIA</div>
-          <div style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇫🇷 FRANCE & BELGIUM</div>
-          <div style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇪🇸 SPAIN & LATAM</div>
-          <div style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇯🇵 JAPAN & ASIA</div>
+          <div class="hover-lift" style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇩🇪 GERMANY & AUSTRIA</div>
+          <div class="hover-lift" style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇫🇷 FRANCE & BELGIUM</div>
+          <div class="hover-lift" style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇪🇸 SPAIN & LATAM</div>
+          <div class="hover-lift" style="padding:12px; background:rgba(255,255,255,0.04); border-radius:8px; font-size:14.5px;">🇯🇵 JAPAN & ASIA</div>
         </div>
         <p class="body-lg" style="font-size:15px; line-height:1.6;">International students pay full tuition in foreign currency and stay for full 28-day immersions. Structuring international search turns your website into a global student magnet.</p>
       </div>
@@ -1675,23 +1705,23 @@
     <p class="sub-heading">These are not random side projects. They represent different stages of the exact digital-growth loop I will apply to your ashram.</p>
 
     <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
+      <div class="hover-lift" style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
         <div><strong style="color:var(--cyan); font-size:15.5px;">1. CrawlMindAI (Research)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Crawls search intent and maps high-value keyword clusters</span></div>
         <span class="interactive-pill" style="font-size:12px; font-weight:700;">DISCOVER</span>
       </div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
+      <div class="hover-lift" style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--cyan);">
         <div><strong style="color:var(--cyan); font-size:15.5px;">2. SearchFoundry (Create)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Structures entity-driven content blueprints matching Google schemas</span></div>
         <span class="interactive-pill" style="font-size:12px; font-weight:700;">STRUCTURE</span>
       </div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--gold);">
+      <div class="hover-lift" style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--gold);">
         <div><strong style="color:var(--gold); font-size:15.5px;">3. RankTracker (Measure)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Monitors daily keyword movement across different international countries</span></div>
         <span class="interactive-pill" style="font-size:12px; font-weight:700;">TRACK</span>
       </div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--red);">
+      <div class="hover-lift" style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--red);">
         <div><strong style="color:var(--red); font-size:15.5px;">4. TrafficSentinel (Detect)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Catches sudden search drops and indexation anomalies before they hurt revenue</span></div>
         <span class="interactive-pill" style="font-size:12px; font-weight:700;">ALERT</span>
       </div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--green);">
+      <div class="hover-lift" style="display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:var(--surface); border-radius:8px; border-left:4px solid var(--green);">
         <div><strong style="color:var(--green); font-size:15.5px;">5. OmniGrowth (Automate)</strong> &mdash; <span style="font-size:14.5px; color:var(--text-secondary);">Automates reporting and marketing workflows without manual busywork</span></div>
         <span class="interactive-pill" style="font-size:12px; font-weight:700;">SCALE</span>
       </div>
