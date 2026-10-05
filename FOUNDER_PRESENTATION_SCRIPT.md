@@ -60,7 +60,7 @@
 >
 > How an international student experiences it when making a major life decision, how Google understands what you offer, and how smoothly the website turns interest into course bookings.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“This isn't an academic SEO lecture. I prepared an actionable audit to protect your search presence, build student trust, and fill upcoming batches with international students.”*
 
 ### ❓ If the Founder Asks
@@ -91,7 +91,7 @@ Move cursor along the horizontal progression: Software Dev → SRE → SEO → A
 >
 > That's where I believe my background becomes useful: I can bridge the gap between creative search strategy and the actual code running the website.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“You don't need another person who just forwards automated PDF reports. You need an engineering-minded partner who understands Google's underlying mechanics and fixes them with your team.”*
 
 ### ❓ If the Founder Asks
@@ -124,7 +124,7 @@ Point to Pillar 1 (Google) → Pillar 2 (Student) → Pillar 3 (Business).
 >
 > If any one of these three breaks, SEO alone cannot grow the ashram.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“Google brings the attention. The website builds the trust. The checkout captures the booking. If one breaks, SEO alone cannot grow the ashram.”*
 
 ### ❓ If the Founder Asks
@@ -155,7 +155,7 @@ Trace the 5 steps across the screen with your cursor: Discover → Verify → Un
 >
 > Tools help me discover anomalies. Human judgment determines whether an issue actually affects student trust or revenue.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“I don't blindly forward automated checklists to your developer. I verify the root cause, translate it into plain business impact, and prioritize what moves the needle.”*
 
 ### ❓ If the Founder Asks
@@ -185,7 +185,7 @@ Point briefly across the 6 category cards, then down to the bottom takeaway.
 >
 > Instead, I selected **10 high-impact opportunities** that best illustrate how I think, how I diagnose friction, and how we can systematically improve student acquisition.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“I will not overwhelm you with 31 problems. Let's examine the 10 prioritized opportunities that most directly influence user trust, search visibility, and student conversion.”*
 
 ### ❓ If the Founder Asks
@@ -221,7 +221,7 @@ Point briefly across the 6 category cards, then down to the bottom takeaway.
 >
 > My recommendation is not to delete your authentic philosophy. It's to **reorder the hierarchy**: bring course cards, batch dates, and trust markers above the fold, and let students explore deeper reading directly below.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“We don't remove your authentic spiritual writing—we simply bring course cards, batch dates, and trust credentials into the top 3 seconds, making the information hierarchy work for foreign students.”*
 
 ### ❓ If the Founder Asks
@@ -254,7 +254,7 @@ Point to the primary booking button → trace over to the payment destination ad
 >
 > We want to ensure that every booking link, deposit form, and receipt is completely unified, on-brand, and hosted under `rishikeshyogaashram.com` so an international student never hesitates for a second.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“I'm not claiming there is a broken payment system. I'm saying this is the first journey I would review because it directly influences whether interested students complete their enrollment.”*
 
 ### ❓ If the Founder Asks
@@ -287,7 +287,7 @@ Point directly to the large red **54 / 100** score, then tap cursor on the **5.4
 >
 > Google also considers mobile loading speed an official ranking signal. Improving speed directly protects search visibility and student attention.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“Speed isn't just an engineering statistic. For an international student comparing three Rishikesh schools on a phone, speed is part of your first impression.”*
 
 ### ❓ If the Founder Asks
@@ -320,7 +320,7 @@ Point to the YouTube request flow (Eager) → then point to the Facade image pre
 >
 > We keep 100% of your student testimonials, but eliminate unnecessary loading delay.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“A simple technical optimization with your developer that immediately speeds up the website without losing a single piece of student proof.”*
 
 ### ❓ If the Founder Asks
@@ -353,7 +353,7 @@ Point to the large **00:02** timer → trace through the 4-step intent journey b
 >
 > By triggering lead prompts after 40 seconds of reading or upon reaching the course syllabus, we capture higher-quality enquiries and eliminate mobile annoyance.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“Lead generation is about timing. Build trust first, show the value, and the prospective student will gladly share their details when they're actually ready to enroll.”*
 
 ### ❓ If the Founder Asks
@@ -386,7 +386,7 @@ Point to the Course Title **Aerial Yoga** → point down to the red slug **/Aria
 >
 > It's a quick, easy quality fix that demonstrates thorough professional standards.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“I don't present this as a catastrophe. I show it because thorough SEO means caring about the fine details that reinforce overall domain quality.”*
 
 ### ❓ If the Founder Asks
@@ -422,7 +422,7 @@ Point to the Course Title **Aerial Yoga** → point down to the red slug **/Aria
 >
 > It doesn't guarantee a rich result overnight, but it makes the school eligible for star snippets, course carousels, and verified knowledge features that give foreign students immediate confidence on Google.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“A web page explains your course to a human reader. Structured Course Schema explains your course to Google. Right now, Google has to guess what we're selling—and that costs us search visibility.”*
 
 ### ❓ If the Founder Asks
@@ -455,7 +455,7 @@ Point to the widget card (Left) → point to the European country market list (R
 >
 > I wouldn't try to translate everything at once. But creating discoverable language landing pages for your top international markets allows foreign students to find you in their native language.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“A widget translates for people who already found you. International SEO helps people find you who are searching natively in their home country.”*
 
 ### ❓ If the Founder Asks
@@ -486,7 +486,7 @@ Point to the bottom right corner of the phone mockup where the green WhatsApp ic
 >
 > The solution is very clean: a pinned bottom action bar with two separate buttons—`[ Send Enquiry ]` and `[ WhatsApp ]`—docked neatly below the content. Zero text obstruction, effortless one-thumb tapping.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“Mobile optimization isn't just whether the site technically loads on a phone. It's whether the student can comfortably read and enquire with zero physical annoyance.”*
 
 ### ❓ If the Founder Asks
@@ -519,7 +519,7 @@ Point to Card A (DMARC) → then Card B (Server Headers).
 >
 > When international students are wiring course fees and submitting personal information, the technical foundation underneath the marketing should also be stable and trustworthy.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“I don't turn this into a security audit, but an engineering background looks at the complete digital asset—ensuring technical hygiene and reputation support your marketing growth.”*
 
 ### ❓ If the Founder Asks
@@ -554,7 +554,7 @@ Trace across Phase 1 → Phase 2 → Phase 3.
 >
 > Baseline first, high-impact fixes with your developer second, and continuous automation third.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“We don't create endless debate. We establish a verified baseline, execute high-impact fixes with your developer, and build automated systems that compound month after month.”*
 
 ### ❓ If the Founder Asks
@@ -587,7 +587,7 @@ Point to the Developer card on the left → point to your card on the right.
 >
 > You won't have to play translator between marketing and development. I can write the exact Schema JSON-LD, explain technical requirements in their language, and work as a collaborative peer.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“I speak developer language. You won't have to play translator between marketing and tech. We work as peers to move faster and grow student enrollments.”*
 
 ### ❓ If the Founder Asks
@@ -622,7 +622,7 @@ Point to Pillar 1 (SEO) → Pillar 2 (Engineering) → Pillar 3 (Automation).
 >
 > Combining these three is what allows us to build a scalable digital acquisition system.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“Most SEOs only understand keywords. Most developers only build code. I connect the code to Google and Google to your business.”*
 
 ### ❓ If the Founder Asks
@@ -653,7 +653,7 @@ Trace down through the 5 systems on screen.
 >
 > When a process is repetitive or data-heavy, I automate it.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“When a process is repetitive or data-heavy, I automate it. This frees up our time to focus on strategic content, student trust, and scaling admissions.”*
 
 ### ❓ If the Founder Asks
@@ -686,7 +686,7 @@ Point down through the 4 value cards.
 >
 > And fourth, **I bring an automation mindset**, building systems that compound results month after month.”
 
-### 💡 Founder Takeaway (Bottom Callout on Screen)
+### 💡 Founder Takeaway (Spoken Anchor)
 > *“You get an SEO specialist who thinks like an engineer, acts like a partner, and is obsessed with filling your courses with students.”*
 
 ### ❓ If the Founder Asks
