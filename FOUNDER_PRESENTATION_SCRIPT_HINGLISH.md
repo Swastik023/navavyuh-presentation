@@ -18,19 +18,18 @@
 
 ---
 
-### SLIDE 01 — INTRO & FRAMING
-* **Screen:** `FROM WEBSITE AUDIT TO DIGITAL GROWTH` (3 Lenses)
-* **Where to Point:** Hover cursor over the 3 cards: *Student → Google → Business*.
+### SLIDE 01 — EXECUTIVE OPENING & AUDIT SCOPE
+* **Screen:** `FROM WEBSITE AUDIT TO PREDICTABLE ADMISSIONS`
+* **Where to Point:** Hover cursor over the 3 cards: *Target Asset (`rishikeshyogaashram.com`) → Audit Scope (31 Touchpoints) → Strategic Objective (Admissions Pipeline)*.
 * **What to Say (50/50 Hinglish):**
-  > “Namaste Sir, Namaste Ma'am.  
-  > Before jumping into my background or resume, today I wanted to focus directly on your business and website.  
-  > Maine `rishikeshyogaashram.com` ka ek deep audit kiya hai—specifically from three angles:  
-  > **First:** The international student—jab koi foreign applicant mobile par land karta hai, do they trust the ashram within 3 seconds?  
-  > **Second:** Google Discoverability—kya search engines ko clearly samajh aa raha hai what courses we're actually selling?  
-  > **And third:** The business funnel—jo interested visitors aate hain, are they easily converting into paid admissions?  
-  > Today, I want to walk you through 10 high-impact areas jahan hum in teeno cheezon ko improve kar sakte hain to drive real foreign admissions.”
-* **Founder Takeaway:**  
-  *“Sir, this is not an academic SEO lecture. Yeh ek actionable audit hai to protect your search visibility, build foreign student trust, and fill upcoming batches.”*
+  > “Namaste Sir, Namaste Ma'am. Thank you for your time today.  
+  > Before jumping into my resume ya background, I wanted to focus directly on your business and website.  
+  > Maine `rishikeshyogaashram.com` ka ek complete technical aur conversion audit kiya hai.  
+  > Jab koi international student 5,000 miles travel karke Rishikesh aane ka decision leta hai for a 200H ya 300H TTC, their entire decision happens on their phone.  
+  > Isliye maine 31 specific touchpoints inspect kiye hain across your code, mobile UX aur search architecture.  
+  > Today's objective bahut straightforward hai: Yeh dekhna ki how we can turn your organic Google visibility into a steady, predictable admissions pipeline for upcoming batches.”
+* **Founder Takeaway (Spoken Anchor):**  
+  *“Sir, this is not an academic SEO lecture. Yeh ek actionable, revenue-focused audit hai to turn website traffic into confirmed international student admissions.”*
 * *(Next Slide →)*
 
 ---
@@ -44,19 +43,20 @@
   > Over time, I shifted into digital growth because modern SEO sirf keyword writing nahi hai. Behind every ranking, there is server speed, clean DOM architecture, structured schema data aur crawl budgets.  
   > That's my core advantage: I bridge the gap between creative marketing strategy and the actual code running on the website.”
 * **Founder Takeaway:**  
-  *“Aapko ek aur aisi agency nahi chahiye jo bas automated PDF reports forward kare. You need someone who understands Google's technical mechanics and fixes them directly with your developer.”*
+  *“Aapko ek aur aisi agency nahi chahiye jo bas automated PDF reports forward kare. You need someone who understands technical mechanics and fixes them directly with your developer.”*
 * *(Next Slide →)*
 
 ---
 
-### SLIDE 03 — THE 3 LENSES OF DIGITAL GROWTH
-* **Screen:** `THE 3 LENSES OF DIGITAL GROWTH`
+### SLIDE 03 — THE 3 LENSES OF DIGITAL GROWTH (INTRODUCING THE FRAMEWORK)
+* **Screen:** `WHY TRADITIONAL SEO FAILS WITHOUT USER TRUST & CONVERSION`
 * **Where to Point:** Point to Pillar 1 (Google) → Pillar 2 (Student) → Pillar 3 (Business).
 * **What to Say (50/50 Hinglish):**
-  > “Whenever I audit a digital asset, I don't just chase keyword rankings. I ask three simple questions:  
-  > **1. Google:** Kya Google ko clearly samajh aa raha hai who we are and what we teach?  
-  > **2. The Student:** Jab koi European ya American student mobile par landing karta hai, do they get instant clarity within 3 seconds?  
-  > **3. The Business:** When they decide to book, is the checkout journey frictionless, ya kisi drop-off ki wajah se they abandon?  
+  > “Ab baat aati hai ki hum is pure audit ko evaluate kaise karte hain.  
+  > Most marketing agencies sirf superficial keyword rankings dekhti hain, but real digital growth needs three connected wheels:  
+  > **1. Google:** Machine readability—kya search engines ko aapke courses, accreditation aur batch fees clearly samajh aa rahi hain?  
+  > **2. The Student:** Trust & psychology—jab koi European ya American student landing page dekhta hai, do they feel 100% confident booking from abroad?  
+  > **3. The Business:** Frictionless conversion—when they click 'Enroll', is the payment flow smooth, ya kisi drop-off ki wajah se they abandon?  
   > Agar inme se ek bhi pahiya break hota hai, toh marketing budget ka full ROI nahi nikalta.”
 * **Founder Takeaway:**  
   *“Google brings the traffic, website builds the trust, aur clean checkout admission deta hai. Teeno ka balance hi growth drive karta hai.”*

@@ -39,29 +39,29 @@
 
 ---
 
-## SLIDE 01 — OPENING & FRAMING
+## SLIDE 01 — OPENING & EXECUTIVE AUDIT SCOPE
 
 ### 🖥️ On Screen
-`FROM WEBSITE AUDIT TO DIGITAL GROWTH`  
-*Lens 1: The Student • Lens 2: Google • Lens 3: The Business*
+`FROM WEBSITE AUDIT TO PREDICTABLE ADMISSIONS`  
+*Target Asset: rishikeshyogaashram.com • Scope: 31 Technical Touchpoints • Objective: Predictable Admissions*
 
 ### 👉 Where to Point
 1. Point to the title.
-2. Slowly move cursor across the three cards: **Student** → **Google** → **Business**.
+2. Slowly move cursor across the three cards: **Target Asset** → **Audit Scope** → **Strategic Objective**.
 
 ### 🗣️ What to Say Naturally
-> “Sir, before I talk about my background and resume, I actually wanted to do something slightly different today.
+> “Sir, Ma'am, before discussing my background or resume, I wanted to focus directly on your business and website today.
 >
-> I looked at the website first.
+> I conducted an in-depth engineering and conversion audit of `rishikeshyogaashram.com`.
 >
-> Because if I am applying for a digital growth role, I thought it would be much more useful to understand the actual business before talking about what I can do.
+> When an international student prepares to travel thousands of miles to Rishikesh for an intensive 200-hour or 300-hour Teacher Training course, their entire research and decision happens on their phone.
 >
-> When I looked at `rishikeshyogaashram.com`, I didn't look at it as just a checklist of SEO tags. I looked at it from three sides:
+> Across the site, I manually reviewed 31 technical and user experience touchpoints—from mobile speed and DOM layout to Course schema data and search discoverability.
 >
-> How an international student experiences it when making a major life decision, how Google understands what you offer, and how smoothly the website turns interest into course bookings.”
+> Today's objective is straightforward: to show you where high-intent foreign applicants experience friction, and how addressing a few high-impact areas can build a predictable, organic admissions pipeline for your upcoming batches.”
 
 ### 💡 Founder Takeaway (Spoken Anchor)
-> *“This isn't an academic SEO lecture. I prepared an actionable audit to protect your search presence, build student trust, and fill upcoming batches with international students.”*
+> *“This isn't an academic SEO lecture. It is a practical, business-focused audit designed to transform organic Google visibility into confirmed foreign student admissions.”*
 
 ### ❓ If the Founder Asks
 * **“Why did you spend time auditing us before even getting the job?”**
@@ -104,28 +104,30 @@ Move cursor along the horizontal progression: Software Dev → SRE → SEO → A
 
 ---
 
-## SLIDE 03 — THE 3 LENSES OF DIGITAL GROWTH
+## SLIDE 03 — THE 3 LENSES OF DIGITAL GROWTH (INTRODUCING THE FRAMEWORK)
 
 ### 🖥️ On Screen
-`THE 3 LENSES OF DIGITAL GROWTH`  
+`WHY TRADITIONAL SEO FAILS WITHOUT USER TRUST & CONVERSION`  
 *1. Google (Discoverability) • 2. The Student (Trust) • 3. The Business (Admissions)*
 
 ### 👉 Where to Point
 Point to Pillar 1 (Google) → Pillar 2 (Student) → Pillar 3 (Business).
 
 ### 🗣️ What to Say Naturally
-> “Whenever I look at a website, I don't look only at keyword rankings. I ask three fundamental questions:
+> “Now, how do we evaluate and connect our audit findings?
 >
-> First: **Can Google clearly understand what we teach and who we are?**
+> Most marketing agencies focus solely on vanity keyword rankings. But real digital growth requires three interconnected wheels:
 >
-> Second: **When a foreign student lands on their smartphone, can they understand and trust the school within 3 seconds?**
+> First: **Google (Discoverability & Entities)** — Can search engines recognize your course curriculums, batch dates, fees, and Yoga Alliance accreditation in rich results?
 >
-> And third: **When they decide to book, does the website make it effortless, or does friction cause them to abandon?**
+> Second: **The Student (Psychology & Trust)** — When an international seeker lands on their phone, do they see authentic proof, clear pricing, and immediate credibility within 3 seconds?
 >
-> If any one of these three breaks, SEO alone cannot grow the ashram.”
+> And third: **The Business (Admissions & Revenue)** — When they decide to enroll, is the checkout journey effortless, or do technical frictions cause them to drop off?
+>
+> If any one of these three pillars breaks, even top Google rankings won't convert into paid admissions.”
 
 ### 💡 Founder Takeaway (Spoken Anchor)
-> *“Google brings the attention. The website builds the trust. The checkout captures the booking. If one breaks, SEO alone cannot grow the ashram.”*
+> *“Google brings the traffic, the website builds the trust, and a frictionless checkout secures the admission. Balancing all three is how we scale.”*
 
 ### ❓ If the Founder Asks
 * **“Which of these three do you think is our biggest weakness right now?”**
